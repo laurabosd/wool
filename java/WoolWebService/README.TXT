@@ -70,15 +70,22 @@ The web service is configured with this file that needs to be created:
 You can make a copy of this file and change it:
 <GITDIR>\wool\java\WoolWebService\gradle.sample.properties
 
-For the secret key, you may use the key generator in the BuildTools. Open a
+Edit the gradle.properties file and change the following properties:
+
+**woolconfigDataDir** points to a location on your harddrive, accessible by TomCat, where data from WOOL is stored. You can create a new folder for this, for example: C:\\dev\\wool_data_dir
+**woolconfigJwtSecretKey** is a JSON Web Token (JWT) key that is used for secure communication. 
+**remoteTomcatPassword** this password is used to automatically deploy to a TomCat server, you should have set this when installing the server.
+
+For generating the JWT secret key, you may use the key generator in the BuildTools. Open a
 command prompt in this directory:
 <GITDIR>\wool\java\BuildTools\BuildTools-1.0.0
 Enter this command:
 > .\keygenerator -t base64 -s 1024
+The resulting key is printed on the commandline -> copy this into the woolconfigJwtSecretKey
 
-The passwords are loaded from an XML file that should be in the configured data
+The user passwords are loaded from an XML file that should be in the configured data
 dir:
-<DATADIR>\users.xml
+<woolconfigDataDir>\users.xml
 An example file can be found in:
 <GITDIR>\wool\java\WoolWebService\config\users.xml
 
