@@ -1,0 +1,44 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 803,731
+---
+<<if $paUserCompletedIntroduction == false>>
+	Hi there! My name is Olivia Simons and I'm your physical activity coach, allow me to introduce myself.
+
+	[[Okay, let's get introduced.|olivia-social-introduction.Start]]
+<<else>>
+	Hey there, nice to see you again! How can I help you?
+
+	[[I just wanted to chat.|olivia-social-menu.Start]]
+	[[Let's talk about coaching.|olivia-coaching-menu.Start]]
+	[[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1157,730
+---
+
+===
+title: Redirect
+tags: 
+speaker: Olivia
+colorID: 2
+position: 806,448
+---
+<<if $paUserCompletedIntroduction == false>>
+	Hi there! My name is Olivia Simons and I'm your physical activity coach, allow me to introduce myself.
+
+	[[Okay, let's get introduced.|olivia-social-introduction.Start]]
+<<else>>
+	Okay, what else did you want to talk about?
+
+	[[I just wanted to chat.|olivia-social-menu.Start]]
+	[[Let's talk about coaching.|olivia-coaching-menu.Start]]
+	[[Goodbye.|End]]
+<<endif>>
+===

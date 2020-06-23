@@ -1,0 +1,170 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 4636,-672
+---
+Okay, so you have some questions about your Fitbit tracker?
+
+<<if $paTrackerType == "Inspire" || $paTrackerType == "Inspire HR" || $paTrackerType == "Other">>
+    [[Menu]]
+<<else>>
+    [[GetTrackerType]]
+<<endif>>
+===
+title: Menu
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4630,-365
+---
+So if I'm not mistaken, you have a $paTrackerBrand tracker of type $paTrackerType, correct?
+
+<<if $paTrackerType == "Inspire">>
+    [[That's correct!|olivia-coaching-sensors-fitbit-faq-inspire.Start]]
+<<elseif $paTrackerType == "Inspire HR">>
+    [[That's correct!|olivia-coaching-sensors-fitbit-faq-inspirehr.Start]]
+<<elseif $paTrackerType == "Other">>
+    [[That's correct!|olivia-coaching-sensors-fitbit-faq-other.Start]]
+<<endif>>
+[[No, I have another tracker.|GetTrackerTypeAgain]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 4631,-69
+---
+
+===
+title: GetTrackerType
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4961,-666
+---
+First of all, just so I can better help you answer your Fitbit questions. May I ask which type of Fitbit you have?
+
+[[How can I see which tracker type I have?|GetTrackerTypeHelp]]
+[[Inspire.|GetTrackerTypeInspire]]
+[[Other.|GetTrackerTypeOther]]
+===
+title: GetTrackerTypeInspire
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5270,-1045
+---
+Okay, a Fitbit Inspire, nice! And does it also track heartrate?
+
+[[Yes.|GetTrackerTypeInspireHR]]
+[[No.|GetTrackerTypeInspireVanilla]]
+[[How can I tell?|GetTrackerTypeInspireHeartRate]]
+===
+title: GetTrackerTypeInspireHR
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5638,-1212
+---
+<<set $paTrackerType = "Inspire HR">>
+
+Okay, so it's a Fitbit Inspire HR, thanks!
+
+[[That's correct.|Menu]]
+[[No, wait, I have a different sensor.|GetTrackerTypeAgain]]
+===
+title: GetTrackerTypeAgain
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4964,-940
+---
+Okay, don't worry. So, which tracker type do you have?
+
+[[Inspire.|GetTrackerTypeInspire]]
+[[Other.|GetTrackerTypeOther]]
+===
+title: GetTrackerTypeInspireVanilla
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5636,-941
+---
+<<set $paTrackerType = "Inspire">>
+
+Okay, so it's a regular Fitbit Inspire, thanks!
+
+[[That's correct.|Menu]]
+[[No, wait, I have a different sensor.|GetTrackerTypeAgain]]
+===
+title: GetTrackerTypeInspireHeartRate
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5638,-1474
+---
+Ah, that's easy. The bottom of the sensor, the part that touches your skin, does it have green blinking lights?
+
+[[Yes, it has.|GetTrackerTypeInspireHR]]
+[[No, it doesn't have lights.|GetTrackerTypeInspireVanilla]]
+===
+title: GetTrackerTypeOther
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5290,-673
+---
+<<set $paTrackerType = "Other">>
+
+Okay, I will just write down "other". Okay?
+
+[[That's correct.|Menu]]
+[[No, wait, I have a different sensor.|GetTrackerTypeAgain]]
+===
+title: GetTrackerTypeHelp
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5023,-312
+---
+<<if $isEvaluationUser == true>>
+    Well, I see that you are participating in the Council of Coaches evaluation study. Did you receive a Fitbit tracker from the researchers?
+
+    [[Yes, they gave me one.|GetTrackerTypeHelpEvaluationReceived]]
+    [[No, I had my own sensor.|GetTrackerTypeHelpEvaluationOwn]]
+<<else>>
+    Well, it's best to simply visit the Fitbit website at www.fitbit.com and see if you can identify your tracker there. Then let me know when you find out which tracker you have, okay?
+
+    [[Okay, I think I know now.|GetTrackerTypeAgain]]
+<<endif>>
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: GetTrackerTypeHelpEvaluationReceived
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5398,-384
+---
+<<set $paTrackerType = "Inspire">>
+
+Okay, in that case it must be a Fitbit "Inspire", because those are the ones we use in the evaluation study!
+
+[[Okay, thanks.|Menu]]
+===
+title: GetTrackerTypeHelpEvaluationOwn
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5404,-81
+---
+Okay, in that case it's best to simply visit the Fitbit website at www.fitbit.com and see if you can identify your tracker there. Then let me know when you find out which tracker you have, okay?
+
+[[Okay, I think I know now.|GetTrackerTypeAgain]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===

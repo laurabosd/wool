@@ -1,0 +1,65 @@
+title: End
+tags: 
+speaker: Helen
+colorID: 5
+position: -46,484
+---
+
+===
+title: Start
+tags: 
+speaker: Helen
+colorID: 2
+position: -423,480
+---
+But of course, I'm always up for a chat!
+
+[[Tell me about yourself.|AboutHelen]]
+<<if $helenCompletedStory1>>
+    [[Can you repeat the previous stories?|AboutHelenRepeat]]
+<<endif>>
+[[I have another question.|helen-menu.Start]]
+[[Goodbye.|End]]
+===
+title: AboutHelen
+tags: 
+speaker: Helen
+colorID: 0
+position: -418,768
+---
+<<if $helenCompletedStoryToday>>
+    I already told you a small story about myself today. Maybe we can talk again tomorrow?
+
+    [[Can you repeat the previous stories?|AboutHelenRepeat]]
+    [[I want to talk about something else.|Start]]
+    [[Goodbye.|End]]
+<<elseif $helenCompletedStory1>> // Update to last available story number
+    I don't have any new stories to tell for now. Maybe in a future update of the Council of Coaches...
+
+    [[Can you repeat the previous stories?|AboutHelenRepeat]]
+    [[I want to talk about something else.|Start]]
+    [[Goodbye.|End]]
+<<else>>
+    Ooh about me? How nice! Well, let me think, what could I talk about today...?
+
+    <<if $helenCompletedStory1 == false >>
+        [[helen-social-story-1.Start]]
+    <<endif>>
+
+<<endif>>
+===
+title: AboutHelenRepeat
+tags: 
+speaker: Helen
+colorID: 0
+position: -50,783
+---
+Of course, which story would you like to repeat?
+
+<<if $helenCompletedStory1>>
+    [[One.|helen-social-story-1.Start]]
+<<endif>>
+[[I want to talk about something else.|Start]]
+[[I have another question.|helen-menu.Start]]
+[[Goodbye.|End]]
+===

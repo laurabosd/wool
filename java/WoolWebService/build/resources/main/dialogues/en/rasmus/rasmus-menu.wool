@@ -1,0 +1,32 @@
+title: Start
+tags: 
+speaker: Rasmus
+colorID: 2
+position: 597,128
+---
+<<if $cpUserCompletedIntroduction == false>>
+  Hey there! So nice to see a new face in here! My name is Rasmus, here to help you with your chronic pain! 
+
+  [[Nice to meet you Rasmus.|rasmus-social-introduction.Start]]
+  [[Goodbye.|End]]
+<<else>>
+  <<if $userGender == "Male">>
+    Hey my man, nice to see you again! How can Rasmus help you?
+  <<elseif $userGender == "Female">>
+    Hey beautiful, nice to see you again! How can Rasmus help you?
+  <<else>>
+    Hey there, nice to see you again! How can Rasmus help you?
+  <<endif>>
+
+  [[I just wanted to chat.|rasmus-social-menu.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Rasmus
+colorID: 5
+position: 951,131
+---
+
+===

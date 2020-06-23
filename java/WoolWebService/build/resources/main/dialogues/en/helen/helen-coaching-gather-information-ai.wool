@@ -1,0 +1,46 @@
+title: Start
+tags: 
+speaker: Helen
+colorID: 2
+position: 139,361
+---
+Well hello there $userFirstName. Would you mind answering a few short questions for me? If you have some time?
+
+[[Yes, I have some time.|helen-coaching-gather-information-esm.Start]]
+[[Maybe later Helen.|Later]]
+[[I don't want to answer today.|NotToday]]
+[[I want to talk about something else.|helen-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Helen
+colorID: 5
+position: 1072,358
+---
+
+===
+title: Later
+tags: 
+speaker: Helen
+colorID: 1
+position: 445,29
+---
+<<set $esmHelenLaterDate = $today>>
+
+Sure, no problem!
+
+[[helen-menu.Redirect]]
+===
+title: NotToday
+tags: 
+speaker: Helen
+colorID: 1
+position: 465,612
+---
+<<set $esmHelenSkipDate = $today>>
+
+Of course. I'll get back to you tomorrow then.
+
+[[helen-menu.Redirect]]
+===

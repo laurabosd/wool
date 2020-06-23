@@ -1,0 +1,260 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: -4335,-278
+---
+Excellent! Now it's time to select who you want to be part of your personalised Council of Coaches.
+
+[[Start2]]
+===
+title: Start2
+tags: 
+speaker: Coda
+colorID: 0
+position: -4025,-275
+---
+On the next screen, we will show you all of the available coaches.
+
+[[Start3]]
+===
+title: Start3
+tags: 
+speaker: Coda
+colorID: 0
+position: -3717,-274
+---
+<<if $userCompletedHealthIntake == true >>
+    Based on your input, we have selected coaches that we think can help you.
+    [[FinalSteps]]
+<<else>>
+    Since you didn't complete the intake, we can not make a suggestion of coaches for you.
+    [[IntakeNotCompleted]]
+<<endif>>
+===
+title: IntakeRedo
+tags: 
+speaker: Coda
+colorID: 0
+position: -1864,129
+---
+Of course you can do the intake again. Do you want to do it now?
+
+[[Okay, let's start the intake.|coda-healthintake.Start]]
+[[Never mind, I have another question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===
+title: End
+tags: 
+speaker: Coda
+colorID: 5
+position: -1289,-268
+---
+
+===
+title: IntakeNotCompleted
+tags: 
+speaker: Coda
+colorID: 0
+position: -3718,32
+---
+You can still decide to complete the intake, if you want some help in your choice of coaches. Would you like to revisit the intake?
+
+[[Yes, let me do the intake.|coda-healthintake.Start]]
+[[No, I will make my own selection.|FinalSteps]]
+===
+title: FinalSteps
+tags: 
+speaker: Coda
+colorID: 0
+position: -3361,-276
+---
+<<if $userHasDiabetes == true>>
+    Okay, since you have indicated that you are diagnosed with Diabetes Type 2, our Diabetes coach Katarzyna will be there to help you.
+<<elseif $userHasChronicPain == true>>
+    Okay, since you have indicated that you are diagnosed with Chronic Pain, our chronic pain coach Rasmus will be there to help you.
+<<else>>
+    Since you don't have any diagnosis of diabetes or chronic pain, our specialised coaches won't be of much use to you.
+<<endif>>
+
+[[FinalSteps2]]
+===
+title: FinalSteps2
+tags: 
+speaker: Coda
+colorID: 0
+position: -3037,-278
+---
+<<if $userHasDiabetes == true>>
+    Our chronic pain coach Rasmus won't be of much help to you, so he will not be available.
+<<elseif $userHasChronicPain == true>>
+    Our diabetes coach Katarzyna won't be of much help to you, so she will not be available.
+<<else>>
+    So neither Katarzyna, our diabetes coach, nor Rasmus, our chronic pain coach, will be available for you.
+<<endif>>
+
+[[FinalSteps3]]
+===
+title: FinalSteps3
+tags: 
+speaker: Coda
+colorID: 0
+position: -2734,-278
+---
+<<if $userCompletedHealthIntake == true >>
+    We have selected the other coaches based on your input, but the final choice is yours.
+<<else>>
+    For the other coaches, the choice is yours.
+<<endif>>
+
+[[FinalSteps4]]
+===
+title: FinalSteps4
+tags: 
+speaker: Coda
+colorID: 0
+position: -2385,-279
+---
+Do you have any questions, or are you ready to select your Council of Coaches?
+
+[[I have a question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===
+title: Questions
+tags: 
+speaker: Coda
+colorID: 0
+position: -2393,32
+---
+Sure, what would you like to ask?
+
+<<if $userCompletedHealthIntake == false>>
+    [[Can I still do the intake?|IntakeDoAnyway]]
+<<else>>
+    [[Can I do the intake again?|IntakeRedo]]
+<<endif>>
+[[Is my choice of coaches final?|QuestionFinal]]
+[[How many coaches can I choose?|QuestionCount]]
+[[What do the coaches do?|QuestionContent]]
+===
+title: IntakeDoAnyway
+tags: 
+speaker: Coda
+colorID: 0
+position: -2001,407
+---
+Of course, it's not too late yet. Shall we get started right away?
+
+[[Okay, let's start the intake.|coda-healthintake.Start]]
+[[Never mind, I have another question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===
+title: QuestionFinal
+tags: 
+speaker: Coda
+colorID: 0
+position: -2399,361
+---
+If you are not happy with the choice of coaches, you can always come talk to me and we can make another selection.
+
+[[QuestionFinal2]]
+===
+title: QuestionFinal2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2692,362
+---
+So don't worry! Do you have any other questions?
+
+[[I have another question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===
+title: QuestionCount
+tags: 
+speaker: Coda
+colorID: 0
+position: -2405,633
+---
+There are seven coaches in total, and your Council must have at least one coach.
+
+[[QuestionCount2]]
+===
+title: QuestionCount2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2697,634
+---
+<<if $userHasDiabetes == true>>
+    In your case, Katarzyna, our diabetes coach, is mandatory, while Rasmus, the chronic pain coach, has been disabled.
+<<elseif $userHasChronicPain == true>>
+    In your case, Rasmus, our chronic pain coach, is mandatory, while Katarzyna, the diabetes coach has been disabled.
+<<else>>
+    In your case, both Katarzyna, the diabetes coach and Rasmus, the chronic pain coach, will be unavailable.
+<<endif>>
+
+[[QuestionCount3]]
+===
+title: QuestionCount3
+tags: 
+speaker: Coda
+colorID: 0
+position: -2990,633
+---
+For the other five coaches, the choice is up to you! You can choose all of them, or none of them!
+
+[[QuestionCount4]]
+===
+title: QuestionCount4
+tags: 
+speaker: Coda
+colorID: 0
+position: -3280,640
+---
+Well, as long as there is at least one coach. Otherwise I will be all alone, and I'm not very good at coaching myself!
+
+[[QuestionCount5]]
+===
+title: QuestionCount5
+tags: 
+speaker: Coda
+colorID: 0
+position: -3556,639
+---
+Did you have any other questions?
+
+[[I have another question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===
+title: QuestionContent
+tags: 
+speaker: Coda
+colorID: 0
+position: -2403,899
+---
+Good question! You will be able to see it for yourself.
+
+[[QuestionContent2]]
+===
+title: QuestionContent2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2694,907
+---
+On the coach selection screen, you have the opportunity to read about all the different coaches, so you can make an informed decision.
+
+[[QuestionContent3]]
+===
+title: QuestionContent3
+tags: 
+speaker: Coda
+colorID: 0
+position: -2997,904
+---
+Do you have any other questions?
+
+[[I have another question.|Questions]]
+[[Let me choose my Council of Coaches.|End|<<action type="generic" value="START_COACH_SELECTION">>]]
+===

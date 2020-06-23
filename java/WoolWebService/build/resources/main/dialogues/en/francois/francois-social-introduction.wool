@@ -1,0 +1,91 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: -66,67
+---
+<<set $nutUserStartedIntroduction = true>>
+
+Hello to you $userFirstName! Very nice to have you with us. Let me tell a little bit about moi.
+
+[[Intro2]]
+===
+title: Intro2
+tags: 
+speaker: Francois
+colorID: 0
+position: 243,68
+---
+So, like I said, my name is François and I'm here to help you out with any questions you have about food and diet!
+
+[[Intro3]]
+===
+title: Intro3
+tags: 
+speaker: Francois
+colorID: 0
+position: 541,68
+---
+Oh, François loves to talk about food. Eating food and cooking food! What about you, do you like to cook?
+
+[[Yes, I like cooking.|LikeCooking]]
+[[I don't really like cooking.|DontLikeCooking]]
+===
+title: LikeCooking
+tags: 
+speaker: Francois
+colorID: 0
+position: 851,-61
+---
+I see you and me will get along just fine!
+
+[[Intro4]]
+===
+title: DontLikeCooking
+tags: 
+speaker: Francois
+colorID: 0
+position: 849,187
+---
+I see I have some work to do... but not to worry, I will teach you a thing or two in the coming weeks!
+
+[[Intro4]]
+===
+title: Intro4
+tags: 
+speaker: Francois
+colorID: 0
+position: 1168,79
+---
+Anyway, come talk to me if you want to discuss recipes, or if you have any questions about dieting.
+
+[[Intro5]]
+===
+title: Intro5
+tags: 
+speaker: Francois
+colorID: 0
+position: 1468,78
+---
+Or just for a chat of course, I always love to chat about... food, cheese, recipes... hmmm, anything really!
+
+[[Okay, thank you François!|IntroEnd]]
+===
+title: IntroEnd
+tags: 
+speaker: Francois
+colorID: 0
+position: 1786,72
+---
+<<set $nutUserCompletedIntroduction = true>>
+
+Adieu! Talk to you later!
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 2144,69
+---
+
+===

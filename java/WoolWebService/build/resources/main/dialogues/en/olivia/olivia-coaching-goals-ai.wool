@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+Would you like to discuss your goals for physical activity?
+
+[[Yes, that sounds good.|olivia-coaching-goals-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===

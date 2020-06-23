@@ -1,0 +1,199 @@
+title: Start
+tags:
+speaker: Francois
+colorID: 2
+position: 554,329
+---
+<<set $wantsBreakfast = null>>
+<<set $wantsLunch = null>>
+<<set $wantsDinner = null>>
+<<set $wantsAppetizer = null>>
+<<set $wantsMainCourse = null>>
+<<set $wantsDessert = null>>
+<<set $eatsVegetarian = null>>
+<<set $wantsVegetarianMeal = null>>
+<<set $wantsChicken = null>>
+<<set $wantsMeat = null>>
+<<set $wantsFish = null>>
+<<set $wantsPasta = null>>
+<<set $wantsRice = null>>
+<<set $wantsPotatoes = null>>
+<<set $noPastaRicePotatoes = null>>
+
+Très bon! I will help you find a recipe! What kind of meal would you like to make?
+
+[[Breakfast.|Breakfast|<<set $wantsBreakfast = true>>]]
+[[Lunch.|Lunch|<<set $wantsLunch = true>>]]
+[[Dinner.|Dinner|<<set $wantsDinner = true>>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: Breakfast
+tags:
+speaker: Francois
+colorID: 0
+position: 887,-27
+---
+Hmmm, let me think about some suitable breakfast recipes... well, what about these?
+
+[[Show me the breakfast recipes.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: Lunch
+tags:
+speaker: Francois
+colorID: 0
+position: 878,328
+---
+Ah oui, let me see... these are the lunch recipes that I know.
+
+[[Show me the lunch recipes.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: End
+tags:
+speaker: Francois
+colorID: 5
+position: -243,43
+---
+
+===
+title: Dinner
+tags: De
+speaker: Francois
+colorID: 0
+position: 876,651
+---
+A dinner recipe? Let me see. Are you looking for an appetizer, a main course or a dessert?
+
+[[An appetizer.|Appetizer|<<set $wantsAppetizer = true>>]]
+[[A main course.|MainCourse|<<set $wantsMainCourse = true>>]]
+[[A dessert.|Dessert|<<set $wantsDessert = true>>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: Appetizer
+tags:
+speaker: Francois
+colorID: 0
+position: 1218,355
+---
+Ah, an appetizer! Let me think... how about these?
+
+[[Show me appetizers.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: Dessert
+tags:
+speaker: Francois
+colorID: 0
+position: 1217,894
+---
+Ah oui, François knows his desserts too. And trust me, they don't need to be unhealthy!
+
+[[Show me desserts.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: MainCourse
+tags:
+speaker: Francois
+colorID: 0
+position: 1220,628
+---
+<<if $nutUserEatsVegetarian == true>>
+    You said you were a vegetarian, right? So, let's look for vegetarian recipes...
+
+    [[Yes, vegetarian please.|VegetarianMainCourse|<<set $wantsVegetarianMeal = true>>]]
+    [[No, also include meat or fish.|NonVegetarianMainCourse|<<set $wantsVegetarianMeal = false>>]]
+<<else>>
+    You said you were not a vegetarian, so let's look for dishes that include meat or fish, okay?
+
+    [[Yes, include meat or fish.|NonVegetarianMainCourse|<<set $wantsVegetarianMeal = false>>]]
+    [[No, I want a vegetarian dish.|VegetarianMainCourse|<<set $wantsVegetarianMeal = true>>]]
+<<endif>>
+===
+title: NonVegetarianMainCourse
+tags:
+speaker: Francois
+colorID: 0
+position: 1639,431
+---
+Okay, non-vegetarian it is! Would you prefer chicken, some other type of meat or fish?
+
+[[Chicken.|ChooseSidedish|<<set $wantsChicken = true>>]]
+[[Other meat.|ChooseSidedish|<<set $wantsMeat = true>>]]
+[[Fish.|ChooseSidedish|<<set $wantsFish = true>>]]
+[[It doesn't matter.|ChooseSidedish]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: VegetarianMainCourse
+tags:
+speaker: Francois
+colorID: 0
+position: 1638,740
+---
+Okay, so a vegetarian dish it will be! What would you like?
+
+[[Pasta or noodles.|ShowRecipes|<<set $wantsPasta = true>>]]
+[[Rice.|ShowRecipes|<<set $wantsRice = true>>]]
+[[Potatoes.|ShowRecipes|<<set $wantsPotatoes = true>>]]
+[[Any other options?|ShowRecipes|<<set $noPastaRicePotatoes = true>>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: ShowRecipes
+tags:
+speaker: Francois
+colorID: 0
+position: 2101,682
+---
+Okay, excellent choices! Now, let's see which options we have today!
+
+[[Show me the recipe options.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: ChooseSidedish
+tags:
+speaker: Francois
+colorID: 0
+position: 2098,366
+---
+<<if $wantsChicken == true>>
+    Ah, a dish with chicken...
+<<elseif $wantsMeat == true>>
+    Ah, a dish with meat...
+<<elseif $wantsFish == true>>
+    Ah, a dish with fish...
+<<else>>
+    Doesn't matter? Okay...
+<<endif>>
+
+And what type of side dish would you like to go with that?
+
+[[Pasta.|ShowRecipes|<<set $wantsPasta = true>>]]
+[[Rice.|ShowRecipes|<<set $wantsRice = true>>]]
+[[Potatoes.|ShowRecipes|<<set $wantsPotatoes = true>>]]
+[[Any other options?|ShowRecipes|<<set $noPastaRicePotatoes = true>>]]
+[[Goodbye.|EndRecipeSelection]]
+===
+title: EndRecipeSelection
+tags:
+speaker: Francois
+colorID: 5
+position: 255,1072
+---
+Au revoir!
+
+<<set $wantsBreakfast = null>>
+<<set $wantsLunch = null>>
+<<set $wantsDinner = null>>
+<<set $wantsAppetizer = null>>
+<<set $wantsMainCourse = null>>
+<<set $wantsDessert = null>>
+<<set $eatsVegetarian = null>>
+<<set $wantsVegetarianMeal = null>>
+<<set $wantsChicken = null>>
+<<set $wantsMeat = null>>
+<<set $wantsFish = null>>
+<<set $wantsPasta = null>>
+<<set $wantsRice = null>>
+<<set $wantsPotatoes = null>>
+<<set $noPastaRicePotatoes = null>>
+===

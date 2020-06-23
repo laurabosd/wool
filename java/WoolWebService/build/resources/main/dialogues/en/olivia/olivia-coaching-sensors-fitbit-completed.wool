@@ -1,0 +1,473 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 5105,1063
+---
+<<if $fitbitLinkResult == "COMPLETE">> // The first data sync is complete (tracker connected).
+
+    Fantastic, everything worked out fine! I can now see your Fitbit data, and help you reach your goals even better!
+
+    [[FitbitLinkComplete]]
+
+<<elseif $fitbitLinkResult == "IN_PROGRESS">> // The first data sync was still in progress after 30 seconds (tracker connected).
+
+    Okay, I think everything worked out well. Although it looks like all of your data has not arrived in my files yet...
+
+    [[FitbitLinkInProgress]]
+
+<<elseif $fitbitLinkResult == "ERROR">> // The Fitbit data could not be downloaded at this time because of an error (tracker connected).
+    
+    Hmmm, I think that worked out okay. Although for some reason your data is not yet showing up...
+
+    [[FitbitLinkError]]
+
+<<elseif $fitbitLinkResult == "NO_TRACKER">> // The link no longer exists because no tracker was attached to the Fitbit account.
+
+    Oh-oh, it looks like something went wrong. It looks like you don't have an activity tracker linked to your Fitbit account...
+
+    [[FitbitLinkNoTracker]]
+
+<<elseif $fitbitLinkResult == "INVALID_TOKEN">> // The link no longer exists because the access token was invalid and could not be refreshed.
+
+    Oh-oh, looks like something went wrong in our connection with the Fitbit service...
+
+    [[FitbitLinkInvalidToken]]
+
+<<elseif $fitbitLinkResult == "NO_PERMISSION">> // The link no longer exists because no sufficient permissions were granted by the Fitbit user.
+
+    Hmmm, that didn't work out well. It seems like I don't have permission to access your data...
+
+    [[FitbitLinkNoPermission]]
+
+<<elseif $fitbitLinkResult == "NO_LINK">> // The link no longer exists for an unknown reason.
+
+    Hmmm, something went wrong... for some reason the link to your Fitbit account didn't work...
+
+    [[FitbitLinkNoLink]]
+
+<<else>>
+
+    Hmmm, something went wrong... to be honest, I have never seen this before, it looks like some unknown error has occured...
+
+    [[FitbitLinkUnknown]]
+
+<<endif>>
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 5494,1922
+---
+
+===
+title: NowWhat
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5116,2144
+---
+<<if $paUserCurrentSteps == null>>
+    Well, for example, I can see that you didn't do any steps yet today. Are you wearing your Fitbit sensor?
+    
+    [[I am wearing my sensor.|UserWearingSensor]]
+    [[No, I'm not wearing it now.|UserNotWearingSensor]]
+<<elseif $paUserCurrentSteps == 0>>
+    Well, for example, I can see that you didn't do any steps yet today. Are you wearing your Fitbit sensor?
+    
+    [[I am wearing my sensor.|UserWearingSensor]]
+    [[No, I'm not wearing it now.|UserNotWearingSensor]]
+<<else>>
+    Well, for example, now I can see that you already did $paUserCurrentSteps today.
+    
+    [[OliviaStepsRecorded]]
+<<endif>>
+===
+title: UserWearingSensor
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4890,2509
+---
+Ah, hmmm, there could be something wrong then...
+
+<<if $coachFrancoisEnabled == true>>
+    [[FrancoisCommentSensorProblem]]
+<<elseif $coachCarlosEnabled == true>>
+    [[CarlosCommentSensorProblem]]
+<<else>>
+    [[OliviaCommentSensorProblem]]
+<<endif>>
+===
+title: UserNotWearingSensor
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5360,2493
+---
+Ah that explains! Well, for a good insight into your daily physical activity, try to wear the sensor every day!
+
+<<if $coachCarlosEnabled == true>>
+    [[CarlosChargingReminder]]
+<<else>>
+    [[OliviaChargingReminder]]
+<<endif>>
+===
+title: FrancoisCommentSensorProblem
+tags: 
+speaker: Francois
+colorID: 0
+position: 4564,2257
+---
+Ah oui! Maybe your battery is empty. I always forget to charge mine.
+
+<<if $coachCarlosEnabled == true>>
+    [[CarlosChargingSolution]]
+<<else>>
+    [[OliviaCommentSensorProblem]]
+<<endif>>
+===
+title: CarlosCommentSensorProblem
+tags: 
+speaker: Carlos
+colorID: 0
+position: 4563,2511
+---
+Maybe you forgot to charge the battery. Happened to me a lot when Olivia gave me my sensor.
+
+[[CarlosChargingSolution]]
+===
+title: OliviaCommentSensorProblem
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4561,2768
+---
+It could be the battery, or it could be something else. Is the battery charged?
+
+[[The battery is charged.|BatteryFine]]
+[[How can I see the battery level?|BatteryCheck]]
+[[Oops, the battery is empty.|BatteryEmpty]]
+===
+title: CarlosChargingSolution
+tags: 
+speaker: Carlos
+colorID: 0
+position: 4294,2255
+---
+I keep the charger next to my bed now, and every Sunday before going to sleep I charge my tracker. Fresh for a new week of walking!
+
+[[OliviaCommentSensorProblem]]
+===
+title: BatteryFine
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4184,3069
+---
+Okay, if the battery is fine, it must be something else...
+
+<<if $coachCarlosEnabled == true>>
+    [[NotSyncedCarlos]]
+<<else>>
+    [[NotSyncedOlivia]]
+<<endif>>
+===
+title: BatteryCheck
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4549,3071
+---
+You can check the battery level by tapping on your Fitbit. Does anything happen?
+
+<<if $coachCarlosEnabled == true>>
+    [[Nothing happens, the screen is black.|BatteryCheck2Carlos]]
+<<else>>
+    [[Nothing happens, the screen is black.|BatteryCheck2Olivia]]
+<<endif>>
+[[Yes, the screen shows something.|BatteryFine]]
+===
+title: BatteryEmpty
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4866,3068
+---
+Well that should be it then. Just put it on the charger for an hour or two and it should be fine.
+
+[[FitbitLinkEnd]]
+===
+title: FitbitLinkEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5340,2874
+---
+Was there anything else you wanted to discuss?
+
+[[Let's talk about something else.|olivia-menu.Redirect]]
+[[That's it for now, thanks.|End]]
+[[Goodbye.|End]]
+===
+title: BatteryCheck2Carlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: 4385,3403
+---
+Remember it's not a touch screen. Really tap it with some motion a few times. It took some time getting used to for me as well.
+
+[[I tried, the screen stays black.|BatteryEmpty]]
+[[The screen is showing something now.|BatteryFine]]
+===
+title: BatteryCheck2Olivia
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4667,3401
+---
+Remember it's not a touch screen. Really tap it with some motion a few times. Dont' worry, you won't break it.
+
+[[I tried, the screen stays black.|BatteryEmpty]]
+[[The screen is showing something now.|BatteryFine]]
+===
+title: NotSyncedCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: 3874,2967
+---
+I know what could be the problem, can I try to help, Olivia?
+
+[[NotSyncedCarlos2]]
+===
+title: NotSyncedOlivia
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3877,3245
+---
+Let's start by opening the Fitbit application on your phone or tablet.
+
+[[Done.|NotSyncedOlivia2]]
+===
+title: NotSyncedCarlos2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3581,2970
+---
+Of course Carlos, what do you think the problem is?
+
+[[NotSyncedCarlos3]]
+===
+title: NotSyncedCarlos3
+tags: 
+speaker: Carlos
+colorID: 0
+position: 3265,2974
+---
+It must be the thing with the Fitbit application, right? That it didn't update or something?
+
+[[NotSyncedCarlos4]]
+===
+title: NotSyncedCarlos4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2957,2981
+---
+It could be Carlos. So, $userFirstName, let's see if the tracker synced properly with the Fitbit app.
+
+[[How do I do that?|NotSyncedOlivia]]
+[[The steps are showing in the Fitbit app.|SyncedCorrectly]]
+[[I managed to solve it.|SyncedCorrectly]]
+===
+title: SyncedCorrectly
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3582,3550
+---
+Okay, so everything is working well, but I don't see your steps yet. Let's see...
+
+[[SyncedCorrectly2]]
+===
+title: SyncedCorrectly2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3576,3833
+---
+It can sometimes take a little bit of time before your data shows up in my system. We simply have to wait a little while.
+
+[[Okay, let's wait a bit.|FitbitLinkEnd]]
+[[Goodbye.|End]]
+===
+title: NotSyncedOlivia2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3583,3239
+---
+Now swipe down from the top of the screen to start the "refresh" procedure. Is it showing the steps now?
+
+[[I still don't see any steps.|NotSyncedOlivia3]]
+[[Yes, I see the steps now.|SyncedCorrectly]]
+===
+title: NotSyncedOlivia3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3261,3238
+---
+Well, in that case I don't know what the problem can be. Maybe you should call someone for help, or have a look at the Fitbit website?
+
+[[Okay, I will try.|FitbitLinkEnd]]
+===
+title: CarlosChargingReminder
+tags: 
+speaker: Carlos
+colorID: 0
+position: 5661,2399
+---
+And don't forget to charge it often! I used to always forget it in the beginning...
+
+[[Thanks Carlos.|FitbitLinkEnd]]
+===
+title: OliviaChargingReminder
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5659,2647
+---
+And don't forget to charge it at least once a week. The battery won't last forever!
+
+[[Thanks Olivia.|FitbitLinkEnd]]
+===
+title: OliviaStepsRecorded
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4783,1936
+---
+From now on, I will be able to give you better advice. Was there something else you wanted to talk about?
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkComplete
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5109,1353
+---
+Thank you for giving me access to your Fitbit data. I guess you're wondering what's next?
+
+[[What's next?|NowWhat]]
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkInProgress
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4844,1355
+---
+So, for now, thank you for giving me access to your Fitbit data. But it looks like we have to wait a little longer before we can start discussing your progress.
+
+[[WhileWeWait]]
+===
+title: WhileWeWait
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5114,1611
+---
+While we wait, was there something else you wanted to talk about?
+
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkError
+tags: 
+speaker: Olivia
+colorID: 0
+position: 5383,1354
+---
+I think at this point all we can do is wait. I've seen this happen before, and it will probably solve itself soon.
+
+[[WhileWeWait]]
+===
+title: FitbitLinkNoTracker
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4578,1362
+---
+Please make sure to connect your activity tracker to your Fitbit account using the official Fitbit app for your smartphone or tablet.
+
+[[SolveProblems]]
+===
+title: SolveProblems
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4584,1624
+---
+If you want I can try to help you. Should we discuss Fitbit issues?
+
+[[Yes, I need some help.|olivia-coaching-sensors-fitbit-faq.Start]]
+[[No, I will try myself.|WhileWeWait]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkInvalidToken
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4315,1363
+---
+Unfortunately this can happen sometimes, and we don't really know why. The only thing to do is to try the connection again. Shall we give it another try?
+
+[[Okay, let's try again.|olivia-coaching-sensors-fitbit-setup.FitbitConnect1]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkNoPermission
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4031,1365
+---
+Are you sure you checked the boxes to give us permission to access your data? Perhaps we could try again?
+
+[[Okay, let's try again.|olivia-coaching-sensors-fitbit-setup.FitbitConnect1]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkNoLink
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3751,1369
+---
+I really don't know what happened... I can only suggest to try connecting another time. Do you want to try again?
+
+[[Okay, let's try again.|olivia-coaching-sensors-fitbit-setup.FitbitConnect1]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitLinkUnknown
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3475,1365
+---
+I will have a chat with the developers to see if they can fix this. In the meantime, I don't see any other option than to try again. Want to give it another shot?
+
+[[Okay, let's try again.|olivia-coaching-sensors-fitbit-setup.FitbitConnect1]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===

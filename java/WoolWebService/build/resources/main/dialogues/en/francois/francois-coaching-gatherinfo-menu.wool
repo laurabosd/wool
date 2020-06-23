@@ -1,0 +1,24 @@
+title: Start
+tags:
+speaker: Francois
+colorID: 2
+position: 1,51
+---
+Yes it would be good for me to know about your food preferences. I have a few questions if you have some time...?
+
+<<if $nutUserCompletedGeneralFoodIntake>>
+  [[Can I answer the food questions again?|francois-coaching-gatherinfo-generalfoodpreferences.Start]]
+<<else>>
+  [[Let's go through the food questions.|francois-coaching-gatherinfo-generalfoodpreferences.Start]]
+<<endif>>
+[[I want to discuss something else.|francois-coaching-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags:
+speaker: Francois
+colorID: 5
+position: 328,46
+---
+
+===

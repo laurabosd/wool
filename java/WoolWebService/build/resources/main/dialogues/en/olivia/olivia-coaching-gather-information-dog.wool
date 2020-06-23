@@ -1,0 +1,101 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 1333,-3430
+---
+Have I ever told you about my dog Brian? Brian is my companion at home and outdoors. Do you have a dog?
+
+[[No, not an animal person.|NotAnimalPerson|<<set $userHasDog = false>>]]
+[[No, I would like to but I don't have a dog.|DoesNotHaveDog|<<set $userHasDog = false>>]]
+[[Yes, I do have a dog!|UserHasDog|<<set $userHasDog = true>>]]
+===
+title: NotAnimalPerson
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1325,-3135
+---
+<<set $paUserCompletedGatherInformationDog = true >>
+
+Oh, really no? Hmmm, it's difficult to imagine, I love dogs! Okay, so I'm not going to talk to you about taking the dog out for a walk!
+
+[[EndGatherInformation]]
+===
+title: UserHasDog
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1051,-3131
+---
+That’s wonderful! Brian is my best friend, I cannot imagine my life without him! How often do you go for walks with your dog?
+
+[[Not so often.|WalksDog|<<set $userWalksDog = "no" >>]]
+[[At least once a day.|WalksDog|<<set $userWalksDog = "daily" >>]]
+[[If possible, multiple times a day!|WalksDog|<<set $userWalksDog = "often" >>]]
+===
+title: WalksDog
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1049,-2871
+---
+<<set $paUserCompletedGatherInformationDog = true >>
+
+<<if $userWalksDog == "no">>
+    That's a pity! Walking the dog is a great way to bring physical activity to your daily life. But don't worry, we will find some other ways to keep you active.
+<<elseif $userWalksDog == "onceDay">>
+    That's good, but maybe we should consider some extra walks outside to keep you active.
+<<elseif $userWalksDog == "often">>
+    That’s a great way to keep you active! I will remember it!
+<<endif>>
+
+<<if $coachEmmaEnabled>>
+    [[CommentDog]]
+<<else>>
+    [[EndGatherInformation]]
+<<endif>>
+
+
+===
+title: DoesNotHaveDog
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1602,-3140
+---
+<<set $paUserCompletedGatherInformationDog = true >>
+
+Too bad! Walking the dog is a great way to bring physical activity to your daily life. But don't worry, we will find some other ways to keep you active.
+
+[[EndGatherInformation]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1689,-2557
+---
+
+===
+title: CommentDog
+tags: 
+speaker: Emma
+colorID: 0
+position: 1058,-2586
+---
+And while you are walking your dog you also get to know your neighbours. Always good to get acquaintances in your neighbourhood.
+
+[[EndGatherInformation]]
+===
+title: EndGatherInformation
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1423,-2814
+---
+Was there something else you wanted to discuss?
+
+[[I wanted to discuss something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

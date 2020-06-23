@@ -1,0 +1,115 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: -982,230
+---
+Did you know that regular physical activity can actually make you smarter?
+
+[[Why is that?|Brain]]
+[[No, tell me more.|Brain]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: -174,767
+---
+
+===
+title: Brain
+tags: 
+speaker: Olivia
+colorID: 0
+position: -663,232
+---
+Well, doing physical activity can result in increased activity of the heart. 
+
+[[Brain2]]
+===
+title: Brain3
+tags: 
+speaker: Olivia
+colorID: 0
+position: -48,230
+---
+More brain cells are created, your blood circulation increases and ultimately more oxygen goes to the brain.
+
+[[Brain4]]
+===
+title: Brain2
+tags: 
+speaker: Olivia
+colorID: 0
+position: -370,232
+---
+And with increased activity of the heart, the activity in your brain also increases!
+
+[[Brain3]]
+===
+title: Brain4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 261,232
+---
+So, you are training your body and your mind at the same time. Think about that the next time you're going for a walk.
+
+<<if $coachHelenEnabled >>
+    [[CommentHelen]]
+<<elseif $coachCarlosEnabled >>
+    [[CommentCarlos]]
+<<else>>
+    [[InformEnd]]
+<<endif>>
+===
+title: CommentHelen
+tags: 
+speaker: Helen
+colorID: 0
+position: 688,-32
+---
+Olivia is very right. Staying physically active will keep your mind sharp as a knife!
+
+<<if $coachCarlosEnabled >>
+    [[CommentCarlos]]
+<<else>>
+    [[InformEnd]]
+<<endif>>
+===
+title: CommentCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: 587,512
+---
+For me it's an extra motivation to go for a walk, killing two birds with one stone.
+
+[[CommentCarlos2]]
+===
+title: CommentCarlos2
+tags: 
+speaker: Carlos
+colorID: 0
+position: 884,514
+---
+Although I would never kill a bird, I love birds! Well, I guess you know what I mean...
+
+[[InformEnd]]
+===
+title: InformEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1155,217
+---
+<<set $paUserCompletedInformWhyBrain = true >>
+<<set $paUserCompletedInformWhyDate = $today >>
+
+Well that was my advice for today. Can I help you with something else?
+
+[[Can we go through the previous tips?|olivia-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

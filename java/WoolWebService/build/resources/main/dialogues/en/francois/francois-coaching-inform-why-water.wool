@@ -1,0 +1,227 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: -196,266
+---
+Besides eating healthy, drinking enough water is also very important.
+
+[[ThisMuch]]
+===
+title: node_voeding_tip1_water1
+tags: 
+speaker: Francois
+colorID: 0
+position: 334,103
+---
+Good to hear that you knew it already. Do you always manage to do so?
+
+[[Yes, I think so.|node_voeding_tip1_water4]]
+[[Sometimes, not always.|node_voeding_tip1_water5]]
+[[No, I don't.|node_voeding_tip1_water5]]
+===
+title: node_voeding_tip1_water2
+tags: 
+speaker: Francois
+colorID: 0
+position: 334,385
+---
+Drinking enough is important for your hydration. You need to drink because you also lose fluids by breathing, sweating and going to the toilet. 
+
+[[Okay, that's clear.|node_voeding_tip1_water3]]
+[[I think I know enough.|PreEnd]]
+===
+title: node_voeding_tip1_water4
+tags: 
+speaker: Francois
+colorID: 0
+position: 898,100
+---
+Magnefique, keep it up!
+
+[[Thank you!|How]]
+===
+title: node_voeding_tip1_water3
+tags: 
+speaker: Francois
+colorID: 0
+position: 612,383
+---
+Good, but do you manage to drink enough?
+
+[[Yes, I think so.|node_voeding_tip1_water4]]
+[[Sometimes, not always.|node_voeding_tip1_water5]]
+[[No, I don't.|node_voeding_tip1_water5]]
+===
+title: node_voeding_tip1_water5
+tags: 
+speaker: Francois
+colorID: 0
+position: 893,379
+---
+That's alright. I have a tip that might be helpful.
+
+[[What is it?|node_voeding_tip1_water6]]
+[[I think I know enough.|PreEnd]]
+===
+title: End
+tags: 
+speaker: 
+colorID: 0
+position: 1293,777
+---
+
+===
+title: node_voeding_tip1_water6
+tags: 
+speaker: Francois
+colorID: 0
+position: 1197,377
+---
+What might work is to alternate drinking water with drinking tea or coffee without sugar.
+
+<<if $coachCarlosEnabled>>
+[[WaterWithCoffeeCarlos]]
+<<elseif $coachOliviaEnabled>>
+[[WaterWithCoffeeOlivia]]
+<<else>>
+[[WaterWithCoffeeFrancois]]
+<<endif>>
+===
+title: node_voeding_tip1_water7
+tags: 
+speaker: Francois
+colorID: 0
+position: 2441,45
+---
+Talking about keeping it close.. I also have another tip that might be useful. I sometimes notice that I'm thirsty when I'm walking to the market, for example.
+
+[[Okay, and what do you do then?|node_voeding_tip1_water8]]
+===
+title: node_voeding_tip1_water8
+tags: 
+speaker: Francois
+colorID: 0
+position: 2702,351
+---
+I try to bring a bottle of water with me wherever I go. Then I can always take a sip when I feel thirsty!
+
+[[What a great idea!|node_voeding_tip1_water9]]
+[[I think I know enough.|PreEnd]]
+===
+title: node_voeding_tip1_water9
+tags: 
+speaker: Francois
+colorID: 0
+position: 2703,658
+---
+That's the solution for me. Always have water near you. 
+
+[[Okay, thanks for the tip!|PreEnd]]
+[[Maybe I'll give it a go.|PreEnd]]
+===
+title: PreEnd
+tags: 
+speaker: Francois
+colorID: 0
+position: 1030,778
+---
+<<set $nutUserCompletedInformWhyWater = true>>
+<<set $nutUserCompletedInformWhyDate = $today>>
+
+Okay, well, that was my tip for today. Anything else you wanted to talk about? 
+
+[[Can we go through the previous tips?|francois-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: ThisMuch
+tags: 
+speaker: Francois
+colorID: 0
+position: 63,275
+---
+Did you know that you need to drink 1.5 to 2 litres of water per day? That's six to eight glasses!
+
+[[I knew that!|node_voeding_tip1_water1]]
+[[Why is it important?|node_voeding_tip1_water2]]
+===
+title: How
+tags: 
+speaker: Francois
+colorID: 0
+position: 1199,86
+---
+Would you still like to hear my tip on how to drink more?
+
+[[Yes, tell me.|node_voeding_tip1_water6]]
+[[No, I know enough for now.|PreEnd]]
+===
+title: WaterWithCoffeeCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: 1515,381
+---
+Francois once told me that you can also have a glass of water next to your coffee. That works well for me!
+
+[[FrancoisResponse]]
+===
+title: FrancoisResponse
+tags: 
+speaker: Francois
+colorID: 0
+position: 1784,374
+---
+<<if $coachCarlosEnabled>>
+A oui! That's right Carlos. Glad to hear that it works for you.
+<<elseif $coachOliviaEnabled>>
+A oui! That's right Olivia. Glad to hear that it works for you.
+<<endif>>
+
+[[DrinkTea]]
+===
+title: WaterWithCoffeeOlivia
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1520,91
+---
+Francois once told me that you can also have a glass of water next to your coffee. That works well for me!
+
+[[FrancoisResponse]]
+===
+title: WaterWithCoffeeFrancois
+tags: 
+speaker: Francois
+colorID: 0
+position: 1510,-171
+---
+And sometimes it helps to drink a glass of water with every cup of coffee you drink. 
+
+[[DrinkTea]]
+===
+title: DrinkTea
+tags: 
+speaker: Francois
+colorID: 0
+position: 2110,355
+---
+Or if you prefer tea.. I've seen Emma make a pot of tea. She then keeps it close so that she can refil her mug easier. 
+
+<<if $coachEmmaEnabled>>
+[[Teaaa]]
+<<else>>
+[[node_voeding_tip1_water7]]
+<<endif>>
+===
+title: Teaaa
+tags: 
+speaker: Emma
+colorID: 0
+position: 2129,38
+---
+That's true, it makes it a lot easier to drink enough! 
+
+[[node_voeding_tip1_water7]]
+===

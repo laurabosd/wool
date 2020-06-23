@@ -1,0 +1,270 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: -1053,235
+---
+Today, we will be talking about elevators, escalators and stairs.
+
+[[Okay, go ahead.|ExplainTip]]
+[[Sorry, I am not interested now.|NoThanks]]
+===
+title: ExplainTip
+tags: 
+speaker: Olivia
+colorID: 1
+position: -909,-40
+---
+First, I would like to know whether you are living on the ground floor?
+
+[[Yes, I am.|GroundFloor|<<set $userLivesOnGroundFloor = true>>]]
+[[No, I am not.|CheckForElevator|<<set $userLivesOnGroundFloor = false>>]]
+===
+title: NoThanks
+tags: 
+speaker: Olivia
+colorID: 1
+position: -775,473
+---
+Okay, can I help you with something else?
+
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1006,827
+---
+
+===
+title: TimeForAction
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1323,388
+---
+<<set $paUserCompletedInformHowStairs = true>>
+<<set $paUserCompletedInformHowDate = $today>>
+
+I think so too. Anyway, let's start the stairs challenge. You can do it!
+
+[[I will. Thanks.|InformEnd]]
+===
+title: ElevatorsInHomeSituation
+tags: 
+speaker: Olivia
+colorID: 1
+position: -394,-163
+---
+Perfect! That means I have a new action point for you.
+
+[[StairsChallenge]]
+===
+title: GroundFloor
+tags: 
+speaker: Olivia
+colorID: 1
+position: -435,328
+---
+<<if $coachHelenEnabled>>
+    Okay, thanks for sharing. I would love to live on the ground floor, having my own garden with french doors. Do you have a garden?
+
+    [[Yes, I have.|HelenGardening|<<set $userHasGarden = true>>]]
+    [[No I don't have a garden.|NoGarden|<<set $userHasGarden = false>>]]
+<<else>>
+    Okay, thanks for sharing. Let's continue.
+    
+    [[StairsChallenge]]
+<<endif>>
+===
+title: HelenGardening
+tags: 
+speaker: Helen
+colorID: 1
+position: -164,320
+---
+Good to hear! I love gardening! I hope you regularly spend some time in the garden. It really refreshes your mind, you know?
+
+[[Thanks, gardening is great indeed.|GardeningIsGreat|<<set $userLikesGardening = true>>]]
+[[I don't really like gardening.|NoGardening|<<set $userLikesGardening = false>>]]
+===
+title: NoGardening
+tags: 
+speaker: Olivia
+colorID: 1
+position: -157,699
+---
+Well, I don't have a green thumb either. But Helen is right, a bit of fresh air is good for you. Anyway, I see you do not have an elevator in your home situation, too bad. However, there are other opportunities.
+
+[[What do you mean?|StairsChallenge]]
+===
+title: GardeningIsGreat
+tags: 
+speaker: Olivia
+colorID: 1
+position: 102,606
+---
+Good to hear! Helen is right, some fresh air could be good for you. Anyway, I see you do not have an elevator in your home situation, too bad. However,  there are other opportunities.
+
+[[What do you mean?|StairsChallenge]]
+===
+title: StairsChallenge
+tags: 
+speaker: Olivia
+colorID: 1
+position: -137,-115
+---
+Have you ever heard of the 'stairs challenge'?
+
+[[No, could you explain it to me?|StairsChallengeExplanation]]
+[[Yes...|StairsChallengeAlreadyKnown]]
+===
+title: StairsChallengeExplanation
+tags: 
+speaker: Olivia
+colorID: 1
+position: 111,-104
+---
+Well, the idea is to avoid using elevators and escalators and to take the stairs instead!
+
+[[Okay.|ChallengeTogether]]
+===
+title: ChallengeTogether
+tags: 
+speaker: Olivia
+colorID: 1
+position: 361,94
+---
+Well, why don't we join this challenge? Each time we come across an elevator or escalator in our daily life, let's take the stairs instead. I am in.
+
+<<if $userHasElevatorAtHome>>
+    We can start doing so by avoiding the elevator in our home situation.
+<<endif>>
+
+[[Sounds like a plan!|Perfect]]
+
+<<if $coachCarlosEnabled>>
+    [[I am not sure whether I am physically able to...|CarlosNotActive]]
+<<else>>
+    [[I am not sure whether I am physically able to...|StartSmall]]
+<<endif>>
+
+[[I do not come across elevators or escalators.|PlacesElevatorsEscalators]]
+===
+title: StartSmall
+tags: 
+speaker: Olivia
+colorID: 1
+position: 586,363
+---
+I see. Well, you can start small. For example, only change to taking the stairs when you have to move across just a single floor. Another option could be to start with one 'stairs day' a week. The challenge should be realistic for your situation.
+
+[[Indeed.|StairsClimbingContests]]
+===
+title: StairsClimbingContests
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1332,91
+---
+Did you know, even stair climbing contests exist? People challenge each other to run the stairs in the highest buildings in the world.
+
+[[Yes, that is really great.|TimeForAction]]
+[[Yes, that is ridiculous.|TimeForAction]]
+[[No, I did not, crazy!|TimeForAction]]
+===
+title: CarlosNotActive
+tags: 
+speaker: Carlos
+colorID: 1
+position: 586,673
+---
+Yes, this sounds a bit too much for me too...
+
+[[StartSmall]]
+===
+title: PlacesElevatorsEscalators
+tags: 
+speaker: Olivia
+colorID: 1
+position: 629,94
+---
+I can barely imagine. I come across that many: at the train station, at work, in shopping malls, in the gym, in parking lots...
+
+[[Okay, you are right.|ManyElevatorsAndEscalators]]
+===
+title: NoGarden
+tags: 
+speaker: Olivia
+colorID: 1
+position: -428,695
+---
+Hmm, too bad. Well, you do save a lot of time on maintenance then! Anyway, let's continue.
+
+[[StairsChallenge]]
+===
+title: StairsChallengeAlreadyKnown
+tags: 
+speaker: Olivia
+colorID: 1
+position: 109,321
+---
+Great to hear! Then you know that the idea is to avoid using elevators and escalators and to take the stairs instead! You would be surprised how many elevators and escalators one comes across in daily life...
+
+[[Yes.|ChallengeTogether]]
+===
+title: CheckForElevator
+tags: 
+speaker: Olivia
+colorID: 1
+position: -643,-113
+---
+Okay, thank you for sharing. And is there an elevator in your home situation?
+
+[[Yes, there is.|ElevatorsInHomeSituation|<<set $userHasElevatorAtHome = true>>]]
+[[No, there is not.|NoElevatorInHomeSituationUser|<<set $userHasElevatorAtHome = false>>]]
+===
+title: NoElevatorInHomeSituationUser
+tags: 
+speaker: Olivia
+colorID: 1
+position: -394,93
+---
+Too bad, anyway, I have a new action point for you!
+
+[[Okay, could you explain it to me?|StairsChallenge]]
+===
+title: ManyElevatorsAndEscalators
+tags: 
+speaker: Olivia
+colorID: 1
+position: 872,95
+---
+Yes, you would be surprised how many elevators and escalators one comes across in daily life...
+
+[[StairsClimbingContests]]
+===
+title: Perfect
+tags: 
+speaker: Olivia
+colorID: 1
+position: 968,407
+---
+Perfect!
+
+[[StairsClimbingContests]]
+===
+title: InformEnd
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1426,736
+---
+Well that was my advice for today. Can I help you with something else?
+
+[[Can we go through the previous tips?|olivia-coaching-inform-how-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

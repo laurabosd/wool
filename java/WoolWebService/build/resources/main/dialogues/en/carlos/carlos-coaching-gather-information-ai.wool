@@ -1,0 +1,46 @@
+title: Start
+tags: 
+speaker: Carlos
+colorID: 2
+position: 740,362
+---
+Olá, I have a few short questions for you, if you have some time?
+
+[[Yes, I have some time.|carlos-coaching-gather-information-esm.Start]]
+[[Maybe later Carlos.|Later]]
+[[I don't want to answer today.|NotToday]]
+[[I want to talk about something else.|carlos-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Carlos
+colorID: 5
+position: 1072,358
+---
+
+===
+title: Later
+tags: 
+speaker: Carlos
+colorID: 0
+position: 915,651
+---
+<<set $esmCarlosLaterDate = $today >>
+
+Of course!
+
+[[carlos-menu.Redirect]]
+===
+title: NotToday
+tags: 
+speaker: Carlos
+colorID: 0
+position: 639,650
+---
+<<set $esmCarlosSkipDate = $today >>
+
+No problem, we will skip the questions for today.
+
+[[carlos-menu.Redirect]]
+===

@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+Would you like me to tell you something about how you can be more active? 
+
+[[Yes, that would be nice.|olivia-coaching-inform-how-selector.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===

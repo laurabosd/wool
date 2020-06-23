@@ -1,0 +1,31 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 673,137
+---
+Sure, I've got plenty of tips. Let's see, there are basically two things we could talk about.
+
+[[WhyOrHow]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 955,425
+---
+
+===
+title: WhyOrHow
+tags: 
+speaker: Olivia
+colorID: 0
+position: 953,138
+---
+We could discuss why physical activity is good for you, or focus on how to become more active. What do you say?
+
+[[Let's talk about why.|olivia-coaching-inform-why-selector.Start]]
+[[Let's talk about how.|olivia-coaching-inform-how-selector.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

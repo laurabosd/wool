@@ -1,0 +1,55 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: 769,332
+---
+I just realised, $userFirstName, I think I never explained you how the radio works? Should I give you a quick overview?
+
+[[Okay, tell me.|Explain]]
+[[I know how it works.|Skip]]
+[[Maybe some other time.|OtherTime]]
+[[Goodbye.|End]]
+===
+title: Explain
+tags: 
+speaker: Coda
+colorID: 0
+position: 447,607
+---
+Okay, let me explain you how it works...
+
+[[coda-explain-radio.Start]]
+===
+title: Skip
+tags: 
+speaker: Coda
+colorID: 0
+position: 772,607
+---
+<<set $radioCompletedIntroduction = true>>
+
+Good, so I don't need to explain you anything. Was there something else I can help you with?
+
+[[Yes, I want to ask something else.|coda-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: OtherTime
+tags: 
+speaker: Coda
+colorID: 0
+position: 1088,605
+---
+Okay, we will get to it later. Was there something else I can help you with?
+
+[[Yes, I want to ask something else.|coda-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Coda
+colorID: 0
+position: 771,66
+---
+
+===

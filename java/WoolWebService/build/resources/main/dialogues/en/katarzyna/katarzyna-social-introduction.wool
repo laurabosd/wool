@@ -1,0 +1,94 @@
+title: Start
+tags: 
+speaker: Katarzyna
+colorID: 2
+position: -145,278
+---
+<<set $dt2UserStartedIntroduction = true>>
+
+I am here to help you with all your questions related to Diabetes Type II.
+
+[[Questions]]
+===
+title: Questions
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 125,277
+---
+I don't know what more to say... if you have any questions, do not hesitate to contact me.
+
+[[Actually, I have a question.|Role]]
+[[Okay, I will.|Bye]]
+===
+title: Role
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 391,277
+---
+Okay, what would you like to know?
+
+[[Are you specialised in Diabetes Type II?|Specialization]]
+[[Do you have Diabetes Type II yourself?|DiabetesSelf]]
+===
+title: Specialization
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 655,275
+---
+Ah I see, let me explain. I have been working as a practice assistance at a general practitioner for several years.
+
+[[Specialization2]]
+===
+title: DiabetesSelf
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 576,600
+---
+Ah I see. Luckily, I do not have diabetes myself. But I do have quite a bit of experience...
+
+[[DiabetesSelf2]]
+===
+title: Bye
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 1177,270
+---
+<<set $dt2UserCompletedIntroduction = true>>
+
+Well, it was nice meeting you. Come talk to me if you have any questions about diabetes.
+
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Katarzyna
+colorID: 5
+position: 573,-57
+---
+
+===
+title: DiabetesSelf2
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 860,599
+---
+I have been working as a practice assistance at a general practitioner for several years. In my job, I am often in contact with people with diabetes.
+
+[[Okay, thank you Katarzyna.|Bye]]
+===
+title: Specialization2
+tags: 
+speaker: Katarzyna
+colorID: 0
+position: 908,274
+---
+In my job, I am often in contact with people with diabetes. I could say, I have gained much experience over the past couple of years.
+
+[[Okay, thank you Katarzyna.|Bye]]
+===

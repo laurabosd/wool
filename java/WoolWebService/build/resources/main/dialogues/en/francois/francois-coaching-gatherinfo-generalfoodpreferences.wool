@@ -1,0 +1,201 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 421,-31
+---
+Okay I have some general questions related to allergies and other food restrictions you might have. Shall we start?
+
+[[Sure, ask away!|Gluten]]
+[[What will you do with that information?|ExplainInformation]]
+[[I don't want to answer those questions.|NoInformation]]
+[[Goodbye.|End]]
+===
+title: NoInformation
+tags: 
+speaker: Francois
+colorID: 0
+position: 650,506
+---
+Hmmm, well... are you sure? It is not mandatory of course, but without this information it is difficult for me to give you dietary advice!
+
+[[Okay, to the questions.|Gluten]]
+[[No, I don't want to answer those questions.|NoInformation2]]
+===
+title: NoInformation2
+tags: 
+speaker: Francois
+colorID: 0
+position: 859,101
+---
+<<set $nutUserCompletedGeneralFoodIntake = false>>
+
+Okay, maybe some other time then. Was there something else you wanted to discuss?
+
+[[I want to talk about food.|francois-coaching-menu.Start]]
+[[I have some other questions.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: ExplainInformation
+tags: 
+speaker: Francois
+colorID: 0
+position: 782,-282
+---
+Well, with that information I can give you more specific advice. For example, I can suggest recipes that fit your diet and lifestyle.
+
+[[Okay, ask away then.|Gluten]]
+[[I don't want to answer those questions.|NoInformation]]
+[[Goodbye.|End]]
+===
+title: Cholesterol
+tags: 
+speaker: Francois
+colorID: 0
+position: 2328,-23
+---
+All right! Now, I would also like to know... is your cholesterol too high?
+
+[[No, it is fine.|NoCholesterol|<<set $nutUserHasHighCholesterol = false>>]]
+[[Yes, it is too high.|HighCholesterol|<<set $nutUserHasHighCholesterol = true>>]]
+===
+title: NoCholesterol
+tags: 
+speaker: Francois
+colorID: 0
+position: 2719,-226
+---
+That's good to hear! Healthy eating, enough exercise, and not too much wine will help to keep it that way!
+
+[[VegetarianVegan]]
+===
+title: VegetarianVegan
+tags: 
+speaker: Francois
+colorID: 0
+position: 3121,-48
+---
+Another thing I'd like to know is if you are a vegetarian or vegan.
+
+[[I do eat meat.|Fish|<<set $nutUserEatsVegetarian = false>><<set $nutUserEatsVegan = false>>]]
+[[I'm a vegetarian.|Vegetarian|<<set $nutUserEatsVegetarian = true>><<set $nutUserEatsVegan = false>>]]
+[[I'm a vegan.|Calories|<<set $nutUserEatsVegetarian = true>><<set $nutUserEatsVegan = true>>]]
+===
+title: FinishQuestioning
+tags: 
+speaker: Francois
+colorID: 0
+position: 4141,-57
+---
+<<set $nutUserCompletedGeneralFoodIntake = true>>
+
+Merci beaucoup! I will keep all of this in mind when suggesting recipes for you.
+
+[[FinishQuestioning2]]
+===
+title: HighCholesterol
+tags: 
+speaker: Francois
+colorID: 0
+position: 2712,140
+---
+Ok, I'll keep that in mind, $userFirstName. We will look for recipes that are good for your cholesterol...
+
+[[VegetarianVegan]]
+===
+title: Vegetarian
+tags: 
+speaker: Francois
+colorID: 0
+position: 3451,-319
+---
+Good to know! And just to be sure, that also means that you don't eat fish?
+
+[[No, I don't eat fish.|Calories|<<set $nutUserEatsFish = false>>]]
+[[Actually, I do eat fish.|Calories|<<set $nutUserEatsFish = true>>]]
+===
+title: GlutenAllergy
+tags: 
+speaker: Francois
+colorID: 0
+position: 1473,263
+---
+Oh, so no French baguette for you... but don't be sad, François knows many fine dishes without gluten.
+
+[[Lactose]]
+===
+title: LactoseAllergy
+tags: 
+speaker: Francois
+colorID: 0
+position: 2079,265
+---
+Hmmm, so you can not have dishes with milk, butter or cream... and even worse, you can't have cheese, mon dieu!
+
+[[Cholesterol]]
+===
+title: Calories
+tags: 
+speaker: Francois
+colorID: 0
+position: 3773,-53
+---
+Okay, one final question. Are you on a low carbohydrates diet?
+
+[[No, not really.|FinishQuestioning|<<set $nutUserEatsLowCarb = false>>]]
+[[Not yet, but I want to start.|FinishQuestioning|<<set $nutUserEatsLowCarb = true>>]]
+[[Yes, I am.|FinishQuestioning|<<set $nutUserEatsLowCarb = true>>]]
+===
+title: Fish
+tags: 
+speaker: Francois
+colorID: 0
+position: 3445,226
+---
+François loves to eat meat. But we shouldn't do it too much. Better to mix it up with some fish every now and then, right?
+
+[[I don't eat fish.|Calories|<<set $nutUserEatsFish = false>>]]
+[[Yes, I eat fish as well.|Calories|<<set $nutUserEatsFish = true>>]]
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 2290,-1030
+---
+
+===
+title: Gluten
+tags: 
+speaker: Francois
+colorID: 0
+position: 1224,-16
+---
+Ok, $userFirstName, I'll try to keep it short and simple! The first question: can you eat food that has gluten?
+
+[[Yes, no problem.|Lactose|<<set $nutUserIsGlutenIntollerant = false>>]]
+[[No, I can't have gluten.|GlutenAllergy|<<set $nutUserIsGlutenIntollerant = true>>]]
+===
+title: Lactose
+tags: 
+speaker: Francois
+colorID: 0
+position: 1792,-20
+---
+And what about lactose? Can you have products that contain lactose?
+
+[[Yes, no problem.|Cholesterol|<<set $nutUserIsLactoseIntollerant = false>>]]
+[[No, I can not have lactose.|LactoseAllergy|<<set $nutUserIsLactoseIntollerant = true>>]]
+===
+title: FinishQuestioning2
+tags: 
+speaker: Francois
+colorID: 0
+position: 4466,-58
+---
+Was there something else you wanted to discuss?
+
+[[I want to talk about food.|francois-coaching-menu.Start]]
+[[I have some other questions.|francois-menu.Start]]
+[[Goodbye.|End]]
+===

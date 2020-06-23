@@ -1,0 +1,65 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 9,-185
+---
+<<set $wantsBreakfast = null>>
+<<set $wantsLunch = null>>
+<<set $wantsDinner = null>>
+<<set $wantsAppetizer = null>>
+<<set $wantsMainCourse = null>>
+<<set $wantsDessert = null>>
+<<set $eatsVegetarian = null>>
+<<set $wantsVegetarianMeal = null>>
+<<set $wantsChicken = null>>
+<<set $wantsMeat = null>>
+<<set $wantsFish = null>>
+<<set $wantsPasta = null>>
+<<set $wantsRice = null>>
+<<set $wantsPotatoes = null>>
+<<set $noPastaRicePotatoes = null>>
+
+<<if $nutUserCompletedGeneralFoodIntake == true>>
+    Ah oui, François knows many recipes! Do you want to browse the recipe book, or shall I help you pick something?
+
+    [[Help me select a recipe.|francois-coaching-recipes-selectrecipe.Start]]
+    [[Let me browse the recipes.|End|<<action type="generic" value="OPEN_RECIPE_BOOK">>]]
+    [[I want to discuss something else.|francois-coaching-menu.Start]]
+    [[Goodbye.|End]]
+<<else>>
+  Ah oui, François knows many recipes!
+
+  [[GeneralFoodIntake]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 341,-180
+---
+
+===
+title: GeneralFoodIntake
+tags: 
+speaker: Francois
+colorID: 0
+position: 15,-497
+---
+But before I can recommend anything, I need to know a little bit about your food preferences and possible allergies.
+
+[[GeneralFoodIntake2]]
+===
+title: GeneralFoodIntake2
+tags: 
+speaker: Francois
+colorID: 0
+position: 339,-502
+---
+Should we quickly go through some questions?
+
+[[Okay, let's do the food preferences intake.|francois-coaching-gatherinfo-generalfoodpreferences.Start]]
+[[I want to discuss something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===

@@ -1,0 +1,70 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 515,361
+---
+<<if $paUserCompletedInformHowDate == $today >>
+    I already gave you some advice today, maybe I have another tip tomorrow...
+
+    [[Archive]]
+<<else>>
+    Hmmm, let me think if I have some good advice today on how to become physically active...
+
+    [[Selector]]
+<<endif>>
+===
+title: Selector
+tags: 
+speaker: Olivia
+colorID: 0
+position: 833,534
+---
+<<if $paUserCompletedInformHowLunchWalk == false >>
+    Hmm, I think I have something. Some advice a good friend of mine used to give...
+
+    [[olivia-coaching-inform-how-lunch-walk.Start]]
+<<elseif $paUserCompletedInformHowFriendsAndPhysicalActivity == false >>
+    <<if $coachEmmaEnabled == true >>
+      Ah yes, I have some advice, and I'm sure Emma will appreciated it as well...
+    <<else>>
+      Ah yes, I have some advice...
+    <<endif>>
+
+    [[olivia-coaching-inform-how-friends-and-physical-activity.Start]]
+<<elseif $paUserCompletedInformHowStairs == false >>
+    Hmmm, yes! I have some tips about using the stairs...
+
+    [[olivia-coaching-inform-how-stairs.Start]]
+<<elseif $paUserCompletedInformHowReduceSedentaryBehaviourEvening == false >>
+    Ah yes, I have a tip on being active in the evenings...
+
+    [[olivia-coaching-inform-how-reduce-sedentary-behaviour-evening.Start]]
+<<else>>
+    Hmmm, I think I've already taught you everything there is to know about getting physically active. If you come back later, I might have more tips.
+
+    [[Show me previous tips.|olivia-coaching-inform-how-archive.Start]]
+    [[I want to talk about something else.|olivia-menu.Start]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 1197,383
+---
+
+===
+title: Archive
+tags: 
+speaker: Olivia
+colorID: 0
+position: 831,245
+---
+Would you like to review the previous tips, or did you want to talk about something else?
+
+[[Previous tips.|olivia-coaching-inform-how-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

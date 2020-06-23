@@ -1,0 +1,264 @@
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 3054,1135
+---
+
+===
+title: StartConnect
+tags: 
+speaker: Olivia
+colorID: 0
+position: 372,1210
+---
+There are a lot of different activity trackers on the market. But currently I prefer to work with FitBit devices.
+
+[[StartConnect2]]
+===
+title: StartConnect2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 668,1215
+---
+So, do you have a Fitbit activity tracker?
+
+[[Yes, I have one.|UserHasFitbit]]
+[[No, I don't.|UserNoFitbit]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: UserHasFitbit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 996,1083
+---
+<<set $paTrackerBrand = "Fitbit">>
+That's great! Well, is it okay if I can have a look at your Fitbit data, so I can help coach you better?
+
+[[Yes, of course!|FitbitConnect1]]
+[[No, I prefer not.|FitbitNotAllowed]]
+===
+title: UserNoFitbit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 998,1369
+---
+Oh that's a shame. Well nothing to worry about, we have some options!
+
+[[What are my options?|UserNoFitbit2]]
+[[Actually, I do have a Fitbit.|UserHasFitbit]]
+[[Goodbye.|End]]
+===
+title: UserNoFitbit2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1305,1367
+---
+First off, do you maybe have another sensor to track activity?
+
+[[Yes: <<input type="text" value="$paTrackerBrandUnknown" min="3" max="300">>.|UserNoFitbitAlternative]]
+[[No, I don't have any.|UserNoFitbitNoAlternative]]
+[[Wait, I do have a Fibit!|UserHasFitbit]]
+===
+title: UserNoFitbitAlternative
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1623,1209
+---
+Okay, I will pass your alternative "$paTrackerBrandUnknown" to our developers, let's see if they can support it in the future.
+
+[[Can I try something else?|UserNoFitbitNoAlternative]]
+===
+title: UserNoFitbitNoAlternative
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1625,1707
+---
+<<if $isEvaluationUser == true>>
+    Well, I see you are participating in the Council of Coaches evaluation, that's correct, right?
+
+    [[Yes, I am!|NoFitbitStudyParticipant]]
+    [[No, I am not.|UserNoFitbitPurchase]]
+    [[What is that?|NoFitbitStudyQuestion]]
+<<else>>
+    Well, then I don't know...
+
+    [[UserNoFitbitPurchase]]
+<<endif>>
+===
+title: NoFitbitStudyParticipant
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1923,1516
+---
+In that case, you should call or write your research contact, he or she will be able to help you out.
+
+[[Okay, thanks!|UserNoFitbitPurchase]]
+[[I don't know the contact.|StudyNoContact]]
+===
+title: NoFitbitStudyQuestion
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1932,1891
+---
+Well, it's a large research study that looks at how our Council of Coaches application works.
+
+[[Okay, thanks.|UserNoFitbitPurchase]]
+===
+title: UserNoFitbitEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2631,1695
+---
+I'm afraid that's all I can do for you now. Would you like to talk about something else?
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: StudyNoContact
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2255,1334
+---
+Oh, that's a problem indeed. Well, just write an email to info@council-of-coaches.eu and we will sort you out.
+
+[[Okay, thanks!|UserNoFitbitEnd]]
+===
+title: UserNoFitbitPurchase
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2261,1702
+---
+For now, all I can recommend you to do is to buy a Fibit tracker.
+
+[[Okay, thanks.|UserNoFitbitEnd]]
+===
+title: FitbitConnect1
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1002,583
+---
+Awesome! So let me quickly explain how it works... it's really quite simple...
+
+[[FitbitConnect2]]
+===
+title: FitbitNotAllowed
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1323,878
+---
+Hmm, that's a shame. Do you mind telling me why you don't want to share your Fitbit data with me?
+
+[[Well: <<input type="text" value="$paUserReasonForNotSharingData" min="3" max="300">>.|FitbitNotAllowedReason]]
+[[I prefer not to say.|FitbitNotAllowedReason]]
+[[Goodbye.|End]]
+===
+title: FitbitNotAllowedReason
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1668,876
+---
+Okay, I see. Well, you should know that without access to your activity data it is difficult for me to coach you.
+
+[[I understand.|FitbitNotAllowedEnd]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitNotAllowedEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1996,878
+---
+Was there anything else you wanted to discuss?
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: FitbitConnect2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1306,578
+---
+When you are ready, I will send you to the Fitbit web site. There you will have to grant permission to access your data.
+
+[[FitbitConnect3]]
+===
+title: FitbitConnect3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1606,574
+---
+You will temporarily leave the Council of Coaches application, but don't worry... you'll be back right here when this is done.
+
+[[FitbitConnect4]]
+===
+title: FitbitConnect4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1905,575
+---
+On the Fitbit website, the first thing you need to do is login with your Fitbit account.
+
+[[FitbitConnect5]]
+===
+title: FitbitConnect5
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2203,574
+---
+Or maybe your browser has remembered your account, in which case you are logged in automatically.
+
+[[FitbitConnect6]]
+===
+title: FitbitConnect6
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2478,572
+---
+In any case, next you will be asked to allow access to your data. Click on "Allow All", and then on the pink "Allow" button in the bottom right of the screen.
+
+[[FitbitConnect7]]
+===
+title: FitbitConnect7
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2758,572
+---
+Then, you will come back to us automatically. When you come back, it might take a few moments, and then I will let you know if everything worked out correctly. So, ready to connect your Fitbit account?
+
+[[I'm ready, let's connect my Fitbit!|End|<<action type="generic" value="REQUEST_FITBIT_LINK">>]]
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 81,1208
+---
+Okay, awesome! Are you ready to connect your activity tracker?
+
+[[Yes, let's do it.|StartConnect]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===

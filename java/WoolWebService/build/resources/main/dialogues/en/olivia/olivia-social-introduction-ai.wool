@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+Hi there! My name is Olivia Simons and I'm your physical activity coach, allow me to introduce myself.
+
+[[Okay, let's get introduced.|olivia-social-introduction.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===

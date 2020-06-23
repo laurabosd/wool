@@ -1,0 +1,468 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: -10922,-1242
+---
+Before we go and meet the coaches, there are a few small things to take care of.
+
+<<set $isEvaluationUser = false >>
+<<set $paUserCompletedHealthIntake = false >>
+<<set $nutUserCompletedHealthIntake = false >>
+<<set $cogUserCompletedHealthIntake = false >>
+<<set $socUserCompletedHealthIntake = false >>
+<<set $dt2UserCompletedHealthIntake = false>>
+<<set $cpUserCompletedHealthIntake = false>>
+<<set $userCompletedHealthIntake = false >>
+
+[[Okay.|AskEvaluationUser]]
+===
+title: StartIntake
+tags: 
+speaker: Coda
+colorID: 0
+position: -9385,-959
+---
+Finally, I have some questions about why you are interested in the Council of Coaches.
+
+[[StartIntake2]]
+===
+title: AskName
+tags: 
+speaker: Coda
+colorID: 0
+position: -8812,-1234
+---
+<<if $userGender == "undisclosed" >>
+That's okay, no problem.
+<<endif>>
+
+Second, my name is Coda, but... what is your name?
+
+[[First name: <<input type="text" value="$userFirstName">>.|AskAge]]
+//<<if $userGender == "undisclosed" >>
+//[[I also don't want to say.|AskAge]]
+//<<else>>
+//[[I don't want to say.|AskAge]]
+//<<endif>>
+===
+title: AskGender
+tags: 
+speaker: Coda
+colorID: 0
+position: -9096,-1234
+---
+Okay, now, may I ask about your gender?
+
+[[I am female.|AskName|<<set $userGender = "female">>]]
+[[I am male.|AskName|<<set $userGender = "male">>]]
+// [[I prefer not to say.|AskName|<<set $userGender = "undisclosed">>]]
+===
+title: AskAge
+tags: 
+speaker: Coda
+colorID: 0
+position: -8541,-1235
+---
+<<if $userFirstName >> // Check if $userFirstName is set
+    <<if $userGender == "male">>
+        Ah that's nice, I have an uncle named $userFirstName!
+    <<elseif $userGender == "female">>
+        Hmm funny, I think my niece's girlfriend is also called $userFirstName... I need to visit them sometimes...
+    <<else>>
+        Ah my best friend in high school was called $userFirstName as well, that's nice...
+    <<endif>>
+<<else>>
+    <<set $userFirstName = "User" >>
+    Okay, in that case we'll just call you, hmmm... "User"!
+<<endif>>
+
+[[Any more questions?|AskAge2]]
+===
+title: StartIntake2
+tags: 
+speaker: Coda
+colorID: 0
+position: -9102,-954
+---
+If you have a few minutes, we can go through some questions and then I can recommend the best coaches for you.
+
+[[StartIntake3]]
+===
+title: StartIntake3
+tags: 
+speaker: Coda
+colorID: 0
+position: -8820,-960
+---
+Alternatively, I can just let you choose which coaches you are interested in. What do you say?
+
+[[Help me pick the coaches.|coda-healthintake.Start]]
+[[Let me choose the coaches myself.|Diagnosis]]
+===
+title: AskAge2
+tags: 
+speaker: Coda
+colorID: 0
+position: -8255,-1231
+---
+Ah yes, yes, let's continue... may I ask how old you are?
+
+[[I am <<input type="numeric" value="$userAge" min="0" max="120">> years old.|AskAgeGiven]]
+//[[I prefer not to say.|AskAgeDeclined]]
+===
+title: AskAgeGiven
+tags: 
+speaker: Coda
+colorID: 0
+position: -7967,-1410
+---
+Great, thanks! The more we know about you, the better our coaches can help you!
+
+[[AskEducation]]
+===
+title: AskAgeDeclined
+tags: 
+speaker: Coda
+colorID: 0
+position: -7963,-1156
+---
+That's okay. The more we know about you, the better our coaches can help you though. But maybe we'll come back to it later.
+
+[[AskEducation]]
+===
+title: Diagnosis
+tags: 
+speaker: Coda
+colorID: 0
+position: -8824,-497
+---
+Okay, so we will skip the health intake part. However, there is one important thing...
+
+[[Diagnosis2]]
+===
+title: Diabetes
+tags: 
+speaker: Coda
+colorID: 0
+position: -8251,-498
+---
+So, are you officially diagnosed with Diabetes Type 2?
+
+[[Yes, I have been diagnosed with Diabetes Type 2.|DiabetesYes]]
+[[No, I have not been.|DiabetesNo]]
+===
+title: DiabetesYes
+tags: 
+speaker: Coda
+colorID: 0
+position: -7959,-633
+---
+<<set $dt2UserCompletedHealthIntake = true>>
+<<set $userHasDiabetes = true>>
+
+Okay, so in any case I will recommend that you include Katarzyna, our specialized Diabetes Type 2 Coach in your council.
+
+[[Okay.|FollowUpQuestions]]
+===
+title: DiabetesNo
+tags: 
+speaker: Coda
+colorID: 0
+position: -7964,-304
+---
+<<set $dt2UserCompletedHealthIntake = true>>
+<<set $userHasDiabetes = false>>
+
+And what about Chronic Pain, have you been officially diagnosed with this?
+
+[[Yes, I am diagnosed with Chronic Pain.|ChronicPainYes]]
+[[No, I am not.|ChronicPainNo]]
+===
+title: ChronicPainYes
+tags: 
+speaker: Coda
+colorID: 0
+position: -7650,-416
+---
+<<set $cpUserCompletedHealthIntake = true>>
+<<set $userHasChronicPain = true>>
+
+Okay, so in any case I will recommend that you include Rasmus, our specialised Chronic Pain Coach in your council.
+
+[[Okay.|FollowUpQuestions]]
+===
+title: ChronicPainNo
+tags: 
+speaker: Coda
+colorID: 0
+position: -7651,-134
+---
+<<set $cpUserCompletedHealthIntake = true>>
+<<set $userHasChronicPain = false>>
+
+Okay, that is good to know! You won't need any of these specialised coaches.
+
+[[FollowUpQuestions]]
+===
+title: FollowUpQuestions
+tags: 
+speaker: Coda
+colorID: 0
+position: -7268,-414
+---
+<<set $userSkippedHealthIntake = true>>
+
+Okay, that's it. Time to meet the coaches!
+
+[[Okay, let's go.|coda-selectcoaches.Start]]
+===
+title: Diagnosis2
+tags: 
+speaker: Coda
+colorID: 0
+position: -8540,-496
+---
+Council of Coaches offers specific support for Type 2 Diabetes and Chronic Pain. It's important for us to know if you have been diagnosed with either.
+
+[[Diabetes]]
+===
+title: AskEducation
+tags: 
+speaker: Coda
+colorID: 0
+position: -7647,-1265
+---
+Just for the record: what is the highest degree or level of school you have completed?
+
+[[Primary education.|AskComputerUse1|<<set $userEducationLevel = "BASIC">>]]
+[[Secondary education.|AskComputerUse1|<<set $userEducationLevel = "LOW_VOCATIONAL">>]]
+[[College level education.|AskComputerUse1|<<set $userEducationLevel = "VOCATIONAL">>]]
+[[Higher education (bachelor or higher).|AskComputerUse1|<<set $userEducationLevel = "HIGH_VOCATIONAL">>]]
+===
+title: AskComputerUse1
+tags: 
+speaker: Coda
+colorID: 0
+position: -7360,-1265
+---
+Awesome! Next we want to know how much you use technology in your everyday life.
+
+[[AskComputerUse2]]
+===
+title: AskComputerUse2
+tags: 
+speaker: Coda
+colorID: 0
+position: -7061,-1266
+---
+First question: do you use a personal computer or a laptop at home?
+
+[[Yes.|AskComputerUse3|<<set $userTechnologyUseComputer = true>>]]
+[[No.|AskComputerUse3|<<set $userTechnologyUseComputer = false>>]]
+===
+title: AskComputerUse3
+tags: 
+speaker: Coda
+colorID: 0
+position: -6752,-1267
+---
+What about a tablet, do you use that at home?
+
+[[Yes.|AskComputerUse4|<<set $userTechnologyUseTablet = true>>]]
+[[No.|AskComputerUse4|<<set $userTechnologyUseTablet = false>>]]
+===
+title: AskComputerUse4
+tags: 
+speaker: Coda
+colorID: 0
+position: -6447,-1271
+---
+And do you use a Smartphone?
+
+[[Yes.|AskComputerUse5|<<set $userTechnologyUseSmartphone = true>>]]
+[[No.|AskComputerUse5|<<set $userTechnologyUseSmartphone = false>>]]
+[[What do you mean by Smartphone?|ExplainSmartphone]]
+===
+title: ExplainSmartphone
+tags: 
+speaker: Coda
+colorID: 0
+position: -6345,-945
+---
+We say "Smartphone" to a phone that can connect to the internet and on which you can install all kinds of applications (or apps).
+
+[[ExplainSmartphone2]]
+===
+title: ExplainSmartphone2
+tags: 
+speaker: Coda
+colorID: 0
+position: -6074,-944
+---
+So, do you have a phone with internet and applications?
+
+[[Yes.|AskComputerUse5|<<set $userTechnologyUseSmartphone = true>>]]
+[[No.|AskComputerUse5|<<set $userTechnologyUseSmartphone = false>>]]
+===
+title: AskComputerUse5
+tags: 
+speaker: Coda
+colorID: 0
+position: -5920,-1274
+---
+And finally, do you use a game computer, like a PlayStation, XBOX, or Nintendo at home?
+
+[[Yes.|HealthInformation|<<set $userTechnologyUseGameConsole = true>>]]
+[[No.|HealthInformation|<<set $userTechnologyUseGameConsole = false>>]]
+[[I don't know what that is.|WhatIsGameConsole|<<set $userTechnologyUseGameConsole = false>>]]
+===
+title: HealthInformation
+tags: 
+speaker: Coda
+colorID: 0
+position: -5582,-1278
+---
+Finally, I would like to ask you three questions regarding health or medical information.
+
+[[HealthInformation2]]
+===
+title: HealthInformation2
+tags: 
+speaker: Coda
+colorID: 0
+position: -5248,-1280
+---
+How often do you have problems learning about your medical condition because of difficulty understanding written information?
+
+[[Always.|HealthInformation3|<<set $userHealthInformationUnderstanding = 0>>]]
+[[Often.|HealthInformation3|<<set $userHealthInformationUnderstanding = 1>>]]
+[[Sometimes.|HealthInformation3|<<set $userHealthInformationUnderstanding = 2>>]]
+[[Occasionally.|HealthInformation3|<<set $userHealthInformationUnderstanding = 3>>]]
+[[Never.|HealthInformation3|<<set $userHealthInformationUnderstanding = 4>>]]
+===
+title: HealthInformation3
+tags: 
+speaker: Coda
+colorID: 0
+position: -4933,-1284
+---
+How confident are you filling out medical forms by yourself?
+
+[[Extremely.|HealthInformation4|<<set $userHealthInformationForms = 4>>]]
+[[Quite a bit.|HealthInformation4|<<set $userHealthInformationForms = 3>>]]
+[[Somewhat.|HealthInformation4|<<set $userHealthInformationForms = 2>>]]
+[[A little bit.|HealthInformation4|<<set $userHealthInformationForms = 1>>]]
+[[Not at all.|HealthInformation4|<<set $userHealthInformationForms = 0>>]]
+===
+title: HealthInformation4
+tags: 
+speaker: Coda
+colorID: 0
+position: -4634,-1284
+---
+How often do you have someone help you read hospital materials?
+
+[[Always.|HealthInformation5|<<set $userHealthInformationHelp = 0>>]]
+[[Often.|HealthInformation5|<<set $userHealthInformationHelp = 1>>]]
+[[Sometimes.|HealthInformation5|<<set $userHealthInformationHelp = 2>>]]
+[[Occasionally.|HealthInformation5|<<set $userHealthInformationHelp = 3>>]]
+[[Never.|HealthInformation5|<<set $userHealthInformationHelp = 4>>]]
+===
+title: HealthInformation5
+tags: 
+speaker: Coda
+colorID: 0
+position: -4324,-1285
+---
+Great! Thank you so much, we are almost there!
+
+[[StartIntake]]
+===
+title: WhatIsGameConsole
+tags: 
+speaker: Coda
+colorID: 0
+position: -5737,-941
+---
+Hah! Don't worry, I will just write down "no" for that one.
+
+[[HealthInformation]]
+===
+title: AskEvaluationUser
+tags: 
+speaker: Coda
+colorID: 0
+position: -10634,-1240
+---
+First of all, are you participating in the Council of Coaches evaluation?
+
+[[Yes, I am.|EvaluationUser]]
+[[No, I am not.|AskGender]]
+===
+title: EvaluationUser
+tags: 
+speaker: Coda
+colorID: 0
+position: -10442,-1540
+---
+<<set $isEvaluationUser = true >>
+<<set $evaluationUserStartDate = $today >>
+
+Okay, great! Well, just as a reminder then... we will now first do the intake.
+
+[[EvaluationUser2]]
+===
+title: EvaluationUser2
+tags: 
+speaker: Coda
+colorID: 0
+position: -10175,-1536
+---
+And I will help you select your personal set of coaches. But then you will have to wait one week before coming back.
+
+[[EvaluationUser3]]
+===
+title: EvaluationUser3
+tags: 
+speaker: Coda
+colorID: 0
+position: -9912,-1539
+---
+This is so we can collect some baseline information, but I'm sure everything was explained to you already.
+
+[[EvaluationUser4]]
+===
+title: EvaluationUser5
+tags: 
+speaker: Coda
+colorID: 0
+position: -9370,-1549
+---
+Okay, great! So, are you ready to continue with the intake?
+
+[[Okay, let's go.|AskGenderAlternative]]
+===
+title: AskGenderAlternative
+tags: 
+speaker: Coda
+colorID: 0
+position: -9098,-1472
+---
+Alright, the intake... So, first question... may I ask about your gender?
+
+[[I am female.|AskName|<<set $userGender = "female">>]]
+[[I am male.|AskName|<<set $userGender = "male">>]]
+// [[I prefer not to say.|AskName|<<set $userGender = "undisclosed">>]]
+===
+title: EvaluationUser4
+tags: 
+speaker: Coda
+colorID: 0
+position: -9645,-1545
+---
+By the way, are you participating with the team in Dundee, or in Twente?
+
+[[Dundee, Scotland.|EvaluationUser5|<<set $evaluationUserSite = "Dundee">>]]
+[[Twente, the Netherlands.|EvaluationUser5|<<set $evaluationUserSite = "Twente">>]]
+===

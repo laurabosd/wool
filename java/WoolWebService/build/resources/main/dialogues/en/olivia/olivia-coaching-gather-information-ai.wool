@@ -1,0 +1,37 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+Hmmm, I realise that there is probably much more to know about you. Care to talk a little bit about you?
+
+[[Sure, what do you want to know?|SelectRandom]]
+[[Not now, I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===
+title: SelectRandom
+tags: 
+speaker: Olivia
+colorID: 2
+position: 908,656
+---
+<<if $paUserCompletedGatherInformationDog == false>>
+  Let's talk about dogs...
+
+  [[olivia-coaching-gather-information-dog.Start]]
+<<else>>
+  Actually, I don't have anything I would like to know at this time...
+
+  [[Okay, can we talk about something else?|olivia-menu.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===

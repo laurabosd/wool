@@ -1,0 +1,138 @@
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 428,603
+---
+
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 436,243
+---
+<<if $paUserTrackerConnected == false>>
+    Hmmm... it's impossible to talk about your progress if I don't know how active you've been.
+
+    [[NoTracker]]
+<<else>>
+    Okay let's see how you've been doing so far. What would you like to know specifically?
+
+    [[Show me my data.|olivia-coaching-feedback-data.Start]]
+    [[Can you tell me how I'm doing?|olivia-coaching-feedback-verbal.Start]]
+    [[I want to discuss something else.|olivia-menu.Redirect]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: NoTracker
+tags: 
+speaker: Olivia
+colorID: 0
+position: 107,242
+---
+You would need to wear a physical activity tracker, and share the data with me.
+
+[[NoTracker2]]
+===
+title: NoTracker2
+tags: 
+speaker: Olivia
+colorID: 0
+position: -184,244
+---
+Then we could set goals together and talk about your progress.
+
+<<if $coachCarlosEnabled >>
+    [[NoTrackerCommentCarlos]]
+<<elseif $coachFrancoisEnabled>>
+    [[NoTrackerCommentFrancois]]
+<<else>>
+    [[NoTrackerCommentOlivia]]
+<<endif>>
+===
+title: NoTrackerCommentCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: -469,-13
+---
+I'm also wearing an activity tracker, and Olivia is helping me staying on track. It's really nice!
+
+[[NoTracker3]]
+===
+title: NoTracker3
+tags: 
+speaker: Olivia
+colorID: 0
+position: -832,244
+---
+So, what do you say? Do you want to connect a tracker now?
+
+[[Okay, let's connect my tracker.|olivia-coaching-sensors-fitbit-setup.Start]]
+[[Why should I connect a tracker?|WhyTracker]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: NoTrackerCommentFrancois
+tags: 
+speaker: Francois
+colorID: 0
+position: -471,509
+---
+I'm also wearing an activity tracker, and Olivia is helping me staying on track. It's très bien!
+
+[[NoTracker3]]
+===
+title: NoTrackerCommentOlivia
+tags: 
+speaker: Olivia
+colorID: 0
+position: -470,245
+---
+Both Carlos and François are also using activity trackers, but I see you didn't select them as your coaches...
+
+[[NoTracker3]]
+===
+title: WhyTracker
+tags: 
+speaker: Olivia
+colorID: 0
+position: -835,519
+---
+Well, nowadays there are a lot of cheap devices on the market that can track how active you are.
+
+[[WhyTracker2]]
+===
+title: WhyTracker2
+tags: 
+speaker: Olivia
+colorID: 0
+position: -835,790
+---
+These devices can give you a valuable insight into your own physical activity behaviour. So, it's really a great first step into becoming more physically active.
+
+[[WhyTracker3]]
+===
+title: WhyTracker3
+tags: 
+speaker: Olivia
+colorID: 0
+position: -833,1049
+---
+And if you give me access to your data, I can show you your progress, right here in the Council of Coaches application.
+
+[[WhyTracker4]]
+===
+title: WhyTracker4
+tags: 
+speaker: Olivia
+colorID: 0
+position: -830,1312
+---
+And then we can discuss your data, to see how you are doing, and how you might improve. So, what do you say? Should we connect your tracker?
+
+[[Okay, let's connect my tracker.|olivia-coaching-sensors-fitbit-setup.Start]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===

@@ -1,0 +1,91 @@
+title: End
+tags: 
+speaker: Helen
+colorID: 5
+position: 2382,-1182
+---
+
+===
+title: Start
+tags: 
+speaker: Helen
+colorID: 2
+position: 3213,-566
+---
+I was born in London and have worked there for a while as well. But I've always loved nature, and London doesn't have too much of that...
+
+[[HelenOriginLonden]]
+===
+title: HelenOriginLonden
+tags: 
+speaker: Helen
+colorID: 0
+position: 3208,-839
+---
+When I was 43 I decided with my husband to move to Brockenhurst.
+
+[[Where's that?|HelenOriginLondon2a]]
+[[Ah, that's nice.|HelenOriginLondon2]]
+===
+title: HelenOriginLondon2
+tags: 
+speaker: Helen
+colorID: 0
+position: 3209,-1105
+---
+I've worked there as a coach ever since and I used to help people with brain training and mindfulness.
+
+[[Is the scenery nice there?|HelenNextSession]]
+[[Thanks for sharing!|PreEnd]]
+===
+title: HelenOriginLondon2a
+tags: 
+speaker: Helen
+colorID: 0
+position: 3504,-970
+---
+It's a small village in the south of England. About two hours by car from London.
+
+[[HelenOriginLondon2]]
+===
+title: HelenNextSession
+tags: 
+speaker: Helen
+colorID: 0
+position: 3218,-1367
+---
+Yes, it was amazing. It's in the middle of New Forest National Park, so you could find me in the nature often.
+
+[[AndNow]]
+===
+title: AndNow
+tags: 
+speaker: Helen
+colorID: 0
+position: 3218,-1639
+---
+And now I live here in the Council of Coaches house! Fortunately we are also surrounded by parks and forests here.
+
+[[AndNow2]]
+===
+title: AndNow2
+tags: 
+speaker: Helen
+colorID: 0
+position: 2929,-1640
+---
+Plenty of opportunity to enjoy the nature. But enough talking for now...
+
+[[Thank you Helen.|PreEnd]]
+===
+title: PreEnd
+tags: 
+speaker: Helen
+colorID: 5
+position: 2686,-1182
+---
+<<set $helenCompletedStory1 = true >>
+<<set $helenCompletedStoryToday = true>>
+
+Let's talk again tomorrow $userFirstName!
+===

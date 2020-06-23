@@ -1,0 +1,241 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 11,319
+---
+Let's talk about lunch walks.
+
+[[Yes, please!|AskForJob]]
+[[I am not interested, sorry.|NoThanks]]
+===
+title: AskForJob
+tags: 
+speaker: Olivia
+colorID: 1
+position: 254,74
+---
+Good! Let me first ask you, do you have a job?
+
+[[Yes, I have.|UserHasJob|<<set $userJobStatus = "employed">>]]
+[[No, not at the moment.|UserDoesNotHaveJob|<<set $userJobStatus = "unemployed">>]]
+[[No, I am retired.|UserDoesNotHaveJob|<<set $userJobStatus = "retired">>]]
+===
+title: NoThanks
+tags: 
+speaker: Olivia
+colorID: 1
+position: 525,877
+---
+Okay, can I help you with something else?
+
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1259,1050
+---
+
+===
+title: UserHasJob
+tags: 
+speaker: Olivia
+colorID: 1
+position: 538,69
+---
+Alright. So, let's take some action to become more physically active at work.
+
+[[Great plan.|StartWithLunch]]
+[[I don't have time for that at work.|NoTime]]
+===
+title: UserDoesNotHaveJob
+tags: 
+speaker: Olivia
+colorID: 1
+position: 526,376
+---
+Okay, let's take some action to become more physically active during the day. Probably you have lots of activities throughout the day that keep you occupied. However, you can always start during lunch time.
+
+[[ThoughtOfWalking]]
+===
+title: EmmaSocial
+tags: 
+speaker: Emma
+colorID: 1
+position: 1740,29
+---
+Yes, I agree. What about asking some colleagues? It is a nice opportunity to get to know them a bit better.
+
+[[That is a good idea.|SocialPressure]]
+[[I prefer to walk alone.|PreferenceWalkingAlone]]
+===
+title: SocialPressure
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2238,21
+---
+Yes. They might also motivate you to go for a walk, when you're not thinking about it yourself.
+
+[[That might help me indeed.|TimeForAction]]
+===
+title: NoTime
+tags: 
+speaker: Olivia
+colorID: 1
+position: 857,65
+---
+I understand. Busy agendas, colleagues who come to you with all kind of questions. However, it is healthy to take a break during the day!
+
+[[Hmm, maybe you are right.|ThoughtOfWalkingWork]]
+===
+title: StartWithLunch
+tags: 
+speaker: Olivia
+colorID: 1
+position: 864,-196
+---
+An easy way to become more active at work is to be active during your lunch break.
+
+[[Okay, what do you suggest?|ThoughtOfWalkingWork]]
+[[Lunch break? I barely have time to breath...|NoTime]]
+===
+title: ThoughtOfWalkingWork
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1155,-54
+---
+Have you ever thought of going for a small walk during lunch time? Grab your jacket, sandwich and go out!
+
+[[I barely do actually...|NotLunchWalkingYetWork]]
+[[I do so regularly. |AlreadyLunchWalkingWork]]
+===
+title: ThoughtOfWalking
+tags: 
+speaker: Olivia
+colorID: 1
+position: 841,391
+---
+Have you ever thought of going for a small walk during lunch time? Grab your jacket, sandwich and go out!
+
+[[I barely do actually...|NotLunchWalkingYetHome]]
+[[I do so regularly. |AlreadyLunchWalkingHome]]
+
+===
+title: CombineWithActivity
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1477,633
+---
+You might combine a lunch walk with small activities still to be done. You could walk to the post box to deliver a letter, walk to the supermarket to pick up a package or walk to the florist to buy a nice bouquet of flowers for the friend you are visiting later that day.
+
+[[I see. |AdaptWalkToPreferences]]
+===
+title: AlreadyLunchWalkingWork
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1154,195
+---
+That is nice to hear. You are doing well, keep on walking!
+
+<<if $coachEmmaEnabled>>
+    [[EmmaSocial]]
+<<else>>
+    [[AdaptWalkToPreferences]]
+<<endif>>
+===
+title: NotLunchWalkingYetWork
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1424,-155
+---
+That is a pity. Walking during lunch is not only good for your physical activity, it also helps to clear your mind. Your afternoon at work will be more productive!
+
+<<if $coachEmmaEnabled>>
+    [[EmmaSocial]]
+<<else>>
+    [[EmmaNotAvailable]]
+<<endif>>
+===
+title: NotLunchWalkingYetHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1146,448
+---
+That is a pity. Walking during lunch is not only good for your physical activity, it also helps to clear your mind.
+
+[[That might be true.|CombineWithActivity]]
+===
+title: TimeForAction
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1961,626
+---
+<<set $paUserCompletedInformHowLunchWalk = true>>
+<<set $paUserCompletedInformHowDate = $today>>
+
+Great! You do not have to walk for hours, starting with 15 minutes is already very healthy! So, what are you waiting for?
+
+[[Thanks, I will remember.|InformEnd]]
+===
+title: PreferenceWalkingAlone
+tags: 
+speaker: Emma
+colorID: 1
+position: 1475,344
+---
+I understand. You are probably surrounded by colleagues all day. Use your lunch walk to clear your mind, spend some time on your own!
+
+[[That sounds better. |AdaptWalkToPreferences]]
+===
+title: AdaptWalkToPreferences
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1960,290
+---
+Just feel free to adapt the walk to your own preferences.
+
+[[Okay.|TimeForAction]]
+===
+title: AlreadyLunchWalkingHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 844,682
+---
+That is nice to hear. You are doing well, keep on walking!
+
+[[Thank you. |CombineWithActivity]]
+===
+title: EmmaNotAvailable
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1774,-274
+---
+You can go alone, just to clear your mind, or find some colleagues to join you, for some social activity as well.
+
+[[AdaptWalkToPreferences]]
+===
+title: InformEnd
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1959,878
+---
+Well that was my advice for today. Can I help you with something else?
+
+[[Can we go through the previous tips?|olivia-coaching-inform-how-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

@@ -1,0 +1,459 @@
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 12078,5507
+---
+
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 10724,5040
+---
+So you want to change your long term goal. Okay, let's see how I can help you do that.
+
+[[InformCurrentLongTermGoal]]
+===
+title: SuggestStepsTaken
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10579,6139
+---
+Your activity tracker constantly measures how much you move, and tries to estimate this as a number of steps.
+
+[[SuggestStepsTaken2]]
+===
+title: SuggestStepsTaken2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10576,6416
+---
+So when we're talking about "steps" it's not just about walking, it's about every little thing you do throughout the day.
+
+[[SuggestStepsTaken3]]
+===
+title: SuggestStepsTaken3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10573,6690
+---
+So, should we set a step goal? Or should I tell you about active minutes?
+
+[[I am ready to decide.|DecidePreferredUnit]]
+[[What about active minutes?|SuggestActiveMinutes]]
+[[Goodbye.|End]]
+===
+title: SuggestActiveMinutes
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10836,6137
+---
+Although every little bit of activity helps, it is also important to do things that require a little more effort. Basically this is when you feel your heart beat going faster, maybe you become sweaty, and you feel tired at the end of the activity.
+
+[[SuggestActiveMinutes2]]
+===
+title: DecidePreferredUnit
+tags: 
+speaker: Olivia
+colorID: 6
+position: 11505,6675
+---
+That's good to hear. What will it be?
+
+[[Steps.|SetNewLongTermGoal|<<set $paPreferredUnit = "steps">>]]
+[[Active minutes.|SetNewLongTermGoal|<<set $paPreferredUnit = "minutes">>]]
+[[Actually, could you explain the options again?|RepeatOptions]]
+===
+title: SuggestActiveMinutes2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10849,6410
+---
+Your activity tracker can see how many time you spent doing a little extra, which we call "active minutes".
+
+[[SuggestActiveMinutes3]]
+===
+title: SuggestActiveMinutes3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10856,6693
+---
+So would you like to set a goal for active minutes?
+
+[[I'm ready to decide.|DecidePreferredUnit]]
+[[What about steps?|SuggestStepsTaken]]
+[[Goodbye.|End]]
+===
+title: RepeatOptions
+tags: 
+speaker: Olivia
+colorID: 0
+position: 11210,6314
+---
+Of course, which option would you like me to explain again?
+
+[[Steps taken?|SuggestStepsTaken]]
+[[Active minutes?|SuggestActiveMinutes]]
+===
+title: SetLongTermGoalValueMinutes
+tags: 
+speaker: Olivia
+colorID: 0
+position: 12103,6841
+---
+<<if $userAge >= 65 >>
+	The World Health Organization recommends that people aged above 65 years old participate in at least 2.5 hours of moderate to high intensity physical activity per week. Think of 3 sessions a bit shorter than 1 hour per week in which your heart rate is elevated. What do you think about this goal?
+
+    [[It sounds good, let's do that!|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 150>>]]
+
+<<elseif $userAge >= 18 >>
+	The World Health Organization recommends that adults participate in at least 150 minutes of moderate to high intensity physical activity per week. Think of 3 sessions a bit shorter than 1 hour per week in which your heart rate is elevated. What do you think about this goal?
+
+    [[It sounds good, let's do that!|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 150>>]]
+
+<<elseif $userAge < 18 >>
+
+	The World Health Organization recommends that those aged between 5 and 17 years old participate in at least 60 minutes of moderate to high intensity physical activity per day. What do you think about this goal?
+
+    [[It sounds good, let's do that!|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 60>>]]
+
+<<endif>>
+
+[[That sounds too easy for me. Could you suggest a higher goal?|SuggestHigherLongTermGoal]]
+[[It might be a bit high for me. Could you please suggest a lower goal?|SuggestLowerLongTermGoal]]
+===
+title: LongTermGoalAccepted
+tags: 
+speaker: Olivia
+colorID: 0
+position: 13084,6687
+---
+<<set $paUserLongTermGoalSet = true>>
+
+<<if $paPreferredUnit == "steps">>
+
+    That is great! So just to make sure, we are working towards $paLongTermStepsGoal steps per day on the long run.
+
+<<elseif $paPreferredUnit == "minutes">>
+
+    <<if $userAge >= 18 >>
+    
+        That is great! So just to make sure, we are working towards $paLongTermMinutesGoal minutes of moderate to high intensity physical activity per week.
+
+    <<else>>
+
+        That is great! So just to make sure, we are working towards $paLongTermMinutesGoal minutes of moderate to high intensity physical activity per day.
+
+    <<endif>>
+
+<<endif>>
+
+<<if $coachEmmaEnabled>>
+
+    [[SocialActivitiesPhysicalActivity]]
+
+<<else>>
+
+    [[SetLongTermGoalEnd]]
+
+<<endif>>
+===
+title: SuggestLowerLongTermGoal
+tags: 
+speaker: Olivia
+colorID: 0
+position: 12477,7057
+---
+<<if $paPreferredUnit == "steps">>
+
+    <<if $userAge >= 65>>
+        Ok, then I would like to suggest a long-term goal of 5.000 steps per day. Is that ok?
+
+        [[Yes, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 5000>>]]
+    <<elseif $userAge >= 18 >>
+        Ok, then I would like to suggest a long-term goal of 7.500 steps per day. Is that ok?
+
+        [[Yes, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 7500>>]]
+    <<else>>
+        Ok, then I would like to suggest a long-term goal of 10.000 steps per day. Is that ok?
+
+        [[Yes, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 10000>>]]
+    <<endif>>
+
+    [[I still think that is too high.|SuggestLowestLongTermGoal]]
+    [[Oh, no, I think that is too low.|SetLongTermGoalValueSteps]]
+
+<<elseif $paPreferredUnit == "minutes">>
+
+    <<if $userAge >= 18>>
+        Ok, then I would like to suggest a long-term goal of 120 minutes of moderate to high physical activity intensity per week. Remember that we are discussing the long-term goal, not your goal for next week. Is that ok?
+
+        [[Yes, let's do that.|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 120>>]]
+    <<else >>
+        Ok, then I would like to suggest a long-term goal of 40 minutes of moderate to high physical activity intensity per day. Remember that we are discussing the long-term goal, not your goal for next week. Is that ok?
+
+        [[Yes, let's do that.|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 40>>]]
+    <<endif>>
+
+    [[I still think that is too high.|SuggestLowestLongTermGoal]]
+    [[Oh, no, I think that is too low.|SetLongTermGoalValueMinutes]]
+
+<<endif>>
+===
+title: SuggestLowestLongTermGoal
+tags: 
+speaker: Olivia
+colorID: 0
+position: 12820,7053
+---
+<<if $paPreferredUnit == "steps">>
+    
+    <<if $userAge >= 65 >>
+        Let's just start with 4.500 steps per day, and we see how it goes. If it does not work for you, we can adjust it next week.
+        
+        [[Okay, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 4500>>]]
+    <<elseif $userAge >= 18 >>
+        Let's just start with 7.000 steps per day, and we see how it goes. If it does not work for you, we can adjust it next week.
+        
+        [[Okay, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 7000>>]]
+    <<else>>
+        Let's just start with 9.000 steps per day, and we see how it goes. If it does not work for you, we can adjust it next week.
+        
+        [[Okay, let's do that.|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 9000>>]]
+    <<endif>>
+
+<<elseif $paPreferredUnit == "minutes">>
+
+    <<if $userAge >= 18>>
+        Let's just start with 60 minutes per week, and we see how it goes. If it does not work for you, we can adjust it next week.
+
+        [[Okay, let's do that.|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 60>>]]
+    <<else>>
+        Let's just start with 30 minutes per day, and we see how it goes. If it does not work for you, we can adjust it next week.
+
+        [[Okay, let's do that.|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 30>>]]
+    <<endif>>
+
+<<endif>>
+
+[[Maybe I can do a bit more...|SuggestLowerLongTermGoal]]
+===
+title: SuggestHigherLongTermGoal
+tags: 
+speaker: Olivia
+colorID: 0
+position: 12482,6385
+---
+<<if $paPreferredUnit == "steps">>
+
+    <<if $userAge >= 65 >>
+        Wonderful to hear that you are willing to try a bit more! So, what about 10.000 steps per day? Remember, we are talking about long-term goals, not your goal for tomorrow.
+
+        [[Yes, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 10000>>]]
+    <<elseif $userAge >= 18 >>
+        Great to hear you're willing to step it up! Okay, what about 12.000 steps per day? Remember, we are talking about long-term goals, not your goal for tomorrow.
+
+        [[Yes, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 12000>>]]
+    <<else>>
+        Nice! Let's step it up some more then. What about 15.000 steps per day? Remember, we are talking about long-term goals, not your goal for tomorrow.
+        
+        [[Yes, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 15000>>]]
+    <<endif>>
+
+    [[That might be too high, can we go lower?|SetLongTermGoalValueSteps]]
+
+<<elseif $paPreferredUnit == "minutes">>
+
+    <<if $userAge >= 18>>
+        Okay, well... the World Health Organization suggests that for extra health benefits you can double the time on moderate to high intensity physical activity. What about aiming for 300 minutes per week?
+
+        [[Yes, let's do that!|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 300>>]]
+
+    <<else>>
+        Okay, what about 120 minutes of moderate to high intensity physical activity per day?
+        
+        [[Yes, let's do that!|LongTermGoalAccepted|<<set $paLongTermMinutesGoal = 120>>]]
+    <<endif>>
+
+    [[That might be too high, can we go lower?|SetLongTermGoalValueMinutes]]
+
+<<endif>>
+===
+title: SetLongTermGoalValueSteps
+tags: 
+speaker: Olivia
+colorID: 0
+position: 12100,6530
+---
+<<if $userAge >= 65 >>
+    There is a general trend to recommend 10.000 steps as a daily goal. However, for people aged 65 or above, this value is often reduced to 7.500 steps. Should we start with a long-term goal of 7.500 steps?
+
+    [[Okay, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 7500>>]]
+    
+<<elseif $userAge >= 18 >>
+    There is a general trend to recommend 10.000 steps as a daily goal. Should we strive to achieve 10.000 steps in the long-run?
+
+    [[Okay, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 10000>>]]
+
+<<else>>
+    It is often suggested that people as young as yourself should reach 13.000 steps a day. Should we try 13.000 steps in the long-run?
+
+    [[Okay, let's do that!|LongTermGoalAccepted|<<set $paLongTermStepsGoal = 13000>>]]
+
+<<endif>>
+
+[[That sounds too easy, can we go a bit higher?|SuggestHigherLongTermGoal]]
+[[That sounds difficult, could we try lower?|SuggestLowerLongTermGoal]]
+===
+title: SocialActivitiesPhysicalActivity
+tags: 
+speaker: Emma
+colorID: 0
+position: 13435,6688
+---
+Group activities are a great way to motivate you to reach your physical activity goal! And you might meet some interesting people as well!
+
+[[CommentSocialActivitiesPhysicalActivity]]
+===
+title: CommentSocialActivitiesPhysicalActivity
+tags: 
+speaker: Olivia
+colorID: 0
+position: 13781,6544
+---
+Yes Emma that's true, and if you need any other tips on how to become more active you know where to find me.
+
+[[SetLongTermGoalEnd]]
+===
+title: SetLongTermGoalEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 13442,6374
+---
+So, is there anything else I can help you with?
+
+[[I want to know more about goals.|olivia-coaching-goals-menu.Start]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: SelectPreferredPAUnit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10725,5563
+---
+<<if $paPreferredUnit == "steps">>
+    Okay, so your current goal is defined in the number of steps you do per day. Would you like to keep this choice?
+
+    [[Yes, I want to keep using steps.|SetNewLongTermGoal]]
+    [[I want to switch to minutes.|SwitchedPreferredUnit|<<set $paPreferredUnit = "minutes">>]]
+<<elseif $paPreferredUnit == "minutes">>
+    Okay, so your current goal is set in "active minutes", the time spent doing high intensity physical activity. Would you like to keep this choice?
+
+    [[Yes, I want to keep using minutes.|SetNewLongTermGoal]]
+    [[I want to switch to steps.|SwitchedPreferredUnit|<<set $paPreferredUnit = "steps">>]]
+<<endif>>
+
+[[Can you explain the difference again?|InformPAUnits]]
+===
+title: InformCurrentLongTermGoal
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10725,5296
+---
+<<if $paPreferredUnit == "steps">>
+    Your current long-term goal is to do $paLongTermStepsGoal steps per day. Do you really want to change the goal?
+<<elseif $paPreferredUnit == "minutes">>
+    <<if $userAge < 18>>
+        Your current long-term goal is to do $paLongTermMinutesGoal minutes of high intensity physical activity per day. Do you really want to change the goal?
+    <<else>>
+        Your current long-term goal is to do $paLongTermMinutesGoal minutes of high intensity physical activity per week. Do you really want to change the goal?    
+    <<endif>>
+<<endif>>
+
+[[Yes, please help me change my goal.|SelectPreferredPAUnit|<<set $paUserLongTermGoalSet = false>>]]
+[[No, I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: InformPAUnits
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10730,5850
+---
+About which physical activity unit would you like to know more?
+
+[[Steps taken?|SuggestStepsTaken]]
+[[Active minutes?|SuggestActiveMinutes]]
+[[I am ready to decide.|DecidePreferredUnit]]
+[[Goodbye.|End]]
+===
+title: SetNewLongTermGoal
+tags: 
+speaker: Olivia
+colorID: 0
+position: 11809,6673
+---
+<<if $paPreferredUnit == "steps">>
+    Now let me to guide you through setting a new long term goal in steps per day.
+
+    [[SetLongTermGoalValueSteps]]
+<<elseif $paPreferredUnit == "minutes">>
+    Now let me to guide you through setting a new long term goal in active minutes.
+
+    [[SetLongTermGoalValueMinutes]]
+<<endif>>
+===
+title: SwitchedPreferredUnit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 11656,6075
+---
+<<if $paPreferredUnit == "steps">>
+    Okay, so from now on, we will look at the total number of steps you take every day.
+<<elseif $paPreferredUnit == "minutes">>
+    <<if $userAge >= 18>>
+        Okay, so from now on, we will look at the number of minutes of high intensity physical activity you perform per week.
+    <<else>>
+        Okay, so from now on, we will look at the number of minutes of high intensity physical activity you perform per day.
+    <<endif>>
+<<endif>>
+
+[[NewDailyGoalNeeded]]
+===
+title: NewDailyGoalNeeded
+tags: 
+speaker: Olivia
+colorID: 0
+position: 11916,6080
+---
+<<if $paUserDailyGoalSet == true>>
+    <<set $paUserDailyGoalSet = false>>
+    <<if $paPreferredUnit == "steps">>
+        Since we've changed from using active minutes to steps for your goals, we will also need to set a new short term goal. But we can do that later... First, let's set your new long-term steps goal...
+    
+    [[SetLongTermGoalValueSteps]]
+    <<elseif $paPreferredUnit == "minutes">>
+        Since we've changed from using steps to active minutes for your goals, we will also need to set a new short term goal. But we can do that later... First, let's set your new long-term active minutes goal...
+
+    [[SetLongTermGoalValueMinutes]]
+    <<endif>>
+<<else>>
+    <<if $paPreferredUnit == "steps">>
+        By the way, you never set any short term goal, right? Hmm... maybe we can do that afterwards? But first, let's set your new long-term steps goal...
+    <<elseif $paPreferredUnit == "minutes">>
+        By the way, you never set any short term goal, right? Hmm... maybe we can do that afterwards? But first, let's set your new long-term active minutes goal...
+    <<endif>>
+<<endif>>
+===

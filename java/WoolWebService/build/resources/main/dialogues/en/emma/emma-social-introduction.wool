@@ -1,0 +1,120 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: -987,357
+---
+Ah very nice to meet you as well! Always nice to meet new people. How are you feeling today?
+
+[[I am doing fine.|Well]]
+[[Actually, not so well.|NotWell]]
+===
+title: NotWell
+tags: 
+speaker: Emma
+colorID: 0
+position: -637,510
+---
+Oh that is sad to hear. I hope I can make you feel a bit better today. Let me explain about my role in the council. I will be your social coach in the Council of Coaches.
+
+[[What does a social coach do?|ExplanationRole]]
+===
+title: Bye
+tags: 
+speaker: Emma
+colorID: 0
+position: 1221,386
+---
+<<set $socUserCompletedIntroduction = true>>
+
+Talk you later $userFirstName!
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 1529,383
+---
+
+===
+title: Well
+tags: 
+speaker: Emma
+colorID: 0
+position: -630,184
+---
+That is good to hear. Let me explain about my role in the council. I will be your social coach in the Council of Coaches.
+
+[[What does a social coach do?|ExplanationRole]]
+===
+title: ExplanationRole
+tags: 
+speaker: Emma
+colorID: 0
+position: -328,344
+---
+Well, I will help you with performing social activities and difficulties you might encounter in doing so.
+
+[[I'm not really an outgoing person.|NotOutgoing]]
+[[I like social activities.|LikeSocial]]
+===
+title: NotOutgoing
+tags: 
+speaker: Emma
+colorID: 0
+position: -27,232
+---
+Oh don't worry! I am not that outgoing either. I enjoy having some "me-time", sitting on the couch, reading a book, while enjoying a nice cup of tea or listening to good music.
+
+[[NotOutgoing2]]
+===
+title: NotOutgoing2
+tags: 
+speaker: Emma
+colorID: 0
+position: 252,232
+---
+There is nothing wrong with enjoying to be on your own...
+
+[[RoleCoach]]
+===
+title: LikeSocial
+tags: 
+speaker: Emma
+colorID: 0
+position: -31,518
+---
+That's good to hear! Being surrounded by other people is a very healthy thing.
+
+[[LikeSocial2]]
+===
+title: LikeSocial2
+tags: 
+speaker: Emma
+colorID: 0
+position: 257,517
+---
+Although I also like to have some time for myself every now and then... you know, to read a book, enjoy a cup of tea...
+
+[[RoleCoach]]
+===
+title: RoleCoach
+tags: 
+speaker: Emma
+colorID: 0
+position: 615,388
+---
+As your social coach, you can always come talk with me if you need any advice or suggestions for doing some social activities.
+
+[[RoleCoach2]]
+===
+title: RoleCoach2
+tags: 
+speaker: Emma
+colorID: 0
+position: 911,388
+---
+I look forward to getting to you know, and see what fun things we can do together!
+
+[[Thank you Emma.|Bye]]
+===

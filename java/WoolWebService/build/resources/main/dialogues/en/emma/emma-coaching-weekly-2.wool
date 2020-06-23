@@ -1,0 +1,510 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: 3863,-1567
+---
+<<set $socUserCompletedListSession2 = false>>
+<<set $socUserHeardSomeTipsSession2 = false>>
+
+Okay, time for session number two! Last week we discussed your social network and two activities you like to do, remember? 
+
+[[Yes, I remember.|Node_social_week2_0a]]
+[[No, I did not share this information with you.|Node_social_week2_0e]]
+[[Goodbye.|End]]
+===
+title: Node_social_week2End
+tags: 
+speaker: Emma
+colorID: 1
+position: 4232,-1099
+---
+<<set $socUserCompletedCoachingWeek2 = true>>
+<<if $socUserCompletedCoachingWeek2Date == null >>
+  <<set $socUserCompletedCoachingWeek2Date = $today>>
+<<endif>>
+
+No problem, I understand. Maybe we can do the session some other time. Did you want to discuss something else?
+
+[[I want to talk about something else.|emma-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 4233,-827
+---
+
+===
+title: Node_social_week2_1a
+tags: 
+speaker: Emma
+colorID: 1
+position: 4824,-1182
+---
+This week we are addressing the social activities you enjoy. Of course it is fun to do some activity alone, but some activities are more fun together. 
+
+[[Yes, I agree.|Node_social_week2_1b]]
+[[I am not so sure.|Node_social_week2_1c]]
+[[No, I do not agree.|Node_social_week2_1c]]
+===
+title: Node_social_week2_2
+tags: 
+speaker: Emma
+colorID: 1
+position: 5545,-1173
+---
+I really like to make lists! Especially about things I like. Such as unique shoes. I have a list of all my unique shoes with all kind of information like colour, when I bought them, ...
+
+[[Okay, okay, can we make the list now?|Node_social_week2_2a]]
+[[Tell me more about your shoes!|Node_social_week2_4]]
+===
+title: Node_social_week2_3
+tags: 
+speaker: Emma
+colorID: 1
+position: 5329,-1474
+---
+<<set $socUserHeardSomeTipsSession2 = true>>
+Okay, last week I was searching on the internet and found some nice information on activities you might like. We could go through the list of tips, or would you like to choose a topic?
+
+[[Go through all the tips.|Node_social_week2_3a]]
+[[Let me choose a topic.|Node_social_week2_3k]]
+===
+title: Node_social_week2_2a
+tags: 
+speaker: Emma
+colorID: 1
+position: 6139,-1174
+---
+Yes, let's start with making the list. For this exercise I ask you to name at most three social activities you enjoy. Can you tell me first activity you enjoy?
+
+[[Activity 1: <<input type="text" value="$socWeek2Activity1" min="0" max="30">>|Node_social_week2_2b]]
+===
+title: Node_social_week2_4
+tags: 
+speaker: Emma
+colorID: 1
+position: 5900,-683
+---
+As you know I really like to collect unique shoes. I can be on the internet for hours to search for a pair I want to have. 
+
+[[Please continue.|Node_social_week2_4a]]
+<<if $socUserCompletedListSession2 == false>>
+[[Interesting, but can we make the list now?|Node_social_week2_2a]]
+<<elseif $socUserCompletedListSession2 == true>>
+<<if $socUserHeardSomeTipsSession2 == false>>
+[[Interesting, but can you tell me about your tips?|Node_social_week2_3]]
+<<else>>
+[[Interesting, but can you show me your tips again?|Node_social_week2_3k]]
+<<endif>>
+[[Let's finalize this week's social session.|Node_social_week2_5]] 
+<<endif>>
+===
+title: Node_social_week2_2b
+tags: 
+speaker: Emma
+colorID: 1
+position: 6395,-1174
+---
+And the second one?
+
+[[Activity 2: <<input type="text" value="$socWeek2Activity2" min="0" max="30">>|Node_social_week2_2c]]
+===
+title: Node_social_week2_2c
+tags: 
+speaker: Emma
+colorID: 1
+position: 6637,-1174
+---
+And the third and last activity:
+
+[[Activity 3: <<input type="text" value="$socWeek2Activity3" min="0" max="30">>|Node_social_week2_2d]]
+===
+title: Node_social_week2_2d
+tags: 
+speaker: Emma
+colorID: 1
+position: 6900,-1173
+---
+<<set $socUserCompletedListSession2 = true>>
+Okay, great! Was it difficult for you to make this list? 
+
+[[Yes.|Node_social_week2_2e]]
+[[No.|Node_social_week2_2e]]
+===
+title: Node_social_week2_2e
+tags: 
+speaker: Emma
+colorID: 1
+position: 6901,-924
+---
+Okay, so if I am correct you mentioned $socWeek2Activity1, $socWeek2Activity2 and $socWeek2Activity3 as those social activities you enjoy?  
+
+[[Yes, you are correct!|Node_social_week2_2f]]
+===
+title: Node_social_week2_2h
+tags: 
+speaker: Emma
+colorID: 1
+position: 6909,-134
+---
+Okay. Let's wait and see! We can finalize now this week social session or I can tell you about my social activity tips or my unique shoes collection. What do you prefer?
+
+[[Let's finalize this week's social session.|Node_social_week2_5]]
+<<if $socUserHeardSomeTipsSession2 == false>>
+[[I want to hear about your social activity tips.|Node_social_week2_3]]
+<<else>>
+[[I want to see your overview of tips again.|Node_social_week2_3k]]
+<<endif>>
+[[I want to hear more about your unique shoes collection.|Node_social_week2_4]]
+===
+title: Node_social_week2_6
+tags: 
+speaker: Emma
+colorID: 1
+position: 5139,-305
+---
+<<set $socUserCompletedCoachingWeek2 = true>>
+<<if $socUserCompletedCoachingWeek2Date == null >>
+  <<set $socUserCompletedCoachingWeek2Date = $today>>
+<<endif>>
+
+Perfect, this was the coaching session for this week. Really nice that you wanted to make a list of activities. Next week we continue to further broader your social network. 
+
+[[Okay, see you next week!|End]]
+[[Goodbye.|End]]
+===
+title: Node_social_week2_3k
+tags: 
+speaker: Emma
+colorID: 1
+position: 5637,-1722
+---
+I have found four social activity tips on the following topics. What would you like to hear about?
+
+[[Nature.|Node_social_week2_3b]]
+[[Dining together.|Node_social_week2_3d]]
+[[Visiting a local living room.|Node_social_week2_3f]]
+[[Soccer.|Node_social_week2_3h]]
+<<if $socUserCompletedListSession2 == false>>
+[[Let's start creating a list of the activities I like.|Node_social_week2_2a]]
+<<else>>
+[[Let's finalize this week's social session.|Node_social_week2_5]]
+<<endif>>
+===
+title: Node_social_week2_3a
+tags: 
+speaker: Emma
+colorID: 1
+position: 6025,-1560
+---
+Perfect, lets start with my first tip. This tip is about nature and enjoying the local environment.  
+
+[[Please continue.|Node_social_week2_3b]]
+[[Can we skip this tip?|Node_social_week2_3c]]
+[[Please, go to the overview on all tips.|Node_social_week2_3k]]
+===
+title: Node_social_week2_3b
+tags: 
+speaker: Emma
+colorID: 1
+position: 6130,-1875
+---
+You could wander around the woods or along a river. Another option is to read up on some information about local natural areas. Try searching Google for "local nature walks" and you will be amazed what you can find.
+
+[[Please go to the next tip.|Node_social_week2_3c]]
+===
+title: Node_social_week2_3c
+tags: 
+speaker: Emma
+colorID: 1
+position: 6337,-1564
+---
+The next tip is about dining together.   
+
+[[Please continue.|Node_social_week2_3d]]
+[[Can we skip this tip?|Node_social_week2_3e]]
+[[Please, go to the overview on all tips.|Node_social_week2_3k]]
+===
+title: Node_social_week2_3d
+tags: 
+speaker: Emma
+colorID: 1
+position: 6438,-1881
+---
+<<if $isEvaluationUser == true>>
+    <<if $evaluationUserSite == "Twente">>
+        A perfect way to combine eating and social activities is provided by Resto VanHarte. These local restaurants are perfect to meet new friends! Just look them up online!   
+    <<else>>
+        There are many local initiatives for going out for dinner and meeting new people at the same time. These are often called "social restaurants", why don't you try looking for one on Google?
+    <<endif>>
+<<else>>
+     There are many local initiatives for going out for dinner and meeting new people at the same time. These are often called "social restaurants", why don't you try looking for one on Google?
+<<endif>>
+
+[[Please go to the next tip.|Node_social_week2_3e]]
+===
+title: Node_social_week2_3e
+tags: 
+speaker: Emma
+colorID: 1
+position: 6629,-1567
+---
+The next tip is about visiting a local living room.    
+
+[[Please continue.|Node_social_week2_3f]]
+[[Can we skip this tip?|Node_social_week2_3g]]
+[[Please, go to the overview on all tips.|Node_social_week2_3k]]
+===
+title: Node_social_week2_3f
+tags: 
+speaker: Emma
+colorID: 1
+position: 6746,-1874
+---
+<<if $isEvaluationUser == true>>
+    <<if $evaluationUserSite == "Twente">>
+        By "Bosshardt" are local living rooms to meet others. Everybody is welcome, and you can find them easily on the internet. Just type "Bij Bosshardt" in Google.  
+    <<elseif $evaluationUserSite == "Dundee">>
+        There are many resources online to meet other people, for example "Meetup", "NextDoor", or "Meet the Neighbours". Why don't you try looking them up online? 
+    <<else>>
+        Everywhere in the world there are local initiatives for people to meet eachother. Sometimes there are "local living rooms" to meet people, why not try looking for one in your area?
+    <<endif>>
+<<else>>
+    Everywhere in the world there are local initiatives for people to meet eachother. Sometimes there are "local living rooms" to meet people, why not try looking for one in your area?
+<<endif>>
+
+[[Please go to the next tip.|Node_social_week2_3g]]
+===
+title: Node_social_week2_3g
+tags: 
+speaker: Emma
+colorID: 1
+position: 6916,-1567
+---
+The last tip is related to soccer.   
+
+[[Please continue.|Node_social_week2_3h]]
+[[Please, go to the overview of all social activity tips.|Node_social_week2_3k]]
+===
+title: Node_social_week2_3h
+tags: 
+speaker: Emma
+colorID: 1
+position: 7062,-1870
+---
+<<if $isEvaluationUser == true>>
+    <<if $evaluationUserSite == "Twente">>
+        If you like to play soccer, Oldstars Walking Football is maybe a nice social and physical activity for you! Just type "Old Stars Walking Football" on Google! 
+    <<elseif $evaluationUserSite == "Dundee">>
+        If you like to play soccer, Walking Football Scotland is maybe a nice social and physical activity for you! Just type "Walking Football Scotland" on Google! 
+    <<else>>
+        If you like to play soccer, maybe there is a local "walking football" club? Try searching for "walking football" on Google, and see what you can find!
+    <<endif>>
+<<else>>
+    If you like to play soccer, maybe there is a local "walking football" club? Try searching for "walking football" on Google, and see what you can find!
+<<endif>>
+
+[[Please, go to the overview of all social activity tips.|Node_social_week2_3k]]
+
+<<if $socUserCompletedListSession2 == false>>
+    [[Let's start with making a list of the activities I like.|Node_social_week2_2a]]
+<<elseif $socUserCompletedListSession2 == true>>
+    [[Let's finalize this week's social session.|Node_social_week2_5]] 
+<<endif>>
+===
+title: Node_social_week2_4a
+tags: 
+speaker: Emma
+colorID: 1
+position: 5676,-672
+---
+Sometimes I get lucky and I can buy a pair very cheap. But often I really have to save some money before I can buy the pair I want. 
+
+[[Please continue.|Node_social_week2_4b]]
+<<if $socUserCompletedListSession2 == false>>
+[[Interesting, but can we make the list now?|Node_social_week2_2a]]
+<<elseif $socUserCompletedListSession2 == true>>
+<<if $socUserHeardSomeTipsSession2 == false>>
+[[Interesting, but can you tell me about your tips?|Node_social_week2_3]]
+<<else>>
+[[Interesting, but can you show me your tips again?|Node_social_week2_3k]]
+<<endif>>
+[[Let's finalize this week's social session.|Node_social_week2_5]] 
+<<endif>>
+===
+title: Node_social_week2_4b
+tags: 
+speaker: Emma
+colorID: 1
+position: 5425,-672
+---
+I really enjoy it when I can buy a pair who need some restoration. Then I can clean them and repair them to restore their glory! So meaningful!
+
+[[Please continue.|Node_social_week2_4c]]
+<<if $socUserCompletedListSession2 == false>>
+[[Interesting, but can we make the list now?|Node_social_week2_2a]]
+<<elseif $socUserCompletedListSession2 == true>>
+<<if $socUserHeardSomeTipsSession2 == false>>
+[[Interesting, but can you tell me about your tips?|Node_social_week2_3]]
+<<else>>
+[[Interesting, but can you show me your tips again?|Node_social_week2_3k]]
+<<endif>>
+[[Let's finalize this week's social session.|Node_social_week2_5]] 
+<<endif>>
+===
+title: Node_social_week2_4c
+tags: 
+speaker: Emma
+colorID: 1
+position: 5177,-681
+---
+<<if $socUserCompletedListSession2 == false>>
+And I enjoy to update my unique shoes collection list... Anyway, speaking of lists... maybe we should start making this list of activities you like. 
+
+[[Good idea, let's start with making this list.|Node_social_week2_2a]]
+[[No, I am not interested in making such a list.|Node_social_week2End]]
+<<else>>
+And I enjoy to update my unique shoes collection list... Anyway, shall we continue our social session?
+
+<<if $socUserHeardSomeTipsSession2 == false>>
+[[Can you tell me about your tips?|Node_social_week2_3]]
+<<else>>
+[[Can you show me your tips again?|Node_social_week2_3k]]
+<<endif>>
+[[Let's finalize this week's social session.|Node_social_week2_5]] 
+<<endif>>
+===
+title: Node_social_week2_1b
+tags: 
+speaker: Emma
+colorID: 1
+position: 5082,-1182
+---
+Let's start. This week we will make a list of social activities. Next to this, I will give tips for social activities. Would you like to start with making the list or shall we start with my tips?
+
+[[Let's do the list.|Node_social_week2_2]]
+[[Let's start with the tips.|Node_social_week2_3]]
+===
+title: Node_social_week2_1c
+tags: 
+speaker: Emma
+colorID: 1
+position: 4817,-932
+---
+Okay. I understand you are reluctant. But social activities can be fun and a great way to meet other people. A strong social network is very helpful when you need help in the future. 
+
+[[Okay, let's continue.|Node_social_week2_1b]]
+[[No, I am not interested.|Node_social_week2End]]
+===
+title: Node_social_week2_0e
+tags: 
+speaker: Emma
+colorID: 1
+position: 4165,-1443
+---
+Okay, no problem. There are various reasons why not to contact a person. The session of this week will focus more on meeting others. Shall we start? 
+
+[[Yes, let's start.|Node_social_week2_1a]]
+[[No, I am not interested.|Node_social_week2End]]
+===
+title: Node_social_week2_0a
+tags: 
+speaker: Emma
+colorID: 1
+position: 4156,-1704
+---
+Did you contact one of the persons who you mentioned last week? 
+
+[[Yes, I did.|Node_social_week2_0b]]
+[[No, I did not.|Node_social_week2_0e]]
+===
+title: Node_social_week2_0b
+tags: 
+speaker: Emma
+colorID: 1
+position: 4429,-1707
+---
+That is good to hear! Did you only contact them? Like through the phone, or did you also meet up?
+
+[[We only contacted each other.|Node_social_week2_0c]]
+[[We also met up.|Node_social_week2_0d]]
+===
+title: Node_social_week2_0c
+tags: 
+speaker: Emma
+colorID: 1
+position: 4439,-1438
+---
+Okay. Nice to hear that you contacted each other. I also think it is nice to meet each other. The session of this week will focus more on meeting others. Shall we start? 
+
+[[Yes, let's start.|Node_social_week2_1a]]
+[[No, I am not interested.|Node_social_week2End]]
+===
+title: Node_social_week2_0d
+tags: 
+speaker: Emma
+colorID: 1
+position: 4715,-1707
+---
+I think it is nice to meet each other. The session of this week will focus more on meeting others. Shall we start? 
+
+[[Yes, please.|Node_social_week2_1a]]
+===
+title: Node_social_week2_2f
+tags: 
+speaker: Emma
+colorID: 1
+position: 6901,-676
+---
+Which of the three activities would you like to do with someone else? The first ($socWeek2Activity1), the second ($socWeek2Activity2), or the third ($socWeek2Activity3)?
+
+[[The first.|Node_social_week2_2g]]
+[[The second.|Node_social_week2_2g]]
+[[The third.|Node_social_week2_2g]]
+===
+title: Node_social_week2_2g
+tags: 
+speaker: Emma
+colorID: 0
+position: 6910,-443
+---
+ Maybe it is an idea to plan one of these three activities this week with a person who is close to you? What do you think? 
+
+[[That is a great idea.|Node_social_week2_2h]]
+[[I am not so sure.|Node_social_week2_2h]]
+[[I do not like this idea.|Node_social_week2_2h]]
+===
+title: Node_social_week2_5
+tags: 
+speaker: Emma
+colorID: 1
+position: 6606,-125
+---
+Before we finish, I would like to give you one final assignment. 
+
+[[Okay, please continue.|Node_social_week2_5a]]
+[[I think I know enough for now.|Node_social_week2_6]]
+===
+title: Node_social_week2_5a
+tags: 
+speaker: Emma
+colorID: 1
+position: 6322,-126
+---
+Almost every municipality has an overview of all their social activities. "Sociale Kaart Nederland" provides an overview of these.
+
+[[Node_social_week2_5b]]
+===
+title: Node_social_week2_5b
+tags: 
+speaker: Emma
+colorID: 1
+position: 6011,-118
+---
+I want to ask you to try and visit this website and search for some social activities in your neighbourhood or municipality. Again, just type it in Google and you will find it online!
+
+[[Node_social_week2_6]]
+===

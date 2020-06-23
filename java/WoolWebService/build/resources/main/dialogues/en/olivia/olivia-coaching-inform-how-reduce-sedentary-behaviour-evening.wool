@@ -1,0 +1,301 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 1370,-164
+---
+Today, we will talk about reducing your sedentary behaviour in the evening.
+
+[[Okay, tell me more.|AskAboutEveningActivity]]
+[[I am not interested.|NoThanks]]
+===
+title: AskAboutEveningActivity
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1658,-418
+---
+Alright! So, what do you often do during your evenings? Do you regularly spend your evening on the couch or in the chair? Watching television, reading the newspaper or a nice book or puzzling?
+
+[[Yes, I am often on the couch or in the chair.|EveningOnCouch]]
+[[No, I am active at home.|EveningNotOnCouch]]
+[[No, I am often away from home.|EveningAwayFromHome]]
+===
+title: NoThanks
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1590,397
+---
+Okay, can I help you with something else?
+
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 3832,285
+---
+
+===
+title: TimeForAction
+tags: 
+speaker: Olivia
+colorID: 1
+position: 3591,-303
+---
+<<set $paUserCompletedInformHowReduceSedentaryBehaviourEvening = true>>
+<<set $paUserCompletedInformHowDate = $today>>
+
+So let's start today! The sooner the better.
+
+[[Thanks, I will try.|InformEnd]]
+===
+title: FrancoisWater
+tags: 
+speaker: Francois
+colorID: 1
+position: 3283,-563
+---
+Indeed! What about combining the reduction of your sedentary behaviour with increasing your water intake? Get off the couch to get a glass of water. Very healthy!
+
+[[Good idea, thanks.|TimeForAction]]
+[[Do you have another suggestion?|ConcreteExample2]]
+[[I already drink enough water.|AlreadySufficientWater]]
+===
+title: EveningOnCouch
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1927,-546
+---
+<<set $userSpendsMostEveningsAtHome = true>>
+<<set $paUserIndicatesToBeActiveInEvening = false>>
+
+Okay, thank you for sharing. It sounds like you have nice and relaxing evenings!
+
+<<if $coachHelenEnabled>>
+    [[HelenRelaxingOnCouch]]
+<<else>>
+    [[RelaxButReduceSedentaryBehaviour]]
+<<endif>>
+===
+title: HelenRelaxingOnCouch
+tags: 
+speaker: Helen
+colorID: 1
+position: 2202,-705
+---
+Yes, taking time to relax is important!
+
+[[RelaxButReduceSedentaryBehaviour]]
+===
+title: RelaxButReduceSedentaryBehaviour
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2465,-553
+---
+However, for your physical health it is important to reduce your sedentary behaviour. I would suggest you to reduce your sedentary behaviour also during the evenings.
+
+[[But how can I do this?|StartSmall]]
+===
+title: StartSmall
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2752,-560
+---
+Just start small. For example, get up from the couch or chair at least two minutes every hour. Doing so is good for your blood circulation.
+
+[[What shall I do in these two minutes?|ConcreteExample]]
+===
+title: ConcreteExample
+tags: 
+speaker: Olivia
+colorID: 1
+position: 3019,-561
+---
+What about getting yourself a drink? Drinking sufficient is healthy too.
+
+<<if $coachFrancoisEnabled>>
+    [[FrancoisWater]]
+<<else>>
+    [[ConcreteExample2]]
+<<endif>>
+===
+title: EveningNotOnCouch
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1929,-241
+---
+<<set $userSpendsMostEveningsAtHome = true>>
+<<set $paUserIndicatesToBeActiveInEvening = true>>
+
+Aha, physically active, great. But, make sure you have time to relax as well. While at home, it's also important to relax!
+
+<<if $coachHelenEnabled>>
+    [[HelenRelaxWhenActive]]
+<<else>>
+    [[SedentaryBehaviourAwayFromHome]]
+<<endif>>
+===
+title: SedentaryBehaviourAwayFromHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2223,143
+---
+So, when you are away from home do you often sit for at least 30 minutes in a row?
+
+[[Yes.|StillSedentary]]
+[[No.|ComplimentOnLittleSedentary]]
+===
+title: StillSedentary
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2226,510
+---
+<<set $paUserIndicatesToBeActiveInEvening = false>>
+
+Okay, thanks for the information. However, for your physical health it is important to reduce your sedentary behaviour. I would suggest to reduce your sedentary behaviour also during the evenings.
+
+[[But how can I do this?|StartSmallOutsideHome]]
+===
+title: AlreadyLittleSedentary
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2469,-240
+---
+It is important to reduce your sedentary behaviour, also during activities in the evening. But, as I understand, you do so already. Keep up the good work!
+
+[[Thanks.|RememberLittleSedentary]]
+===
+title: ConcreteExample2
+tags: 
+speaker: Olivia
+colorID: 1
+position: 3290,-89
+---
+Other activities you could do during your relaxing evening on the couch are washing a few dishes, tidying some things around the house, watering your plants or even going to the toilet. Every little bit of activity helps!
+
+[[Okay, thank you.|TimeForAction]]
+===
+title: AlreadySufficientWater
+tags: 
+speaker: Olivia
+colorID: 1
+position: 3009,-92
+---
+<<set $nutUserIndicatesDrinkingEnoughWater = true>>
+
+Perfect! Keep going.
+
+[[ConcreteExample2]]
+===
+title: HelenRelaxWhenActive
+tags: 
+speaker: Helen
+colorID: 1
+position: 2204,-237
+---
+Yes, taking time to relax is important!
+
+[[AlreadyLittleSedentary]]
+===
+title: RememberLittleSedentary
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2762,-247
+---
+But, when you do have a nice evening at home on the couch or in the chair, do not sit still too long in a row.
+
+[[But how can I do this?|StartSmall]]
+[[I understand, thanks.|TimeForAction]]
+===
+title: EveningAwayFromHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1737,145
+---
+<<set $userSpendsMostEveningsAtHome = false>>
+
+Aha. Well, make sure you have time to relax as well. Being at home, relaxing, is very healthy.
+
+<<if $coachHelenEnabled>>
+    [[HelenRelaxWhenAwayFromHome]]
+<<else>>
+    [[SedentaryBehaviourAwayFromHome]]
+<<endif>>
+===
+title: ConcreteExampleOutsideHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2979,504
+---
+You could go to the toilet, get a glass or water or just stand up from your chair for two minutes. Every little bit of activity helps!
+
+[[Okay, thank you.|TimeForAction]]
+===
+title: ComplimentOnLittleSedentary
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2496,139
+---
+<<set $paUserIndicatesToBeActiveInEvening = true>>
+
+Alright, good to hear!
+
+[[Thank you.|RememberReducingSedentaryAwayFromHome]]
+===
+title: StartSmallOutsideHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2558,507
+---
+Just start small. For example, get up from the chair at least two minutes every hour. Doing so is good for your blood circulation.
+
+[[What shall I do in these two minutes?|ConcreteExampleOutsideHome]]
+===
+title: HelenRelaxWhenAwayFromHome
+tags: 
+speaker: Helen
+colorID: 1
+position: 1974,410
+---
+Yes, taking time to relax is important!
+
+[[SedentaryBehaviourAwayFromHome]]
+===
+title: RememberReducingSedentaryAwayFromHome
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2783,147
+---
+Getting up from the chair at least two minutes every hour already helps for your blood circulation.
+
+[[What shall I do in these two minutes?|ConcreteExampleOutsideHome]]
+===
+title: InformEnd
+tags: 
+speaker: Olivia
+colorID: 5
+position: 3836,-1
+---
+Well that was my advice for today. Can I help you with something else?
+
+[[Can we go through the previous tips?|olivia-coaching-inform-how-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
