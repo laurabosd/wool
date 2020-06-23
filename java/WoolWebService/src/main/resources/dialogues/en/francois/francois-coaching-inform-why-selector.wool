@@ -1,0 +1,65 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 1
+position: 267,204
+---
+<<if $nutUserCompletedInformWhyDate == $today>>
+    Hm.. I see that I already told you something about the benefits of healthy nutrition. Maybe we can talk about this some more tomorrow?
+    
+    [[Can you repeat a tip for me? |Archive]]
+<<else>>
+    Let me think... why should you have a healthy diet...
+
+    [[Selector]]
+<<endif>>
+===
+title: Archive
+tags: 
+speaker: Francois
+colorID: 0
+position: 277,512
+---
+Sure, I can repeat something that I have told you before. 
+
+[[Yes, that would be nice.|francois-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: Selector
+tags: 
+speaker: Francois
+colorID: 0
+position: 594,198
+---
+<<if $nutUserCompletedInformWhySalt == false>>
+	I can tell you something about salt!
+	
+	[[francois-coaching-inform-why-salt.Start]]
+//<<elseif $nutUserCompletedInformWhyVegetables == false>>
+//    Ah yes, I know something...
+
+//    [[francois-coaching-inform-why-vegetables.Start]]
+<<elseif $nutUserCompletedInformWhyWater == false>>
+    Hm... today I think it would be good to discuss drinking water. 
+	[[francois-coaching-inform-why-water.Start]]
+<<elseif $nutUserCompletedInformWhyFruit == false>>
+    Well, okay. So today I thought we could talk about fruit. 
+
+    [[francois-coaching-inform-why-fruit.Start]]
+<<else>>
+  Oh dear, I was so busy thinking about all of the recipes, that I forgot to come up with my tip of the day. Maybe we can discuss this another time? 
+
+  [[Can you repeat a previous topic?|francois-coaching-inform-why-archive.Start]]
+  [[I want to talk about something else.|francois-menu.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 598,505
+---
+
+===

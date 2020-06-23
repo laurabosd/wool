@@ -1,0 +1,27 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 515,361
+---
+You want to review some of the reasons why physical activity is good for you? Which advice do you want me to repeat?
+
+<<if $paUserCompletedInformWhyBrain == true >>
+  [["Brain."|olivia-coaching-inform-why-brain.Start]]
+<<endif>>
+
+<<if $paUserCompletedInformWhyBiologicalAge == true >>
+  [["Biological age."|olivia-coaching-inform-why-biological-age.Start]]
+<<endif>>
+
+[[I want to discuss something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 833,358
+---
+
+===

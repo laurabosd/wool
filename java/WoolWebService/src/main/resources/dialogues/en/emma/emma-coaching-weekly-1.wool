@@ -1,0 +1,399 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: -660,90
+---
+Today I want to talk about the importance of a social network. Are you interested in my story?
+
+[[Okay, I'm curious.|Node_social_week1_1]]
+[[No, sorry I am not.|Node_social_week1End]]
+===
+title: Node_social_week1_1
+tags: 
+speaker: Emma
+colorID: 1
+position: -390,85
+---
+When I was doing my groceries today, I met an old friend. We didn't speak to each other for years. He told me that he was planning a holiday and needed someone to look after his cat.
+
+[[Node_social_week1_2]]
+===
+title: Node_social_week1End
+tags: 
+speaker: Emma
+colorID: 5
+position: -885,424
+---
+Okay, I understand, maybe some other time!
+
+[[Goodbye.|End]]
+===
+title: Node_social_week1_2
+tags: 
+speaker: Emma
+colorID: 1
+position: -143,87
+---
+I have free time and I like cats, so I suggested to help him as he has no friends to help. He was very pleased with my offer and it feels good to help someone, don't you think?
+
+[[I guess so.|Node_social_week1_3]]
+===
+title: Node_social_week1_3
+tags: 
+speaker: Emma
+colorID: 1
+position: 108,87
+---
+I think a good social network is important. Not only to help each other out, but also to do activities together. I like to be alone sometimes, but I prefer to be with friends and family. What do you prefer?
+
+[[I prefer to be alone.|Node_social_week1_4a]]
+[[I prefer to be with friends and family.|Node_social_week1_5a]]
+===
+title: Node_social_week1_4a
+tags: 
+speaker: Emma
+colorID: 1
+position: 346,-157
+---
+Being alone can be very nice and relaxing. But being with friends and family can really help you to enjoy life. This week I want to get to know you better and talk about your social network and the things you like to do. What do you say?
+
+[[Okay, good idea.|Node_social_week1_6]]
+[[Hmm, maybe not.|Node_social_week1End]]
+
+===
+title: Node_social_week1_5a
+tags: 
+speaker: Emma
+colorID: 1
+position: 350,91
+---
+Yes, being with friends and family can really help you to enjoy life. This week I want to talk to you about your social network, and the things you like to do. What do you say?
+
+[[Okay, good idea.|Node_social_week1_6]]
+[[Hmm, maybe not.|Node_social_week1End]]
+===
+title: Node_social_week1_6
+tags: 
+speaker: Emma
+colorID: 1
+position: 631,98
+---
+Let's start. First you social network. These are family members, friends, colleagues and acquaintances who are close to you. Are you satisfied with your current social network?
+
+[[Yes.|Node_social_week1_7a]]
+[[No.|Node_social_week1_7b]]
+===
+title: Node_social_week1_7b
+tags: 
+speaker: Emma
+colorID: 1
+position: 897,210
+---
+Realising this is a first step to improving you social network. Let's continue this exercise and identify your social network. A nice way for me to get to know you, right?
+
+[[Okay.|Node_social_week1_8]]
+===
+title: Node_social_week1_7a
+tags: 
+speaker: Emma
+colorID: 1
+position: 634,322
+---
+That is great! I really want to know you and your social network. Let's start to identify your social network, okay?
+
+[[Okay.|Node_social_week1_8]]
+[[No, sorry I am not interested.|Node_social_week1End]]
+===
+title: Node_social_week1_8
+tags: 
+speaker: Emma
+colorID: 1
+position: 567,566
+---
+For this exercise I ask you to name up to five family members, friends, colleagues and/or acquaintances who are close to you. Please, name the first person...
+
+[[Person 1: <<input type="text" value="$socialnetworkclose1" min="0" max="30">>|Node_social_week1_8a]]
+===
+title: Node_social_week1_8a
+tags: 
+speaker: Emma
+colorID: 1
+position: 807,561
+---
+Please, name the second person...
+
+[[Person 2: <<input type="text" value="$socialnetworkclose2" min="0" max="30">>|Node_social_week1_8b]]
+===
+title: Node_social_week1_8b
+tags: 
+speaker: Emma
+colorID: 1
+position: 1034,559
+---
+Please, name the third person...
+
+[[Person 3: <<input type="text" value="$socialnetworkclose3" min="0" max="30">>|Node_social_week1_8c]]
+===
+title: Node_social_week1_8c
+tags: 
+speaker: Emma
+colorID: 1
+position: 1267,551
+---
+Please, mention the fourth person...
+
+[[Person 4: <<input type="text" value="$socialnetworkclose4" min="0" max="30">>|Node_social_week1_8d]]
+===
+title: Node_social_week1_8d
+tags: 
+speaker: Emma
+colorID: 1
+position: 1504,551
+---
+And now the fifth and last person please...
+
+[[Person 5: <<input type="text" value="$socialnetworkclose5" min="0" max="30">>|Node_social_week1_9]]
+===
+title: Node_social_week1_9
+tags: 
+speaker: Emma
+colorID: 1
+position: 1764,646
+---
+Thank you. So, if I am correct you mentioned $socialnetworkclose1, $socialnetworkclose2, $socialnetworkclose3, $socialnetworkclose4 and $socialnetworkclose5 as your close family members, friends, colleagues and/or acquaintances, right?
+
+[[Yes, you are correct!|Node_social_week1_9a]]
+[[Sorry I made a mistake. Let me do it again.|Node_social_week1_8]]
+===
+title: Node_social_week1_9a
+tags: 
+speaker: Emma
+colorID: 1
+position: -553,808
+---
+Next to close friends and family, there are always persons who you want to be closer to you. Is there anyone (family members, friends, colleagues and/or acquaintances) who you want to be closer to?
+
+[[Yes, there are people.|Node_social_week1_9b]]
+[[No, I can't think of anyone.|Node_social_week1_9e]]
+
+
+
+===
+title: Node_social_week1_10a
+tags: 
+speaker: Emma
+colorID: 1
+position: 500,814
+---
+Can you name the second one...?
+
+[[Person 2: <<input type="text" value="$socialnetworknotclose2" min="0" max="30">>|Node_social_week1_10b]]
+===
+title: Node_social_week1_10b
+tags: 
+speaker: Emma
+colorID: 1
+position: 758,818
+---
+Please name the third person...
+
+[[Person 3: <<input type="text" value="$socialnetworknotclose3" min="0" max="30">>|Node_social_week1_10c]]
+===
+title: Node_social_week1_10c
+tags: 
+speaker: Emma
+colorID: 1
+position: 1023,821
+---
+And the fourth person...?
+
+[[Person 4: <<input type="text" value="$socialnetworknotclose4" min="0" max="30">>|Node_social_week1_10d]]
+===
+title: Node_social_week1_10d
+tags: 
+speaker: Emma
+colorID: 1
+position: 1276,820
+---
+And the fifth and last person...
+
+[[Person 5: <<input type="text" value="$socialnetworknotclose5" min="0" max="30">>|Node_social_week1_10e]]
+===
+title: Node_social_week1_10e
+tags: 
+speaker: Emma
+colorID: 1
+position: 1520,817
+---
+Thank you. So, if I am correct you mentioned $socialnetworknotclose1, $socialnetworknotclose2, $socialnetworknotclose3, $socialnetworknotclose4 and $socialnetworknotclose5 as people you want to be closer to?
+
+[[Yes, that is correct.|Node_social_week1_11]]
+[[No, sorry, can I do it again?|Node_social_week1_10]]
+===
+title: Node_social_week1_11b
+tags: 
+speaker: Emma
+colorID: 1
+position: 1527,1178
+---
+What are the activities you really enjoy doing? Can you mention two activities?
+
+[[Yes, I can.|Node_social_week1_11c]]
+[[No, I don't want to.|Node_social_week1_13a]]
+===
+title: Node_social_week1_13a
+tags: 
+speaker: Emma
+colorID: 5
+position: -865,1004
+---
+This was this week's social session. I really liked to get to know you better. Next week we continue to further broader or social network and discuss the kind of social activities you like.
+
+<<set $socUserCompletedCoachingWeek1 = true>>
+<<if $socUserCompletedCoachingWeek1Date == null >>
+  <<set $socUserCompletedCoachingWeek1Date = $today>>
+<<endif>>
+
+[[Okay, see  you next week!|EmmaEnd]]
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: -1311,681
+---
+
+===
+title: Node_social_week1_10
+tags: 
+speaker: Emma
+colorID: 1
+position: 237,815
+---
+Okay. I appreciate that you are willing to share. Please, name up to five family members, friends, colleagues and/or acquaintances who are not sufficiently close to you. Can you name the first person?
+
+[[Person 1: <<input type="text" value="$socialnetworknotclose1" min="0" max="30">>|Node_social_week1_10a]]
+===
+title: Node_social_week1_9b
+tags: 
+speaker: Emma
+colorID: 1
+position: -322,504
+---
+I really want to know who these persons are. Would you like to tell me who they are?
+
+[[Yes, okay.|Node_social_week1_10]]
+[[No, I prefer not to say.|Node_social_week1_9e]]
+===
+title: Node_social_week1_9e
+tags: 
+speaker: Emma
+colorID: 1
+position: -145,815
+---
+Okay. I understand. In that case, let's continue with something else...
+
+[[Node_social_week1_11]]
+===
+title: Node_social_week1_11c
+tags: 
+speaker: Emma
+colorID: 1
+position: 1276,1184
+---
+What is the first activity that comes to your mind?
+
+[[Activity 1: <<input type="text" value="$social_week1_activity1" min="0" max="30">>|Node_social_week1_11d]]
+===
+title: Node_social_week1_11
+tags: 
+speaker: Emma
+colorID: 1
+position: 1783,900
+---
+Maybe it would be a good idea to contact one of these people this week, what do you think?
+
+[[Yes, that's a good idea.|Node_social_week1_11a]]
+[[No, I don't think so.|Node_social_week1_11a]]
+===
+title: Node_social_week1_11a
+tags: 
+speaker: Emma
+colorID: 1
+position: 1792,1189
+---
+In any case, you've shared a lot of information with me and a I really have the feeling I'm getting to know you better! Before we end this session I have one more question.
+
+[[Node_social_week1_11b]]
+===
+title: Node_social_week1_11d
+tags: 
+speaker: Emma
+colorID: 1
+position: 1021,1190
+---
+Is this an activity that you do together or alone?
+
+[[Together.|Node_social_week1_11e]]
+[[Alone.|Node_social_week1_11e]]
+===
+title: Node_social_week1_11e
+tags: 
+speaker: Emma
+colorID: 1
+position: 771,1189
+---
+Okay, and what is the second activity that comes to mind?
+
+[[Activity 2: <<input type="text" value="$social_week1_activity2" min="0" max="30">>|Node_social_week1_11f]]
+===
+title: Node_social_week1_11f
+tags: 
+speaker: Emma
+colorID: 1
+position: 513,1187
+---
+And is this an activity that you do together or alone?
+
+[[Together.|Node_social_week1_11g]]
+[[Alone.|Node_social_week1_11g]]
+===
+title: Node_social_week1_11h
+tags: 
+speaker: Emma
+colorID: 1
+position: -30,1188
+---
+Okay. Let's wait and see! Next week we will continue with this theme and discuss the kind of social activities you like.
+
+<<set $socUserCompletedCoachingWeek1 = true>>
+<<if $socUserCompletedCoachingWeek1Date == null >>
+  <<set $socUserCompletedCoachingWeek1Date = $today>>
+<<endif>>
+
+[[Okay, see  you next week.|EmmaEnd]]
+===
+title: Node_social_week1_11g
+tags: 
+speaker: Emma
+colorID: 1
+position: 236,1191
+---
+These are two very nice activities, right? Maybe it is an idea to plan one of these activities this week with a person who is close to you? What do you think?
+
+[[That is a great idea.|Node_social_week1_11h]]
+[[I am not so sure.|Node_social_week1_11h]]
+[[No, I don't like that.|Node_social_week1_11h]]
+===
+title: EmmaEnd
+tags: 
+speaker: Emma
+colorID: 5
+position: -374,1186
+---
+Yes, next week we will have a new coaching session! Was there something else you wanted to discuss now?
+
+[[I want to discuss something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===

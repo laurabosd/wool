@@ -1,0 +1,46 @@
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 1072,358
+---
+
+===
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: 742,326
+---
+Hi there $userFirstName, I have a few short questions for you, if you have some time?
+
+[[Yes, I have some time.|emma-coaching-gather-information-esm.Start]]
+[[Maybe later Emma.|Later]]
+[[I don't want to answer today.|NotToday]]
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: Later
+tags: 
+speaker: Emma
+colorID: 0
+position: 915,651
+---
+<<set $esmEmmaLaterDate = $today >>
+
+Yes, of course, we will get back to it later!
+
+[[emma-menu.Redirect]]
+===
+title: NotToday
+tags: 
+speaker: Emma
+colorID: 0
+position: 639,650
+---
+<<set $esmEmmaSkipDate = $today >>
+
+Ooh sure, not a problem at all, we can skip the questions for today.
+
+[[emma-menu.Redirect]]
+===

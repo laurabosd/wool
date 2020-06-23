@@ -1,0 +1,219 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 3443,381
+---
+So if I'm not mistaken, you have a $paTrackerBrand tracker of type $paTrackerType. So, what is your question about?
+
+[[I have a problem with my tracker.|Problems]]
+[[Is the tracker waterproof?|Waterproof]]
+[[Can I sleep with the tracker?|Sleep]]
+[[Activity tracker during cycling.|UseFitbitBike]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 3441,83
+---
+
+===
+title: Waterproof2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2972,1033
+---
+In principle you can also go to the shower or bath with your activity tracker. However, to ensure its optimal use for many years to come, I recommend that you take it off in the shower.
+
+[[Why is that?|WhyNoShower]]
+[[Okay, thanks.|FollowUpQuestion]]
+===
+title: Sleep
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3286,759
+---
+You do not need to remove your activity tracker during sleep. Actually, your Fitbit Inspire also tracks how much and how well you are sleeping. 
+
+[[Sleep2]]
+===
+title: FollowUpQuestion
+tags: 
+speaker: Olivia
+colorID: 0
+position: 4152,377
+---
+Do you have any other question?
+
+[[Yes, I have another question.|OtherQuestion]]
+[[No, for now I don't have any other question.|FinishConversation]]
+===
+title: FinishConversation
+tags: 
+speaker: Olivia
+colorID: 5
+position: 4504,749
+---
+Always glad to help. If you have any question do not hesitate to ask me.
+===
+title: FitbitScreenOff
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3611,1032
+---
+Ah, well it might be that the battery is empty. Have you tried charging it?
+
+[[How do I charge the tracker?|ChargeFitbitInspire]]
+===
+title: ChargeFitbitInspire
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3609,1303
+---
+Plug the charging cable that was given with your activity tracker into a USB port on your computer or into a USB wall charger. Attach the other end of the cable to your device. To make sure that your device is fully charged, you should wait 1-2 hours.​
+
+[[FollowUpQuestion]]
+===
+title: UseFitbitBike
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3910,755
+---
+The activity tracker measures the number of steps per day. Since you're not collecting steps during cycling, the activity tracker doesn't count this as steps.
+
+[[FollowUpQuestion]]
+===
+title: SyncFitbit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3198,1634
+---
+Okay, first, can you check if Bluetooth is switched on, on the device that is running the Fitbit application?
+
+[[Yes, bluetooth is on.|Bluetoothon]]
+[[No, it is switched off.|Bluetoothoff]]
+===
+title: Bluetoothon
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3385,1956
+---
+And how about the Wi-Fi, or mobile network connection... is it switched on? Is the phone or tablet connected to the internet?
+
+[[Yes, it's connected to the internet.|Wifion]]
+[[No, it is not.|Wifioff]]
+===
+title: Bluetoothoff
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3019,1954
+---
+Okay, in that case, can you switch on the Bluetooth and try so synchronize again?
+
+[[Bluetoothon]]
+===
+title: Wifioff
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3751,1958
+---
+Turn on the Wi-Fi and try so synchronize again.
+
+[[Wifion]]
+===
+title: Wifion
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3550,1629
+---
+If it is still not working, try to turn off the bluetooth for a couple seconds, turn it back on and synchronize again.
+
+[[Let's try!|Askresearch]]
+===
+title: Askresearch
+tags: 
+speaker: Olivie
+colorID: 0
+position: 3878,1630
+---
+Is it still not working? Ask the research team!
+
+[[FollowUpQuestion]]
+===
+title: Sleep2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3285,1026
+---
+The activity tracker can measure a restless sleep. It can be possible that you moved during the night or woke up a couple times. The activity tracker will measure a restless sleep while this was not the case. Nothing to worry about!
+
+[[Sleep3]]
+===
+title: Waterproof
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2972,768
+---
+Your activity tracker is water proof and you can swim with it. By the way, swimming is a great activity to help you achieving the recommended daily activity. So my recommendation is head to that swimming pool!
+
+[[Waterproof2]]
+===
+title: OtherQuestion
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3738,383
+---
+Of course, what more do you want to know?
+
+[[I have a problem with my tracker.|Problems]]
+[[Is the tracker waterproof?|Waterproof]]
+[[Can I sleep with the tracker?|Sleep]]
+[[Activity tracker during cycling.|UseFitbitBike]]
+[[Goodbye.|End]]
+===
+title: Sleep3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3281,1295
+---
+Also, if you keep wearing it at night, you won't forget to put it on in the morning. We don't want to lose track of those early morning steps right?
+
+[[FollowUpQuestion]]
+===
+title: WhyNoShower
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2972,1295
+---
+Well, the device is waterproof, but the soap and shampoo might damage the wristband. So, although you could keep wearing it in the shower, we advice to take it off anyway.
+
+[[FollowUpQuestion]]
+===
+title: Problems
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3610,753
+---
+Ai, what is the problem exactly?
+
+[[The tracker screen is black.|FitbitScreenOff]]
+[[Activity tracker doesn't syncronizes with the app.|SyncFitbit]]
+===

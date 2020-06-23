@@ -1,0 +1,23 @@
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 1265,1063
+---
+
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 921,1063
+---
+Let's get down to business and talk about some coaching. What do you want to discuss today?
+
+[[My progress.|olivia-coaching-feedback-menu.Start]]
+[[My goals.|olivia-coaching-goals-menu.Start]]
+[[My coaching strategy.|olivia-coaching-strategy-menu.Start]]
+[[Tips and info.|olivia-coaching-inform-menu.Start]]
+[[My activity tracker.|olivia-coaching-sensors-menu.Start]]
+[[Goodbye.|End]]
+===

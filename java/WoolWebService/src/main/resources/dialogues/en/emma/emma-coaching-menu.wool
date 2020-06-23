@@ -1,0 +1,93 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: 471,432
+---
+<<if $socUserCompletedCoachingWeek1 == false >>
+    Shall we start the coaching session for this week?
+
+    [[Okay, let's start session #1.|emma-coaching-weekly-1.Start]]
+<<elseif $socUserCompletedCoachingWeek2 == false>>
+
+    <<if $socUserCompletedCoachingWeek1Date < $oneWeekAgo>>
+        Okay, last week we discussed your social network. Shall we start our second week's session?
+
+        [[Okay, let's start session #2.|emma-coaching-weekly-2.Start]]
+    <<else>>
+        I have a new coaching session every week. This week you've already completed the session on social networks. Do you want to go through it again?
+
+        [[Okay, let's repeat session #1.|emma-coaching-weekly-1.Start]]
+    <<endif>>
+
+<<elseif $socUserCompletedCoachingWeek3 == false>>
+
+    <<if $socUserCompletedCoachingWeek2Date < $oneWeekAgo>>
+        Okay, last week we discussed your preferred social activities. Shall we start our third week's session?
+
+        [[Okay, let's start session #3.|emma-coaching-weekly-3.Start]]
+    <<else>>
+        I have a new coaching session every week. This week you've already completed the session on social activities. Do you want to go through it again?
+
+        [[Okay, let's repeat session #2.|emma-coaching-weekly-2.Start]]
+    <<endif>>
+
+//<<elseif $socUserCompletedCoachingWeek4 == false>>
+
+//    <<if $socUserCompletedCoachingWeek3Date < $oneWeekAgo>>
+//        Okay, last week we discussed broadening your network. Shall we start our fourth week's session?
+
+//        [[Okay, let's start session #4.|emma-coaching-weekly-4.Start]]
+//    <<else>>
+//        I have a new coaching session every week. This week you've already completed the session on broadening your network. Do you want to go through it again?
+
+//        [[Okay, let's repeat session #3.|emma-coaching-weekly-3.Start]]
+//    <<endif>>
+
+<<else>>
+    Well, it looks like you've finished all the coaching sessions I have prepared so far. Maybe if you check back later, I might have something new!
+<<endif>>
+
+[[Which coaching sessions can I repeat?|Archive]]
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 910,547
+---
+
+===
+title: Archive
+tags: 
+speaker: Emma
+colorID: 0
+position: 806,199
+---
+<<if $socUserCompletedCoachingWeek1 == true>>
+  These are the coaching sessions you can repeat.
+<<else>>
+  You haven't completed any coaching sessions yet.
+<<endif>>
+
+<<if $socUserCompletedCoachingWeek1 == true>>
+    [[Session #1.|emma-coaching-weekly-1.Start]]
+<<endif>>
+
+<<if $socUserCompletedCoachingWeek2 == true>>
+    [[Session #2.|emma-coaching-weekly-2.Start]]
+<<endif>>
+
+<<if $socUserCompletedCoachingWeek3 == true>>
+    [[Session #3.|emma-coaching-weekly-3.Start]]
+<<endif>>
+
+<<if $socUserCompletedCoachingWeek4 == true>>
+    [[Session #4.|emma-coaching-weekly-4.Start]]
+<<endif>>
+
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===

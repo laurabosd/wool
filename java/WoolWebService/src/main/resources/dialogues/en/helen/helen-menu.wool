@@ -1,0 +1,65 @@
+title: Start
+tags: 
+speaker: Helen
+colorID: 2
+position: 139,61
+---
+<<if $cogUserCompletedIntroduction == false>>
+  
+  <<if $userGender == "Male">>
+    Good day sir. My name is Helen Flores, so nice to meet you.
+  <<elseif $userGender == "Female">>
+    Good day madam. My name is Helen Flores, so nice to meet you.
+  <<else>>
+    Good day! My name is Helen Flores, so nice to meet you.
+  <<endif>>
+
+	[[Nice to meet you Helen.|helen-social-introduction.Start]]
+<<else>>
+
+  <<if $userGender == "Male">>
+    Hello sir, nice to see you again! How may I help you?
+  <<elseif $userGender == "Female">>
+    Hello madam, nice to see you again! How may I help you?
+  <<else>>
+    Hello there, nice to see you again! How may I help you?
+  <<endif>>
+
+  [[I just wanted to chat.|helen-social-menu.Start]]
+  [[Goodbye.|End]]
+
+<<endif>>
+===
+title: End
+tags: 
+speaker: Helen
+colorID: 5
+position: 984,61
+---
+
+===
+title: Redirect
+tags: 
+speaker: Helen
+colorID: 2
+position: 143,-183
+---
+<<if $cogUserCompletedIntroduction == true>>
+    So, how may I help you today?
+
+    [[I just wanted to chat.|helen-social-menu.Start]]
+    //[[Can we have a coaching session?|helen-coaching-menu.Start]]
+    [[Goodbye.|End]]
+<<else>>
+    <<if $userGender == "Male">>
+        Good day sir. My name is Helen Flores, so nice to meet you.
+    <<elseif $userGender == "Female">>
+        Good day madam. My name is Helen Flores, so nice to meet you.
+    <<else>>
+        Good day! My name is Helen Flores, so nice to meet you.
+    <<endif>>
+
+    [[Nice to meet you Helen.|helen-social-introduction.Start]]
+    [[Goodbye.|End]]
+<<endif>>
+===

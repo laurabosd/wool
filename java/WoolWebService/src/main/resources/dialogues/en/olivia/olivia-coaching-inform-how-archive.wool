@@ -1,0 +1,35 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 515,361
+---
+You want to review some of the tips on how you can improve your physical activity? Which advice do you want me to repeat?
+
+<<if $paUserCompletedInformHowLunchWalk == true >>
+  [["Lunch walks."|olivia-coaching-inform-how-lunch-walk.Start]]
+<<endif>>
+
+<<if $paUserCompletedInformHowFriendsAndPhysicalActivity == true >>
+  [["Friends and activity."|olivia-coaching-inform-how-friends-and-physical-activity.Start]]
+<<endif>>
+
+<<if $paUserCompletedInformHowReduceSedentaryBehaviourEvening == true >>
+  [["Sedentary evenings."|olivia-coaching-inform-how-reduce-sedentary-behaviour-evening.Start]]
+<<endif>>
+
+<<if $paUserCompletedInformHowStairs == true >>
+  [["Using the stairs."|olivia-coaching-inform-how-stairs.Start]]
+<<endif>>
+
+[[I want to discuss something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 833,358
+---
+
+===

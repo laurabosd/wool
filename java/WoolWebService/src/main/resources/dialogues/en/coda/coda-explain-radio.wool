@@ -1,0 +1,126 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: -180,-13
+---
+<<if $coachFrancoisEnabled >>
+    You can find the radio on the kitchen counter, next to François!
+<<else>>
+    You can find the radio on the kitchen counter, right behind me.
+<<endif>>
+
+[[Please go on.|Expl1]]
+[[Okay, I've heard enough.|EndExplanation]]
+===
+title: EndExplanation
+tags: 
+speaker: Coda
+colorID: 0
+position: -566,-10
+---
+<<set $radioCompletedIntroduction = true>>
+
+Okay, sure. Was there something else I can help you with?
+
+[[I want to talk about something else.|coda-menu.Redirect]]
+[[I will try the radio now, goodbye!|End]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Coda
+colorID: 5
+position: -572,-312
+---
+
+===
+title: Expl1
+tags: 
+speaker: Coda
+colorID: 0
+position: 130,-13
+---
+When you want to switch on the radio, tap on it to get a close-up view.
+
+[[Please go on.|Expl2]]
+[[Okay, I've heard enough.|EndExplanation]]
+===
+title: Expl2
+tags: 
+speaker: Coda
+colorID: 0
+position: 442,-12
+---
+The radio has a big "Play" button on the left, a big "Stop" button on the right, and four channel selectors in the middle.
+
+[[Please go on.|Expl3]]
+[[Okay, I've heard enough.|EndExplanation]]
+===
+title: Expl3
+tags: 
+speaker: Coda
+colorID: 0
+position: 747,-17
+---
+By default the radio is set to channel 1. This channel plays old classic blues and jazz music. If you want to hear something else, select a different channel with the four buttons in the middle bottom of the radio.
+
+[[Please go on.|Expl4]]
+[[Okay, I've heard enough.|EndExplanation]]
+===
+title: Expl4
+tags: 
+speaker: Coda
+colorID: 0
+position: 1035,-17
+---
+The second channel plays classical music, mostly piano pieces, it's quite soothing for humans, as I understand...
+
+[[Please go on.|Expl5]]
+[[Okay, I've heard enough.|EndExplanation]]
+===
+title: Expl5
+tags: 
+speaker: Coda
+colorID: 0
+position: 1341,-20
+---
+<<if $coachFrancoisEnabled >>
+    The third channel plays old classic French songs, François sure loves it!
+    
+    [[Expl5Francois]]
+<<else>>
+    The third channel plays old classic French songs. Our diet coach, François can't get enough of it, but I see you didn't choose him to be your coach...
+    
+    [[Please go on.|Expl6]]
+    [[Okay, I've heard enough.|EndExplanation]]
+<<endif>>
+===
+title: Expl5Francois
+tags: 
+speaker: Francois
+colorID: 0
+position: 1614,-263
+---
+<<if $radioState == "PLAYING" && $radioChannel == "3">>
+    <i>Francois is humming along with the French music on the radio...</i>
+<<else>>
+    <<if $radioState == "PLAYING">>
+        Aaah oui, please switch it to channel trois!
+    <<else>>
+        Aaah oui, please turn on the radio to channel trois!
+    <<endif>>
+<<endif>>
+
+[[Expl6]]
+===
+title: Expl6
+tags: 
+speaker: Coda
+colorID: 0
+position: 1760,136
+---
+And finally, channel four has some nice old rock and roll music. Why don't you give it a try?
+
+[[Thanks for the explanation, Coda.|EndExplanation]]
+===

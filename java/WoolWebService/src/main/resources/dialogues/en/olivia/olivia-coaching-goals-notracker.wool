@@ -1,0 +1,100 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 10430,-399
+---
+Oh, hmm... there is just one little problem. I can not actually see how active you are in your daily life!
+
+[[TrackerNotConnected2]]
+===
+title: TrackerNotConnected2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 10156,-397
+---
+If you want to set an activity goal, I first need access to your physical activity data.
+
+[[TrackerNotConnected3]]
+===
+title: TrackerNotConnected3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 9876,-400
+---
+Should I help you connect your physical activity tracker, so we can talk about goals later?
+
+[[Okay, let's connect my tracker.|olivia-coaching-sensors-menu.Start]]
+[[Why do you need my data?|Why]]
+[[Goodbye.|End]]
+===
+title: Why
+tags: 
+speaker: Olivia
+colorID: 0
+position: 9871,-98
+---
+Well, first of all, if I can not see how active you are, I can not coach you towards your activity goal.
+
+[[Why2]]
+===
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 9526,-402
+---
+
+===
+title: Why2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 9870,180
+---
+And second, if I can follow your progress, I can set a more personalised activity goal for you.
+
+<<if $coachCarlosEnabled >>
+    [[CommentCarlos]]
+<<elseif $coachFrancoisEnabled >>
+    [[CommentFrancois]]
+<<else>>
+    [[FinishWhy]]
+<<endif>>
+===
+title: FinishWhy
+tags: 
+speaker: Olivia
+colorID: 0
+position: 9872,779
+---
+So...?
+
+[[TrackerNotConnected3]]
+===
+title: CommentCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: 10108,451
+---
+It's really helpful to share the activity data with Olivia. I did it as well so we can talk about my progress.
+
+<<if $coachFrancoisEnabled >>
+    [[CommentFrancois]]
+<<else>>
+    [[FinishWhy]]
+<<endif>>
+===
+title: CommentFrancois
+tags: 
+speaker: Francois
+colorID: 0
+position: 9665,460
+---
+Ah oui! I also share my data with Olivia. I know she keeps my information safe!
+
+[[FinishWhy]]
+===

@@ -1,0 +1,106 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: -3602,418
+---
+I would like to know a bit more about the environment where you live. I don’t want to know your address or anything like that, but I want to help you having an active lifestyle and the environment is very important.
+
+[[Okay, what would you like to know?|GetLivingEnvironment]]
+[[I prefer not to talk about it.|PreferNotToTalk]]
+[[Goodbye.|End]]
+===
+title: PreferNotToTalk
+tags: 
+speaker: Olivia
+colorID: 0
+position: -3088,614
+---
+Ok, maybe I will ask you about it some other time.
+
+[[Okay.|EndGatherInformation]]
+===
+title: GetLivingEnvironment
+tags: 
+speaker: Olivia
+colorID: 0
+position: -4043,607
+---
+For example, do you live in an urban area with cars, people on the streets and so on, or more in an rural area, close to the countryside?
+
+[[I live in an urban area.|LiveInNeighborhood|<<set $userLivingEnvironment = "urban">>]]
+[[I live in a rural area.|LiveInRuralArea|<<set $userLivingEnvironment = "rural">>]]
+[[I prefer not to answer.|PreferNotToTalk]]
+[[Goodbye.|End]]
+===
+title: LiveInRuralArea
+tags: 
+speaker: Olivia
+colorID: 0
+position: -4376,752
+---
+That’s great! All the fresh air! After living in London and Amsterdam for almost all my life, I really like going for walks with my dog Brian in the fields.
+
+[[GetPleasantLivingEnvironment]]
+===
+title: LiveInNeighborhood
+tags: 
+speaker: Olivia
+colorID: 0
+position: -3743,753
+---
+I lived in big cities all my life and I must confess that sometimes I miss it a little bit. But oh well now that I live in the countryside I can have long walks with my dog Brian. 
+
+[[GetPleasantLivingEnvironment]]
+===
+title: GetPleasantLivingEnvironment
+tags: 
+speaker: Olivia
+colorID: 0
+position: -4084,950
+---
+Would you say that you have a pleasant environment in the surroundings of your house, where you feel like going for a walk outside?
+
+[[Yes a pleasant environment, day and night.|FollowUPPleasantEnvironment|<<set $userLivingPleasantEnvironmentDay = true>> <<set $userLivingPleasantEnvironmentNight = true >>]]
+[[Pleasant during the day, but not at night.|FollowUPPleasantEnvironment|<<set $userLivingPleasantEnvironmentDay = true>><<set $userLivingPleasantEnvironmentNight = false>>]]
+[[The environment is not very pleasant.|FollowUPPleasantEnvironment|<<set $userLivingPleasantEnvironmentDay = false>><<set $userLivingPleasantEnvironmentNight = false>>]]
+[[Goodbye.|End]]
+
+===
+title: FollowUPPleasantEnvironment
+tags: 
+speaker: Olivia
+colorID: 0
+position: -3817,1227
+---
+<<set $paUserCompletedGatherInformationEnvironment = true>>
+
+<<if $userLivingPleasantEnvironmentDay == true && $userLivingPleasantEnvironmentNight == true  >>
+    That's great! We can make a plan to include short daily walks on your daily routine, but let's talk about it later.
+<<elseif $userLivingPleasantEnvironmentDay == true && $userLivingPleasantEnvironmentNight == false>>
+    I get it. I will take that into consideration when giving you my advice for recommendation of activities. No night-time walks...
+<<elseif $userLivingPleasantEnvironmentDay == false && $userLivingPleasantEnvironmentNight == false>>
+    Too bad, but we will find ways to get you active. Don't worry, where you see threats, I see opportunities!
+<<endif>>
+
+[[EndGatherInformation]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: -2980,1217
+---
+
+===
+title: EndGatherInformation
+tags: 
+speaker: Olivia
+colorID: 5
+position: -3366,1095
+---
+Was there something else you wanted to discuss?
+
+[[I wanted to discuss something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

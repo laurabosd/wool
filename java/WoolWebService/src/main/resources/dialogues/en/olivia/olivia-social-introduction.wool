@@ -1,0 +1,217 @@
+title: End
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3018,857
+---
+
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 0
+position: -468,816
+---
+Ooh I get so excited meeting new people! But I will try to keep it short, as I'm sure the others are also eager to meet you.
+
+<<if $coachFrancoisEnabled >>
+    [[StartCommentFrancois]]
+<<elseif $coachCarlosEnabled >>
+    [[StartCommentCarlos]]
+<<else>>
+    [[StartNoComment]]
+<<endif>>
+
+===
+title: StartCommentFrancois
+tags: 
+speaker: Francois
+colorID: 0
+position: -175,654
+---
+<<if $nutUserCompletedIntroduction>>
+    Take your time Olivia, $userFirstName and moi have already been introduced.
+<<else>>
+    <<if $userGender == "Female">>
+        Oui, oui, keep it short Olivia... I want to talk to her as well!
+    <<elseif $userGender == "Male">>
+        Oui, oui, keep it short Olivia... I want to talk to him as well!
+    <<else>>
+        Oui, oui, keep it short Olivia... I want to talk to our new friend as well!
+    <<endif>>
+<<endif>>
+
+<<if $coachCarlosEnabled >>
+    [[StartCommentCarlos2]]
+<<else>>
+    [[StartNoComment]]
+<<endif>>
+===
+title: StartNoComment
+tags: 
+speaker: Olivia
+colorID: 0
+position: 395,853
+---
+So, my name is Olivia... who do I have the pleasure of coaching today?
+
+<<if $userFirstName == "User">> // Previously undisclosed
+    [[First name: <<input type="text" value="$userFirstName">>.|Introduced]]
+<<else>>
+    [[Hi, my name is $userFirstName.|Introduced]]
+<<endif>>
+
+[[I prefer not to say.|Introduced]]
+===
+title: StartCommentCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: -182,965
+---
+<<if $peerUserCompletedIntroduction >>
+    <<if $userGender == "Female">>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice lady!
+    <<elseif $userGender == "Male">>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice gentleman!
+    <<else>>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice person!
+    <<endif>>
+<<else>>
+    <<if $userGender == "Female">>
+        Yes yes, do hurry up a little bit Olivia, I look forward to meeting her as well.
+    <<elseif $userGender == "Male">>
+        Yes yes, do hurry up a little bit Olivia, I look forward to meeting him as well.
+    <<else>>
+        Yes yes, do hurry up a little bit Olivia, I look forward to have a little chat as well.
+    <<endif>>
+<<endif>>
+
+[[StartNoComment]]
+===
+title: StartCommentCarlos2
+tags: 
+speaker: Carlos
+colorID: 0
+position: 101,652
+---
+<<if $peerUserCompletedIntroduction >>
+    <<if $userGender == "Female">>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice lady!
+    <<elseif $userGender == "Male">>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice gentleman!
+    <<else>>
+        Oh take your time Olivia, $userFirstName and I have already chatted a bit, such a nice person!
+    <<endif>>
+<<else>>
+    <<if $userGender == "Female">>
+        Yes yes, do hurry up a little bit Olivia, I look forward to meeting her as well.
+    <<elseif $userGender == "Male">>
+        Yes yes, do hurry up a little bit Olivia, I look forward to meeting him as well.
+    <<else>>
+        Yes yes, do hurry up a little bit Olivia, I look forward to have a little chat as well.
+    <<endif>>
+<<endif>>
+
+[[StartNoComment]]
+===
+title: Introduced
+tags: 
+speaker: Olivia
+colorID: 0
+position: 711,849
+---
+<<if $userFirstName == "User">>
+    Okay, I understand. Maybe later once we get to know each other a little better.
+<<else>>
+    So nice to meet you $userFirstName!
+<<endif>>
+
+[[Role]]
+===
+title: Role
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1012,849
+---
+Well I promised to keep it short, so let me just quickly explain my role in the Council of Coaches.
+
+[[Role2]]
+===
+title: Role2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1323,848
+---
+I am here to help you reaching a physically active life!
+
+[[Role3]]
+===
+title: Role3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1619,848
+---
+I will help you set up a personal plan for how to start increasing your activity day by day, and week by week.
+
+[[Role4]]
+===
+title: Role4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1905,848
+---
+I will also help you keep track of your daily steps, and give you feedback on your progress.
+
+[[Role5]]
+===
+title: Role5
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2230,848
+---
+Together we will work towards a new physically active you, how does that sound?
+
+[[Sounds good.|SoundsGood]]
+[[I'm not sure.|SoundsNotSure]]
+[[Goodbye.|SocialIntroductionEnd]]
+===
+title: SoundsGood
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2538,577
+---
+<<set $paUserCompletedIntroduction = true>>
+
+Excellent! I can't wait to get started. Come back to me whenever you're ready to start.
+
+[[Goodbye.|End]]
+===
+title: SoundsNotSure
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2541,848
+---
+<<set $paUserCompletedIntroduction = true>>
+
+Hmmm, well let's give it some time. Small steps, and let's see where we end up shall we?
+
+[[Goodbye.|End]]
+===
+title: SocialIntroductionEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2538,1118
+---
+<<set $paUserCompletedIntroduction = true>>
+
+Goodbye! Just let me know when you want to talk again!
+===

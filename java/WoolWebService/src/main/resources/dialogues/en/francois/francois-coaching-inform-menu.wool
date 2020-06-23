@@ -1,0 +1,33 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: -417,-97
+---
+Yes of course, François has lots of tips! Would you like to hear my tip of the day?
+
+[[What is the tip the day?|AskWhyOrHow]]
+[[I want to discuss something else.|francois-coaching-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: -92,-98
+---
+
+===
+title: AskWhyOrHow
+tags: 
+speaker: Francois
+colorID: 0
+position: -414,170
+---
+Let's see.. I could give you a tip on why having a healthy diet is important. 
+
+[[I would like to know why.|francois-coaching-inform-why-selector.Start]]
+//[[I would like to know how.|francois-coaching-inform-how-selector.Start]]
+[[I want to talk about something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===

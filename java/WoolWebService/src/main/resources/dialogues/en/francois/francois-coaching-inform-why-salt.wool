@@ -1,0 +1,157 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 375,35
+---
+So $userFirstName, did you know that by lowering your salt intake, you decrease your blood pressure?
+
+[[No, is that right?|MaxSalt]]
+[[Yes, I know.|HowMuchSalt]]
+[[But I like to use salt.|LikeSalt]]
+===
+title: MaxSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 695,40
+---
+Yes, it is. It is important to pay attention to your salt intake. Try not to eat more than 6 grams a day.
+
+[[Okay.|ReplaceSalt]]
+[[That will be difficult.|DifficultToReduceSalt]]
+
+===
+title: AverageAmountSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1247,35
+---
+On average, women eat 7.5 grams of salt a day and men eat even 10 grams a day. Clearly, these numbers show that a lot of people exceed the guidelines of salt intake.
+
+[[ReduceSalt]]
+===
+title: ReplaceSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1112,-251
+---
+Instead of using salt, you might add other herbs to your dish. This way, you make your dish more tasty, without making it unhealthy.
+
+[[Good idea!|TipLessSalt]]
+[[Yes, I know.|KnowTipLessSalt]]
+===
+title: ReduceSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1538,39
+---
+Yet, I advise you to stick to the guidelines. Too much salt is not healthy.
+
+[[ReplaceSalt]]
+===
+title: HowMuchSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 703,312
+---
+Do you know what is the recommended daily allowance of salt a day?
+
+[[Yes, <<input type="numeric" value="$nutUserAnswerAmountOfSalt" min="0" max="100">> grams of salt.|CheckAmountSalt]]
+[[No, I don't have clue.|NoClueAmountOfSalt]]
+===
+title: DifficultToReduceSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 982,35
+---
+I understand that it is difficult to take less than 6 gram salt a day.
+
+[[AverageAmountSalt]]
+===
+title: CheckAmountSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 702,644
+---
+<<if $nutUserAnswerAmountOfSalt == 6 >>
+  Yes, you are right! According to the guidelines, you should not take more than 6 grams of salt a day.
+
+  [[Yes, indeed.|AverageAmountSalt]]
+<<else>>
+  Sadly, that is not right. According to the guidelines, you should not take more than 6 grams of salt a day.
+
+  [[That is not a lot.|DifficultToReduceSalt]]
+  [[Okay.|AverageAmountSalt]]
+<<endif>>
+===
+title: TipLessSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1425,-253
+---
+Yes, indeed! By replacing salt by herbs when preparing your dishes, you will be fine!
+
+[[Okay.|FinishTip]]
+===
+title: FinishTip
+tags: 
+speaker: Francois
+colorID: 0
+position: 1711,-248
+---
+<<set $nutUserCompletedInformWhySalt = true>>
+<<set $nutUserCompletedInformWhyDate = $today>>
+
+Okay, that was my tip for today. Anything else you wanted to talk about? 
+
+[[Can we go through the previous tips?|francois-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 1994,-254
+---
+
+===
+title: NoClueAmountOfSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1250,319
+---
+Okay, let me inform you. According to the guidelines, you should not take more than 6 grams of salt a day.
+
+[[That is not a lot.|DifficultToReduceSalt]]
+[[Okay.|AverageAmountSalt]]
+===
+title: LikeSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 374,375
+---
+I understand, I like salt as well. I understand that it is difficult to take less than 6 gram salt a day.
+
+[[AverageAmountSalt]]
+===
+title: KnowTipLessSalt
+tags: 
+speaker: Francois
+colorID: 0
+position: 1429,-509
+---
+Great to hear you already know this trick. So, continue with replacing salt by herbs when preparing your dishes, and you will be fine!
+
+[[Okay.|FinishTip]]
+===

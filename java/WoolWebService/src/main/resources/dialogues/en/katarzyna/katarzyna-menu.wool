@@ -1,0 +1,26 @@
+title: Start
+tags: 
+speaker: Katarzyna
+colorID: 2
+position: 629,131
+---
+<<if $dt2UserCompletedIntroduction == false>>
+  Hello and welcome to the Council of Coaches. My name is Katarzyna, so nice to meet you!
+
+  [[Nice to meet you Katarzyna.|katarzyna-social-introduction.Start]]
+  [[Goodbye.|End]]
+<<else>>
+  Hello and nice to see you again. How can I help you?
+
+  [[I just wanted to chat.|katarzyna-social-menu.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Katarzyna
+colorID: 5
+position: 946,131
+---
+
+===

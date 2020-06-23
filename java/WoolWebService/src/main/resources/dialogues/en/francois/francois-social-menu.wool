@@ -1,0 +1,65 @@
+title: AboutFrancois
+tags:
+speaker: Francois
+colorID: 6
+position: -125,208
+---
+<<if $francoisCompletedStoryToday>>
+    I already told you a small story about myself today. Maybe we can talk again tomorrow?
+
+    [[Can you repeat the previous stories?|AboutFrancoisRepeat]]
+    [[I want to talk about something else.|Start]]
+    [[Goodbye.|End]]
+<<elseif $francoisCompletedStory1>> // Update to last available story number
+    I don't have any new stories to tell for now. Maybe in a future update of the Council of Coaches...
+
+    [[Can you repeat the previous stories?|AboutFrancoisRepeat]]
+    [[I want to talk about something else.|Start]]
+    [[Goodbye.|End]]
+<<else>>
+    About moi? I don't like talking about myself, but let's see... what could I tell you today...?
+
+    <<if $francoisCompletedStory1 == false >>
+        [[francois-social-story-1.Start]]
+    <<endif>>
+
+<<endif>>
+===
+title: End
+tags:
+speaker: Francois
+colorID: 5
+position: 370,-117
+---
+
+===
+title: Start
+tags:
+speaker: Francois
+colorID: 2
+position: -11,-110
+---
+To chat? Ah oui of course. What would you like to talk about?
+
+[[Tell me about yourself.|AboutFrancois]]
+<<if $francoisCompletedStory1>>
+    [[Can you repeat the previous stories?|AboutFrancoisRepeat]]
+<<endif>>
+[[I have another question.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: AboutFrancoisRepeat
+tags:
+speaker: Francois
+colorID: 0
+position: 200,210
+---
+Of course, which story would you like to repeat?
+
+<<if $francoisCompletedStory1>>
+    [[One.|francois-social-story-1.Start]]
+<<endif>>
+[[I want to talk about something else.|Start]]
+[[I have another question.|francois-menu.Start]]
+[[Goodbye.|End]]
+===

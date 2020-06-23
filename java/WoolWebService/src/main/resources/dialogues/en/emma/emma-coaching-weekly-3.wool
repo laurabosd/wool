@@ -1,0 +1,416 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: 2202,-470
+---
+Excellent, let's start the third session! From our talks the last two weeks, I really get the feeling I am getting to know you better. 
+
+[[Okay, please continue.|Node_social_week3_1a]]
+===
+title: Node_social_week3End
+tags: 
+speaker: Emma
+colorID: 0
+position: 1799,300
+---
+Okay, well, in that case I guess we can skip this week's session. Are you sure?
+
+[[Yes, I'm sure.|Session3End]]
+[[No, please continue the session.|Session3Continue]]
+
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 1796,18
+---
+
+===
+title: Node_social_week3_2a
+tags: 
+speaker: Emma
+colorID: 0
+position: 2690,456
+---
+With the information we gathered during our first two sessions we are going to make a plan to broaden your social network...
+
+[[Node_social_week3_2b]]
+===
+title: Node_social_week3_2b
+tags: 
+speaker: Emma
+colorID: 0
+position: 2986,463
+---
+<<if $coronaVirusActive == true>>
+    The plan is to make an appointment with yourself to perform a social activity with someone else. This can be with someone who is close to you or not. And of course, we will stick to phone or video call!
+<<else>>
+    The plan is to make an appointment with yourself to perform a social activity with someone else. This can be with someone who is close to you or not.   
+<<endif>>
+
+[[Okay |Node_social_week3_2c]]
+===
+title: Node_social_week3_1a
+tags: 
+speaker: Emma
+colorID: 0
+position: 2483,-462
+---
+We already discussed the people who are close to you and the people who you want to be closer to you in the first week...
+
+[[Node_social_week3_1b]]
+===
+title: Node_social_week3_1b
+tags: 
+speaker: Emma
+colorID: 0
+position: 2773,-463
+---
+And last week we discussed the kind of social activities you can do with someone else...
+
+[[Node_social_week3_1c]]
+===
+title: Node_social_week3_1c
+tags: 
+speaker: Emma
+colorID: 0
+position: 3059,-465
+---
+<<if $coronaVirusActive == true>>
+    This week I would like to ask you to look on the internet to see if you can find some online social activities that are organised in your municipality. Due to the corona virus, there are many things organized to talk to people online.
+<<else>>
+    This week I would like to ask you to look on the internet to see if you can find some social activities that are organised in your municipality.
+<<endif>>
+
+[[I already did.| Node_social_week3_1d]]
+[[I did not look for anything yet.| Node_social_week3_1f]]
+===
+title: Node_social_week3_1d
+tags: 
+speaker: Emma
+colorID: 0
+position: 3333,-467
+---
+<<if $coronaVirusActive == true>>
+    That is geat. Did you find any nice social activity in your municipality to talk to someone online?
+<<else>>
+    That is great. Did you find a nice social activity in your municipality you want to visit?
+<<endif>>
+
+[[Yes, I did.| Node_social_week3_1e]]
+[[No, I did not.| Node_social_week3_1f]]
+===
+title: Node_social_week3_2
+tags: 
+speaker: Emma
+colorID: 0
+position: 2408,182
+---
+Alright, we have a lot of catching up to do! Let's start with this week's session and make a plan!
+
+[[Let's make a plan.|Node_social_week3_2a0]]
+[[I am not interested in making a plan.|Node_social_week3End]]
+===
+title: Node_social_week3_1f
+tags: 
+speaker: Emma
+colorID: 0
+position: 3265,-147
+---
+<<if $coronaVirusActive == true>>
+    Okay, no problem. But maybe you can find some time this week to search for a nice online social activity in your municipality?
+<<else>>
+    Okay, no problem. But maybe you can find some time this week to search for a nice social activity in your municipality?
+<<endif>>
+
+[[That is a nice idea, maybe I will.| Node_social_week3_1e]]
+[[No, I am not interested.| Node_social_week3_1e]]
+===
+title: Node_social_week3_2c
+tags: 
+speaker: Emma
+colorID: 0
+position: 3269,466
+---
+<<if $coronaVirusActive == true>>
+    Okay, first you are going to decide which social activity will be part of your plan... because of the social distancing, we will look at online or phone activities...
+<<else>>
+    <<if $socWeek2Activity1 == null>>
+    Okay, first you are going to decide which social activity will be part of your plan...
+    <<else>>
+        Okay, first you are going to decide which social activity will be part of your plan. During last week's session you mentioned some social activities you like...
+    <<endif>>
+<<endif>>
+
+[[Node_social_week3_2d]]
+===
+title: Node_social_week3_2d
+tags: 
+speaker: Emma
+colorID: 0
+position: 3558,463
+---
+<<if $coronaVirusActive == true>>
+    So let's think about a social activity we can do without having physical contact with someone...
+<<elseif $socWeek2Activity1 == null>>
+    You didn't mention any social activities in our last week's coaching session if I remember correctly...
+<<elseif $socWeek2Activity2 == null>>
+    You mentioned $socWeek2Activity1 as the kind of social activity you like to do...
+<<elseif $socWeek2Activity3 == null>>
+    You mentioned $socWeek2Activity1, and $socWeek2Activity2 as the kind of social activities you like to do...
+<<else>>
+    You mentioned $socWeek2Activity1, $socWeek2Activity2 and $socWeek2Activity3 as the kind of social activities you like to do...
+<<endif>>
+
+[[Node_social_week3_2e]]
+===
+title: Node_social_week3_2e
+tags: 
+speaker: Emma
+colorID: 0
+position: 3857,462
+---
+So, what is the social activity you are going to pick for the plan. Of course you can also decide to mention a new activity!
+
+[[Social activity: <<input type="text" value="$socWeek3ActivityPlan" min="0" max="30">>.|Node_social_week3_2f]]
+
+
+===
+title: Node_social_week3_2f
+tags: 
+speaker: Emma
+colorID: 0
+position: 4158,459
+---
+That's a nice idea. The next step is to pick a person who you going to ask to join you. Okay?
+
+[[Node_social_week3_2g]]
+===
+title: Node_social_week3_2g
+tags: 
+speaker: Emma
+colorID: 0
+position: 2966,830
+---
+<<if $socialnetworkclose1 == null>>
+    In our first coaching session you didn't mention any people who are close to you if I remember correctly...
+<<elseif $socialnetworkclose2 == null>>
+    During our first session you mentioned the following person close to you: $socialnetworkclose1 ...
+<<elseif $socialnetworkclose3 == null>>
+    During our first session you mentioned the following people close to you: $socialnetworkclose1, and $socialnetworkclose2 ...
+<<elseif $socialnetworkclose4 == null>>
+    During our first session you mentioned the following people close to you: $socialnetworkclose1, $socialnetworkclose2, and $socialnetworkclose3 ...
+<<elseif $socialnetworkclose5 == null>>
+    During our first session you mentioned the following people close to you: $socialnetworkclose1, $socialnetworkclose2, $socialnetworkclose3, and $socialnetworkclose4 ...
+<<else>>
+    During our first session you mentioned the following people close to you: $socialnetworkclose1, $socialnetworkclose2, $socialnetworkclose3, $socialnetworkclose4 and $socialnetworkclose5 ...
+<<endif>>
+
+[[Node_social_week3_2h]]
+===
+title: Node_social_week3_2h
+tags: 
+speaker: Emma
+colorID: 0
+position: 3254,826
+---
+<<if $socialnetworknotclose1 == null>>
+...and you didn't mention any persons that are not sufficiently close to you...
+<<elseif $socialnetworknotclose2 == null>>
+...and you mentioned $socialnetworknotclose1 as a person not sufficiently close to you...
+<<elseif $socialnetworknotclose3 == null>>
+...and you mentioned $socialnetworknotclose1, and $socialnetworknotclose2 as those not sufficiently close to you...
+<<elseif $socialnetworknotclose4 == null>>
+...and you mentioned $socialnetworknotclose1, $socialnetworknotclose2, and $socialnetworknotclose3 as those not sufficiently close to you...
+<<elseif $socialnetworknotclose5 == null>>
+...and you mentioned $socialnetworknotclose1, $socialnetworknotclose2, $socialnetworknotclose3, and $socialnetworknotclose4 as those not sufficiently close to you...
+<<else>>
+...and you mentioned $socialnetworknotclose1, $socialnetworknotclose2, $socialnetworknotclose3, $socialnetworknotclose4 and $socialnetworknotclose5 as those not sufficiently close to you...
+<<endif>>
+
+[[Node_social_week3_2i]]
+===
+title: Node_social_week3_2i
+tags: 
+speaker: Emma
+colorID: 0
+position: 3563,819
+---
+Which person are you going to ask to join you? You can pick someone from the two earlier mentioned list or someone else. It's up to you! 
+
+[[Person: <<input type="text" value="$socWeek3PersonPlan" min="0" max="30">>.|Node_social_week3_2j]]
+===
+title: Node_social_week3_2j
+tags: 
+speaker: Emma
+colorID: 0
+position: 3849,823
+---
+That's nice. So, your plan is to invite $socWeek3PersonPlan for $socWeek3ActivityPlan, right?
+
+[[Yes, you are correct!|Node_social_week3_4a]]
+[[Sorry I made a mistake, can I start over?|StartOver]]
+===
+title: Node_social_week3_4a
+tags: 
+speaker: Emma
+colorID: 0
+position: 3109,1119
+---
+Okay, the next step is to plan a date and a time. When are you planning for this social activity? Please, be specific!
+
+[[Day: <<input type="text" value="$socWeek3DayPlan" min="0" max="30">>.|Node_social_week3_4b]]
+===
+title: Node_social_week3_1e
+tags: 
+speaker: Emma
+colorID: 0
+position: 3558,-155
+---
+<<if $coronaVirusActive == true>>
+    Okay. Besides that, last week I suggested to plan an activity with a person who is close to you. Because of the whole ongoing situation, maybe you managed to talk to someone over the phone?
+<<else>>
+    Okay. Besides that, last week I suggested to plan an activity with a person who is close to you. Did you manage to plan something?
+<<endif>>
+
+[[Yes, I did.|Node_social_week3_1g]]
+[[No, I did not.|Node_social_week3_1h]]
+
+===
+title: Node_social_week3_1g
+tags: 
+speaker: Emma
+colorID: 0
+position: 3847,-50
+---
+That is great to hear! Did you enjoy your social activity?
+
+[[Yes, I did.|Node_social_week3_2]]
+[[No, I did not.|Node_social_week3_2]]
+===
+title: Node_social_week3_1h
+tags: 
+speaker: Emma
+colorID: 0
+position: 3853,200
+---
+Okay, no problem of course. In this week's session we are going to focus on this...
+
+[[Node_social_week3_2]]
+===
+title: Node_social_week3_2a0
+tags: 
+speaker: Emma
+colorID: 0
+position: 2403,449
+---
+It can be difficult to change your social behaviour, especially when you are busy. I think making a plan can help!
+
+[[Node_social_week3_2a]]
+===
+title: Node_social_week3_4c
+tags: 
+speaker: Emma
+colorID: 0
+position: 3930,1103
+---
+Great. So, if I am correct. Your plan is to invite $socWeek3PersonPlan for $socWeek3ActivityPlan on $socWeek3DayPlan at $socWeek3TimePlan, right?
+
+[[Yes, you are correct!|Node_social_week3_4d]]
+[[Sorry I made a mistake, can I start over?|StartOverDate]]
+===
+title: Node_social_week3_4d
+tags: 
+speaker: Emma
+colorID: 0
+position: 4294,1097
+---
+Was it hard to make this social plan during this week's social session?
+
+[[Yes.|Node_social_week3_4e]]
+[[No.|Node_social_week3_4e]]
+===
+title: Node_social_week3_4e
+tags: 
+speaker: Emma
+colorID: 0
+position: 4296,1403
+---
+<<set $socUserCompletedCoachingWeek3 = true>>
+<<if $socUserCompletedCoachingWeek3Date == null >>
+  <<set $socUserCompletedCoachingWeek3Date = $today>>
+<<endif>>
+
+Okay, well... that's it for this week's social session. We made a social plan. Good luck in implementing the plan! I hope to see you next week, again!
+
+[[Week3End]]
+===
+title: Node_social_week3_4b
+tags: 
+speaker: Emma
+colorID: 0
+position: 3532,1112
+---
+... and on what time are you planning this activity? Please, be specific!
+
+[[Time: <<input type="text" value="$socWeek3TimePlan" min="0" max="30">>.|Node_social_week3_4c]]
+===
+title: Session3End
+tags: 
+speaker: Emma
+colorID: 0
+position: 1490,295
+---
+<<set $socUserCompletedCoachingWeek3 = true>>
+<<if $socUserCompletedCoachingWeek3Date == null >>
+  <<set $socUserCompletedCoachingWeek3Date = $today>>
+<<endif>>
+
+Okay, well... was there something else you wanted to talk about?
+
+[[I want to discuss something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: Session3Continue
+tags: 
+speaker: Emma
+colorID: 0
+position: 2066,592
+---
+Pfeew, okay, that's great! You won't regret it! So, about making a plan...
+
+[[Node_social_week3_2a0]]
+===
+title: StartOver
+tags: 
+speaker: Emma
+colorID: 0
+position: 4159,749
+---
+Of course, let's go through it again...
+
+[[Node_social_week3_2e]]
+===
+title: StartOverDate
+tags: 
+speaker: Emma
+colorID: 0
+position: 3539,1427
+---
+Of course, let's do it again...
+
+[[Node_social_week3_4a]]
+===
+title: Week3End
+tags: 
+speaker: Emma
+colorID: 0
+position: 4299,1695
+---
+Was there something else you wanted to discuss?
+
+[[I want to discuss something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===

@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Carlos
+colorID: 2
+position: 670,340
+---
+This part of my dialogue is still being written.
+
+[[Okay, take me back.|carlos-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Carlos
+colorID: 5
+position: 1012,339
+---
+
+===

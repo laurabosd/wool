@@ -1,0 +1,46 @@
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: 618,237
+---
+<<if $socUserCompletedIntroduction == true>>
+  Hello hello, so nice to see you again. How may I help you today?
+
+  [[I just wanted to chat.|emma-social-menu.Start]]
+  [[Can we have a coaching session?|emma-coaching-menu.Start]]
+  [[Goodbye.|End]]
+<<else>>
+  Hi there! My name is Emma Li.
+
+  [[Nice to meet you, Emma.|emma-social-introduction.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 943,234
+---
+
+===
+title: Redirect
+tags: 
+speaker: Emma
+colorID: 2
+position: 619,-10
+---
+<<if $socUserCompletedIntroduction == true>>
+  Okay, so tell me... what can I do for you?
+
+  [[I just wanted to chat.|emma-social-menu.Start]]
+  [[Can we have a coaching session?|emma-coaching-menu.Start]]
+  [[Goodbye.|End]]
+<<else>>
+  Hi there! My name is Emma Li.
+
+  [[Nice to meet you, Emma.|emma-social-introduction.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===

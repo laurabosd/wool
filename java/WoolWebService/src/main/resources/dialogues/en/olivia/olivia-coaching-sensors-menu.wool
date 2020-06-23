@@ -1,0 +1,124 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 817,128
+---
+<<if $paUserTrackerConnected == false>>
+    Okay, let's talk about your activity tracker. I see you didn't connect one yet, would you like to set one up now?
+
+    [[Okay, let's do it!|olivia-coaching-sensors-fitbit-setup.Start]]
+    [[I have a question about my tracker.|TrackerQuestions]]
+    [[I want to discuss something else.|olivia-menu.Redirect]]
+    [[Goodbye.|End]]
+<<else>>
+    Okay, let's discuss your activity tracker. Anything specific?
+
+    [[I have a question about my tracker.|TrackerQuestions]]
+    [[I want to discuss something else.|olivia-menu.Redirect]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1149,133
+---
+
+===
+title: TrackerQuestions
+tags: 
+speaker: Olivia
+colorID: 0
+position: 816,407
+---
+<<if $paTrackerBrand == null || $paTrackerBrand == "">>
+    A question about your activity tracker? Sure, I can help. Which brand of activity tracker do you have?
+
+    [[Fitbit.|olivia-coaching-sensors-fitbit-faq.Start|<<set $paTrackerBrand = "Fitbit">>]]
+    [[Something else.|OtherTracker]]
+<<elseif $paTrackerBrand == "Fitbit">>
+    A question about your activity tracker? Sure, I can help. You own a Fitbit tracker, right?
+
+    [[Yes, that's correct.|olivia-coaching-sensors-fitbit-faq.Start]]
+    [[No, that's wrong.|ChangeTrackerBrand]]
+<<endif>>
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: ChangeTrackerBrand
+tags: 
+speaker: Olivia
+colorID: 0
+position: 495,407
+---
+Hmmm, strange, I thought you owned a tracker from $paTrackerBrand. Well, guess I was wrong.
+
+[[Yes, you are wrong.|ChangeTrackerBrandWrong]]
+[[I changed my brand.|ChangeTrackerBrandChanged]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: OtherTracker
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1151,532
+---
+Okay, well, I'm afraid I don't work with other activity trackers at the moment, but maybe in the future. Could you tell me the brand of the tracker you own?
+
+[[Sure, it's from: <<input type="text" value="$paTrackerBrandUnknown">>.|UnknownBrandGiven]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: UnknownBrandGiven
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1468,530
+---
+Hmmm, a $paTrackerBrandUnknown ... I have to look into it, thanks! Is there something else I can do for you?
+
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: ChangeTrackerBrandWrong
+tags: 
+speaker: Olivia
+colorID: 0
+position: 627,699
+---
+Okay, my mistake! So, which tracker brand do you own?
+
+[[Fitbit|GoToFAQFitbit|<<set $paTrackerBrand = "Fitbit">>]]
+[[Something else.|OtherTracker]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: ChangeTrackerBrandChanged
+tags: 
+speaker: Olivia
+colorID: 0
+position: 355,699
+---
+Ah okay, in that case, which tracker do you own now?
+
+[[Fitbit|GoToFAQFitbit|<<set $paTrackerBrand = "Fitbit">>]]
+[[Something else.|OtherTracker]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: GoToFAQFitbit
+tags: 
+speaker: Olivia
+colorID: 0
+position: 498,1028
+---
+Okay, a Fitbit, noted! So, you had a question about your Fitbit?
+
+[[Yes, I have a question.|olivia-coaching-sensors-fitbit-faq.Start]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===

@@ -1,0 +1,127 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 649,213
+---
+<<if $nutUserCompletedIntroduction == false>>
+	Bonjour! Allow me to introduce myself... I am... François Dubois! Your personal Chef and diet coach!
+
+	[[Hello François.|francois-social-introduction.Start]]
+	[[Goodbye.|End]]
+<<else>>
+    <<if $userGender == "male">>
+        Bonjour monsieur!
+    <<elseif $userGender == "female">>
+        Bonjour madame!
+    <<else>>
+        Bonjour!
+    <<endif>>
+
+	<<if $radioState == "PLAYING">>
+		<<if $radioChannel == "3">>
+			Hmm, hmm, I love this radio channel... oh pardon, what can I do for you?
+		<<else>>
+			Hmmpf... can't we set the radio to the French channel? Oh pardon me, what can I do for you?
+		<<endif>>
+	<<else>>
+		Don't you think it's a little quiet here? Why don't you switch on the radio? Anyway, what can François do for you?
+	<<endif>>
+
+    [[I just wanted to chat.|francois-social-menu.Start]]
+    [[Let's talk about food.|francois-coaching-menu.Start]]
+    <<if $radioState != "PLAYING">>
+        [[How do I switch on the radio?|Radio]]
+    <<endif>>
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 970,213
+---
+
+===
+title: Radio
+tags: 
+speaker: Francois
+colorID: 0
+position: 301,214
+---
+The radio? It's right here on the kitchen counter. Just tap the radio to start playing some music.
+
+[[Radio2]]
+===
+title: Radio2
+tags: 
+speaker: Francois
+colorID: 0
+position: -15,209
+---
+Then you can switch over to channel 3 for the most beautiful French songs, oooh mon dieu, I love it!
+
+<<if $coachCarlosEnabled >>
+    [[RadioCommentCarlos]]
+<<else>>
+    [[RadioCommentCoda]]
+<<endif>>
+===
+title: RadioCommentCarlos
+tags: 
+speaker: Carlos
+colorID: 0
+position: -329,29
+---
+Oh no, please no. François cannot stop singing along with those terrible chansons, it's driving me mad.
+
+[[Which channel do you prefer?|RadioCommentCarlosPreference]]
+[[I will try the radio.|RadioEnd]]
+[[(Say nothing.)|RadioCommentCarlos2]]
+===
+title: RadioCommentCarlosPreference
+tags: 
+speaker: Carlos
+colorID: 0
+position: -623,-265
+---
+Oh, anything but the French channel. There is some nice blues and jazz on channel 1, classical music on channel 2 and some good old rock and roll on channel 4.
+
+[[I will try the radio.|RadioEnd]]
+[[I want to talk about something else.|Start]]
+[[Goodbye.|End]]
+===
+title: RadioEnd
+tags: 
+speaker: Francois
+colorID: 0
+position: -801,24
+---
+Yes, just have a look. I guess everything is better than this quiet here... but I do prefer channel 3. Just tap the radio right here in the kitchen.
+
+[[Let me try the radio.|End]]
+[[I want to talk about something else.|Start]]
+[[Goodbye.|End]]
+===
+title: RadioCommentCarlos2
+tags: 
+speaker: Francois
+colorID: 0
+position: -639,292
+---
+Oh sacre blue Carlos, what would you prefer? That terrible rock and roll on channel 4?
+
+[[Which channel do you prefer, Carlos?|RadioCommentCarlosPreference]]
+[[I will try the radio.|RadioEnd]]
+===
+title: RadioCommentCoda
+tags: 
+speaker: Coda
+colorID: 0
+position: -316,483
+---
+There are 4 channels in total. Channel 1 has Jazz and Blues, channel 2 has Classical music, channel 3 has French songs, and channel 4 has Rock and Roll.
+
+[[Thank you Coda, I will try the radio.|RadioEnd]]
+===

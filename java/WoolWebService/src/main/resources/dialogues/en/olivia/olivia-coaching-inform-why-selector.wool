@@ -1,0 +1,62 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 515,361
+---
+<<if $paUserCompletedInformWhyDate == $today >>
+    Well, today I already gave you some information on why physical activity is good for you. Maybe tomorrow I'll have something new.
+
+    [[Archive]]
+<<else>>
+    Hmmm, so let me think... why should you be physically active in your every day life... well...
+
+    [[Selector]]
+<<endif>>
+===
+title: Selector
+tags: 
+speaker: Olivia
+colorID: 0
+position: 833,534
+---
+<<if $paUserCompletedInformWhyBrain == false >>
+    <<if $coachHelenEnabled >>
+      Today I have something really interesting for you, and I'm sure Helen will also appreciate it...
+    <<else>>
+      Today I have something really interesting for you...
+    <<endif>>
+
+    [[olivia-coaching-inform-why-brain.Start]]
+<<elseif $paUserCompletedInformWhyBiologicalAge == false >>
+    Ah yes, I know something...
+
+    [[olivia-coaching-inform-why-biological-age.Start]]
+<<else>>
+  I'm afraid, at the moment, I don't have any more information to give you on why you should be physically active. Perhaps you can come back later?
+
+  [[Show me previous info.|olivia-coaching-inform-why-archive.Start]]
+  [[I want to talk about something else.|olivia-menu.Start]]
+  [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: 
+colorID: 5
+position: 1197,383
+---
+
+===
+title: Archive
+tags: 
+speaker: Olivia
+colorID: 0
+position: 831,245
+---
+Would you like to review the previous information, or did you want to talk about something else?
+
+[[Previous info.|olivia-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

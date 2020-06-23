@@ -1,0 +1,29 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 1
+position: 241,298
+---
+Which tip on why you should eat healthy would you like me to repeat?
+
+<<if $nutUserCompletedInformWhySalt == true>>
+    [["Salt."|francois-coaching-inform-why-salt.Start]]
+<<endif>>
+<<if $nutUserCompletedInformWhyWater == true>>
+	[["Water."|francois-coaching-inform-why-water.Start]]
+<<endif>>
+<<if $nutUserCompletedInformWhyFruit == true>>
+    [["Fruit."|francois-coaching-inform-why-fruit.Start]]
+<<endif>>
+
+[[I want to discuss something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 6
+position: 641,290
+---
+
+===

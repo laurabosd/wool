@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Katarzyna
+colorID: 2
+position: 675,243
+---
+This part of my dialogue is still being written.
+
+[[Okay, take me back.|katarzyna-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Katarzyna
+colorID: 5
+position: 985,243
+---
+
+===

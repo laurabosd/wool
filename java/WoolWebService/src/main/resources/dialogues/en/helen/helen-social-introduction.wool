@@ -1,0 +1,73 @@
+title: Start
+tags: 
+speaker: Helen
+colorID: 2
+position: 98,304
+---
+<<set $cogUserStartedIntroduction = true>>
+
+I am the cognitive coach in your Council of Coaches, at your service!
+
+[[What do you do as a cognitive coach?|ExplanationRole]]
+===
+title: ExplanationRole
+tags: 
+speaker: Helen
+colorID: 0
+position: 392,302
+---
+Aha, let me explain... did you know that your cognitive health relates to your overall wellbeing?
+
+[[ExplanationRole2]]
+===
+title: Skeptical
+tags: 
+speaker: Helen
+colorID: 0
+position: 1064,150
+---
+I know it all may sound a bit vague. But don't worry too much, I might just ask you to reflect upon how you are feeling every now and then.
+
+[[Okay.|Bye]]
+===
+title: Agreement
+tags: 
+speaker: Helen
+colorID: 0
+position: 1073,462
+---
+Great. I am looking forward to work with you. I hope you feel the same...
+
+[[Bye]]
+===
+title: End
+tags: 
+speaker: Helen
+colorID: 5
+position: 1835,327
+---
+
+===
+title: Bye
+tags: 
+speaker: Helen
+colorID: 0
+position: 1485,319
+---
+<<set $cogUserCompletedIntroduction = true>>
+
+Well, it was very nice meeting you, come talk to me whenever you need me!
+
+[[Thank you Helen.|End]]
+===
+title: ExplanationRole2
+tags: 
+speaker: Helen
+colorID: 0
+position: 698,298
+---
+I will help you to reflect upon yourself, and provide you with some exercises. All to make sure you will feel good about yourself!
+
+[[Yes that sounds important.|Agreement]]
+[[Hmm, I'm not sure.|Skeptical]]
+===

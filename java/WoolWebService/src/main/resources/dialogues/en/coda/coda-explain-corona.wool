@@ -1,0 +1,119 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: -756,392
+---
+Hello and a good day to you! I would like to start today with a message from the Council of Coaches developers.
+
+[[Message]]
+===
+title: Message
+tags: 
+speaker: Coda
+colorID: 0
+position: -494,391
+---
+As you are all aware, there is a big world-wide crisis ongoing, caused by the outbreak of the corona virus.
+
+[[Message2]]
+===
+title: Message2
+tags: 
+speaker: Coda
+colorID: 0
+position: -232,392
+---
+Our coaches were created to provide advice on your normal everyday life. They were also created in a time when “everyday life” was still normal.
+
+[[Message3]]
+===
+title: Message3
+tags: 
+speaker: Coda
+colorID: 0
+position: 24,392
+---
+Olivia might tell you to combine physical activity with visiting friends, while Emma is doing her best to motivate you to meet new people, and to be socially active.
+
+[[Message4]]
+===
+title: Message4
+tags: 
+speaker: Coda
+colorID: 0
+position: 275,390
+---
+It goes without saying that, in the light of the corona crisis, the government’s advice to practice social distancing takes priority over anything our coaches may have to say.
+
+[[Message5]]
+===
+title: Message5
+tags: 
+speaker: Coda
+colorID: 0
+position: 539,389
+---
+Please take care of yourself, and limit your risks of infection by following the advices given by the official government channels.
+
+[[Message6]]
+===
+title: Message6
+tags: 
+speaker: Coda
+colorID: 0
+position: 795,389
+---
+Finally, we would like to thank you for trying out our Council of Coaches application, and for all of your valuable feedback.
+
+[[Message7]]
+===
+title: Message7
+tags: 
+speaker: Coda
+colorID: 0
+position: 1053,387
+---
+The Council of Coaches developers and staff are doing their part, and working from home these days, sometimes combining work with the care for children.
+
+[[Message8]]
+===
+title: Message8
+tags: 
+speaker: Coda
+colorID: 0
+position: 1315,387
+---
+They are however continuing to offer their full support to you, our evaluation participants, and are still working hard to improve the Council of Coaches on a day by day basis.
+
+[[MessageEnd]]
+===
+title: MessageEnd
+tags: 
+speaker: Coda
+colorID: 0
+position: 1590,386
+---
+<<if $userCompletedCoronaMessage1 != true>>
+
+    <<set $userCompletedCoronaMessage1 = true>>
+
+    Thank you again for your help in evaluating the Council of Coaches. If you have any questions, please do not hesitate to contact us through the usual channels.
+
+    [[Goodbye.|End]]
+<<else>>
+
+    Thank you again for your help in evaluating the Council of Coaches. If you have any questions, please do not hesitate to contact us through the usual channels.
+
+    [[I want to ask something else.|coda-menu.Redirect]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Coda
+colorID: 5
+position: 1879,383
+---
+
+===

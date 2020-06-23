@@ -1,0 +1,174 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 400,75
+---
+Today, we will talk about being more active when meeting your friends.
+
+[[Okay, let's hear it.|ExplainTip]]
+[[I am not interested now, thank you.|NoThanks]]
+===
+title: ExplainTip
+tags: 
+speaker: Olivia
+colorID: 1
+position: 704,-88
+---
+Are you planning on seeing some of your friends this week?
+
+[[Yes.|Tip]]
+[[No, nothing planned.|NothingPlanned]]
+===
+title: NoThanks
+tags: 
+speaker: Olivia
+colorID: 1
+position: 690,299
+---
+Okay no problem, can I help you with something else?
+
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 2302,352
+---
+
+===
+title: Tip
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1065,-219
+---
+Great! What about working on your physical activity together? Perhaps you could suggest to perform an activity together that is fun and active.
+
+[[Could you give an example?|Example1]]
+===
+title: Example1
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1408,-224
+---
+Well, instead of going to the movies you could suggest to play pool. Playing pool is less sedentary than sitting two hours in the same chair. Burning calories while having fun, is that not perfect? Secondly, it allows you to have a nice chat!
+
+<<if $coachCarlosEnabled>>
+    [[CarlosGuestLikesPool]]
+<<else>>
+    [[Thanks for the tip, do you have another example?|Example2]]
+    [[That is not really my thing, do you have another suggestion?|Example2]]
+    [[Thanks, I've heard enough.|Enjoy]]
+<<endif>>
+===
+title: Example2
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1734,-388
+---
+Yes, of course. Are you planning to have a drink or meal together? That is nice. I often go out with friends for a drink or lunch. But, what about combining the activity with a small walk? Taking some fresh air for half an hour before enjoying the food?
+
+<<if $coachFrancoisEnabled>>
+    [[FrancoisLikesWalking]]
+<<else>>
+    [[That is a great suggestion, thanks.|Enjoy]]
+    [[Hmm, this does not fit my situation.|OtherTips]]
+<<endif>>
+===
+title: NothingPlanned
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1059,67
+---
+That is a pity! But I understand, I always run into the problem of having too little time to meet my friends. However, are you interested in how to combine meeting your friends with being more active?
+
+[[Yes, please tell me.|Tip]]
+[[No, thank you.|NoThanks]]
+===
+title: Enjoy
+tags: 
+speaker: Olivia
+colorID: 1
+position: 2009,-212
+---
+<<set $paUserCompletedInformHowFriendsAndPhysicalActivity = true>>
+<<set $paUserCompletedInformHowDate = $today>>
+
+You're welcome. So, time for action and fun!
+
+[[InformEnd]]
+===
+title: OtherTips
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1837,40
+---
+<<set $paUserCompletedInformHowFriendsAndPhysicalActivity = true>>
+<<set $paUserCompletedInformHowDate = $today>>
+
+Okay, well, no worries, I will have more tips soon.
+
+[[InformEnd]]
+===
+title: CarlosGuestLikesPool
+tags: 
+speaker: Carlos
+colorID: 1
+position: 1406,44
+---
+Playing pool! I always enjoyed it. Actually, me and my friends play billiards. I used to be quite good, if I say so myself.
+
+[[ResponseOnCarlosPool]]
+===
+title: FrancoisLikesWalking
+tags: 
+speaker: Francois
+colorID: 1
+position: 1677,339
+---
+That is a good suggestion. I enjoy having nice diners with friends. But, sometimes one has to think about one's weight as well. I will suggest to have a nice walk after we finished our starter next time!
+
+[[ResponseOnFrancoisWalking]]
+===
+title: ResponseOnCarlosPool
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1409,347
+---
+Well, well, why doesn't that surprise me? But, you see, even Carlos likes doing something active with his friends.
+
+[[Thanks for the tip, do you have another example?|Example2]]
+[[That is not really my thing, do you have another suggestion?|Example2]]
+[[Thanks, I've heard enough.|Enjoy]]
+===
+title: ResponseOnFrancoisWalking
+tags: 
+speaker: Olivia
+colorID: 1
+position: 1993,608
+---
+Great to hear that you like the suggestion, François. Oh! That reminds me of my meeting with my best friend next week, I almost forgot about it.
+
+[[Indeed, that is a great suggestion, thanks.|Enjoy]]
+[[Hmm, this does not fit my situation.|OtherTips]]
+===
+title: InformEnd
+tags: 
+speaker: Olivia
+colorID: 5
+position: 2293,57
+---
+Well that was my advice for today. Can I help you with something else?
+
+[[Can we go through the previous tips?|olivia-coaching-inform-how-archive.Start]]
+[[I want to talk about something else.|olivia-menu.Start]]
+[[Goodbye.|End]]
+===

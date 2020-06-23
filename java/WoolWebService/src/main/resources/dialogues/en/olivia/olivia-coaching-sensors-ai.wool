@@ -1,0 +1,26 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+<<if $paUserTrackerConnected == false>>
+    Okay, let's talk about activity tracking! I see you didn't connect one yet, would you like to set one up now?
+
+    [[Okay, let's do it!|olivia-coaching-sensors-fitbit-setup.Start]]
+    [[Goodbye.|End]]
+<<else>>
+    I see you have a tracker connected, but this part of my dialogue is still being written.
+
+    [[Okay, take me back.|olivia-coaching-menu.Start]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===

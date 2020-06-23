@@ -1,0 +1,114 @@
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 688,417
+---
+
+===
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 40,418
+---
+So, let's talk about your physical activity goals.
+
+<<if $paUserTrackerConnected>>
+
+    <<if $paUserLongTermGoalSet == false >>
+        [[olivia-coaching-goals-long-term-set.Start]]
+    <<else>>
+        [[Menu]]
+    <<endif>>
+
+<<else>>
+    [[olivia-coaching-goals-notracker.Start]]
+<<endif>>
+===
+title: Menu
+tags: 
+speaker: Olivia
+colorID: 0
+position: 371,419
+---
+So, what would you like to discuss today?
+
+[[My long-term goals.|LongTermGoals]]
+//[[My daily goals.|DailyGoals]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: LongTermGoalInfo
+tags: 
+speaker: Olivia
+colorID: 0
+position: 250,-219
+---
+<<if $paPreferredUnit == "steps" >>
+    Your current long term goal is to reach $paLongTermStepsGoal steps per day.
+<<elseif $paPreferredUnit == "minutes" >>
+    <<if $userAge >= 18>>
+        Your current long term goal is to reach $paLongTermMinutesGoal active minutes each week.
+    <<else>>
+        Your current long term goal is to reach $paLongTermMinutesGoal active minutes each day.
+    <<endif>>
+<<endif>>
+
+//[[And what is my daily goal?|DailyGoalInfo]]
+[[I want to change my long term goal.|olivia-coaching-goals-long-term-change.Start]]
+[[I had a different question.|Menu]]
+===
+title: DailyGoalInfo
+tags: 
+speaker: Olivia
+colorID: 0
+position: 512,-214
+---
+<<if $paUserDailyGoalSet == false>>
+    We didn't actually agree yet on a daily activity goal for you. Would you like to set one now?
+    
+    [[Okay, set a daily goal.|olivia-coaching-goals-daily-set.Start]]
+<<else>>
+    <<if $paPreferredUnit == "steps">>
+        Your daily step goal is ...
+    <<elseif $paPreferredUnit == "minutes">>
+        Your daily active minutes goal is ...
+    <<endif>>
+
+    [[I want to change my daily goal.|olivia-coaching-goals-daily-change.Start]]
+<<endif>>
+
+[[I had a different question.|Menu]]
+===
+title: LongTermGoals
+tags: 
+speaker: Olivia
+colorID: 0
+position: 250,78
+---
+Ah yes, something to work towards... what would you like to know?
+
+[[What is my long term goal?|LongTermGoalInfo]]
+[[I want to change my long term goal.|olivia-coaching-goals-long-term-change.Start]]
+[[I had a different question.|Menu]]
+===
+title: DailyGoals
+tags: 
+speaker: Olivia
+colorID: 0
+position: 514,75
+---
+<<if $paUserDailyGoalSet == false>>
+    We haven't set a daily activity goal for you yet, would you like to set one now?    
+
+    [[I want to set a daily goal.|olivia-coaching-goals-daily-set.Start]]
+<<else>>
+    Your daily goals... sure, what would you like to discuss?
+    
+    [[What is my daily goal?|DailyGoalInfo]]
+    [[I want to change my daily goal.|olivia-coaching-goals-daily-change.Start]]
+<<endif>>
+
+[[I had a different question.|Menu]]
+===

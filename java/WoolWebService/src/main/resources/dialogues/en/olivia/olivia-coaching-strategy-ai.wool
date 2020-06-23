@@ -1,0 +1,19 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 740,362
+---
+This part of my dialogue still has to be written.
+
+[[Okay.|olivia-coaching-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 1072,358
+---
+
+===

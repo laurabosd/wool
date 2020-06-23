@@ -1,0 +1,112 @@
+title: Start
+tags: 
+speaker: Carlos
+colorID: 2
+position: -187,-258
+---
+<<if $esmCarlosCompletedDate == $today>>
+    Oh wait, I forgot I already asked you about how you are feeling today. Silly me, I am so sorry. Did you want to talk about something else?
+
+    [[I want to discuss something else.|carlos-menu.Redirect]]
+    [[Goodbye.|End]]
+<<else>>
+    Excellent, I just have three short questions about how you are doing today. Are you ready?
+
+    [[Okay, let's go.|QuestionP1]]
+    [[Can we come back to this later?|OtherTime]]
+    [[I don't want to answer today.|NotToday]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: OtherTime
+tags: 
+speaker: Carlos
+colorID: 0
+position: -23,45
+---
+<<set $esmCarlosLaterDate = $today >>
+
+Okay, understandable. I will ask you again some other time. Was there something else I can help you with?
+
+[[I want to talk about something else.|carlos-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: QuestionP1
+tags: 
+speaker: Carlos
+colorID: 0
+position: 168,-265
+---
+Please describe your overall mood, from negative to positive, during the morning hours, let's say between 08:00 in the morning and 12 in the afternoon.
+
+[[Very negative.|QuestionP2|<<set $esmEmotionalMorning = 0>>]]
+[[Negative.|QuestionP2|<<set $esmEmotionalMorning = 1>>]]
+[[Neutral.|QuestionP2|<<set $esmEmotionalMorning = 2>>]]
+[[Positive.|QuestionP2|<<set $esmEmotionalMorning = 3>>]]
+[[Very positive.|QuestionP2|<<set $esmEmotionalMorning = 4>>]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Carlos
+colorID: 5
+position: 585,140
+---
+
+===
+title: QuestionP2
+tags: 
+speaker: Carlos
+colorID: 0
+position: 512,-265
+---
+Ok, thank you! Now, please describe your overall mood, from negative to positive, during the afternoon, so between 12:00 and 17:00.
+
+[[Very negative.|QuestionP3|<<set $esmEmotionalAfternoon = 0>>]]
+[[Negative.|QuestionP3|<<set $esmEmotionalAfternoon = 1>>]]
+[[Neutral.|QuestionP3|<<set $esmEmotionalAfternoon = 2>>]]
+[[Positive.|QuestionP3|<<set $esmEmotionalAfternoon = 3>>]]
+[[Very positive.|QuestionP3|<<set $esmEmotionalAfternoon = 4>>]]
+[[Goodbye.|End]]
+===
+title: QuestionP3
+tags: 
+speaker: Carlos
+colorID: 0
+position: 844,-266
+---
+And finally, please describe your overall mood, from negative to positive, during the evening hours, so between 17:00 in the afternoon and midnight.
+
+[[Very negative.|ClosingText|<<set $esmEmotionalEvening = 0>>]]
+[[Negative.|ClosingText|<<set $esmEmotionalEvening = 1>>]]
+[[Neutral.|ClosingText|<<set $esmEmotionalEvening = 2>>]]
+[[Positive.|ClosingText|<<set $esmEmotionalEvening = 3>>]]
+[[Very positive.|ClosingText|<<set $esmEmotionalEvening = 4>>]]
+[[Goodbye.|End]]
+===
+title: ClosingText
+tags: 
+speaker: Carlos
+colorID: 0
+position: 1196,-268
+---
+<<set $esmCarlosCompletedDate = $today >>
+
+Thanks for your time! Was there something else you wanted to discuss?
+
+[[I want to talk about something else.|carlos-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: NotToday
+tags: 
+speaker: Carlos
+colorID: 0
+position: -281,48
+---
+<<set $esmCarlosSkipDate = $today >>
+
+Of course, we can skip today. Was there something else I can help you with?
+
+[[I want to talk about something else.|carlos-menu.Redirect]]
+[[Goodbye.|End]]
+===

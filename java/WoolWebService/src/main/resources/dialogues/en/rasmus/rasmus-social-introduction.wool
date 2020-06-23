@@ -1,0 +1,52 @@
+title: Start
+tags: 
+speaker: Rasmus
+colorID: 2
+position: 294,316
+---
+<<set $cpUserStartedIntroduction = true>>
+
+It is a pleasure to meet you too. Let me talk a bit about me.
+
+[[Role]]
+===
+title: Role
+tags: 
+speaker: Rasmus
+colorID: 0
+position: 597,315
+---
+You are probably wondering what my role is in the Council of Coaches? Well, I will assist you with all your questions related to chronic pain.
+
+[[CP]]
+===
+title: CP
+tags: 
+speaker: Rasmus
+colorID: 0
+position: 886,312
+---
+I used to work at a physical rehabilitation centre in Copenhagen. In my job, I regularly helped chronic pain patients.
+
+[[Bye]]
+===
+title: Bye
+tags: 
+speaker: Rasmus
+colorID: 0
+position: 1178,308
+---
+<<set $cpUserCompletedIntroduction = true>>
+
+So, whenever you have a question, feel free to come have a chat with me.
+
+[[Thank you Rasmus.|End]]
+===
+title: End
+tags: 
+speaker: Rasmus
+colorID: 5
+position: 1455,301
+---
+
+===

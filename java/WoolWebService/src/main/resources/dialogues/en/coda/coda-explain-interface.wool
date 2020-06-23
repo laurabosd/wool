@@ -1,0 +1,586 @@
+title: Start
+tags:
+speaker: Coda
+colorID: 2
+position: 1104,1394
+---
+<<if $isEvaluationUser == true && $evaluationUserStartDate < $oneWeekAgo >>
+    Hi $userFirstName, I see that you are participating in the Council of Coaches evaluation, that's great!
+
+    [[Yes, that's correct.|EvaluationStartCheck]]
+    [[What? Which evaluation?|EvaluationConfirm]]
+
+<<else>>
+    Okay, so what you see here is the Council of Coaches living room.
+
+    [[Introduction2]]
+<<endif>>
+===
+title: End
+tags:
+speaker:
+colorID: 5
+position: 455,2239
+---
+
+===
+title: Introduction2
+tags:
+speaker: Coda
+colorID: 0
+position: 1407,1395
+---
+This is where the coaches live, and where you can talk to them about anything you want! Let's go say hello shall we?
+
+<<if $coachCarlosEnabled >>
+    [[Okay.|IntroductionCarlos]]
+<<elseif $coachEmmaEnabled >>
+    [[Okay.|IntroductionEmma]]
+<<elseif $coachFrancoisEnabled >>
+    [[Okay.|IntroductionFrancois]]
+<<elseif $coachHelenEnabled >>
+    [[Okay.|IntroductionHelen]]
+<<elseif $coachKatarzynaEnabled >>
+    [[Okay.|IntroductionKatarzyna]]
+<<elseif $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionCarlos
+tags:
+speaker: Coda
+colorID: 0
+position: 1754,987
+---
+Carlos Silva is sitting on the left, on his favourite couch. Olá Carlos!
+
+[[IntroductionCarlos2]]
+===
+title: IntroductionCarlos2
+tags:
+speaker: Carlos
+colorID: 0
+position: 2051,987
+---
+Olá Coda!
+
+[[IntroductionCarlos3]]
+===
+title: IntroductionCarlos3
+tags:
+speaker: Coda
+colorID: 0
+position: 2345,988
+---
+Carlos is working on his healthy lifestyle, together with the coaches. Click on him if you need any general support.
+
+[[IntroductionCarlos4]]
+===
+title: IntroductionEmma
+tags:
+speaker: Coda
+colorID: 0
+position: 1757,1241
+---
+Emma Li is sitting in the middle of the screen, on the left chair. Hi there Emma!
+
+[[IntroductionEmma2]]
+===
+title: IntroductionEmma2
+tags:
+speaker: Emma
+colorID: 0
+position: 2052,1239
+---
+Hi little robot man! Everything okay? Did you get that loose wire repaired?
+
+[[IntroductionEmma3]]
+===
+title: IntroductionEmma3
+tags:
+speaker: Coda
+colorID: 0
+position: 2343,1237
+---
+Yeah, thanks Emma! Emma is always so nice... click on her if you need any social support.
+
+[[IntroductionEmma4]]
+===
+title: IntroductionCarlos4
+tags:
+speaker: Coda
+colorID: 0
+position: 2643,988
+---
+Let's see who is next shall we?
+
+<<if $coachEmmaEnabled >>
+    [[Okay.|IntroductionEmma]]
+<<elseif $coachFrancoisEnabled >>
+    [[Okay.|IntroductionFrancois]]
+<<elseif $coachHelenEnabled >>
+    [[Okay.|IntroductionHelen]]
+<<elseif $coachKatarzynaEnabled >>
+    [[Okay.|IntroductionKatarzyna]]
+<<elseif $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionEmma4
+tags:
+speaker: Coda
+colorID: 0
+position: 2645,1239
+---
+Okay, who else do we have, let's see...
+
+<<if $coachFrancoisEnabled >>
+    [[Okay.|IntroductionFrancois]]
+<<elseif $coachHelenEnabled >>
+    [[Okay.|IntroductionHelen]]
+<<elseif $coachKatarzynaEnabled >>
+    [[Okay.|IntroductionKatarzyna]]
+<<elseif $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionFrancois
+tags:
+speaker: Coda
+colorID: 0
+position: 1758,1512
+---
+François Dubois is standing right behind me in the kitchen, bonjour François!
+
+[[IntroductionFrancois2]]
+===
+title: IntroductionFrancois2
+tags:
+speaker: Francois
+colorID: 0
+position: 2056,1511
+---
+Bonjour Coda! Did you already taste my new lasagna recipe?
+
+[[IntroductionFrancois3]]
+===
+title: IntroductionFrancois3
+tags:
+speaker: Coda
+colorID: 0
+position: 2350,1512
+---
+Haha, very funny François, you know I don't eat food.
+
+[[IntroductionFrancois4]]
+===
+title: IntroductionFrancois4
+tags:
+speaker: Coda
+colorID: 0
+position: 2657,1512
+---
+Anyway, click on François when you need advice on healthy eating.
+
+[[IntroductionFrancois5]]
+===
+title: IntroductionFrancois5
+tags:
+speaker: Coda
+colorID: 0
+position: 2955,1507
+---
+Let's see if there is anyone else, hmm...
+
+<<if $coachHelenEnabled >>
+    [[Okay.|IntroductionHelen]]
+<<elseif $coachKatarzynaEnabled >>
+    [[Okay.|IntroductionKatarzyna]]
+<<elseif $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionHelen
+tags:
+speaker: Coda
+colorID: 0
+position: 1753,1787
+---
+Helen Jones is sitting over there to my right, on the right chair, the lady with the glasses.
+
+[[IntroductionHelen2]]
+===
+title: IntroductionHelen2
+tags:
+speaker: Helen
+colorID: 0
+position: 2062,1782
+---
+<<if $cogUserCompletedIntroduction >>
+    Hello Coda, how is the processing unit today? Oh and hello $userFirstName!
+<<else>>
+    Hello Coda, how is the processing unit today?
+<<endif>>
+
+[[IntroductionHelen3]]
+===
+title: IntroductionHelen3
+tags:
+speaker: Coda
+colorID: 0
+position: 2352,1784
+---
+Everything is running like clockwork Helen, thanks!
+
+[[IntroductionHelen4]]
+===
+title: IntroductionHelen4
+tags:
+speaker: Coda
+colorID: 0
+position: 2653,1784
+---
+Helen is your cognitive coach, click on her if you want to discuss your mind and cognition!
+
+[[IntroductionHelen5]]
+===
+title: IntroductionHelen5
+tags:
+speaker: Coda
+colorID: 0
+position: 2953,1776
+---
+So on to the next... let's see who do we have left.
+
+<<if $coachKatarzynaEnabled >>
+    [[Okay.|IntroductionKatarzyna]]
+<<elseif $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionKatarzyna
+tags:
+speaker: Coda
+colorID: 0
+position: 1751,2077
+---
+Katarzyna Kowalska is standing over there, reading some kind of book. What are you reading Katarzyna?
+
+[[IntroductionKatarzyna2]]
+===
+title: IntroductionKatarzyna2
+tags:
+speaker: Katarzyna
+colorID: 0
+position: 2061,2071
+---
+What me? Oh hi Coda. What am I reading? Oh just some background on living with diabetes...
+
+[[IntroductionKatarzyna3]]
+===
+title: IntroductionKatarzyna3
+tags:
+speaker: Coda
+colorID: 0
+position: 2355,2073
+---
+Katarzyna is the person you should talk to when you want to discuss your Diabetes. Click on her if you want to talk to her.
+
+[[IntroductionKatarzyna4]]
+===
+title: IntroductionKatarzyna4
+tags:
+speaker: Coda
+colorID: 0
+position: 2656,2068
+---
+<<if $coachOliviaEnabled >>
+    <<if $coachRasmusEnabled >>
+        So, two coaches left, let's say hi to them as well...
+    <<else>>
+        So, just one coach left, let's say hi to Olivia...
+    <<endif>>
+<<else>>
+    <<if $coachRasmusEnabled >>
+        So, just one coach left, let's say hi to Rasmus...
+    <<else>>
+        Okay, I think that's everyone covered... right?
+    <<endif>>
+<<endif>>
+
+<<if $coachOliviaEnabled >>
+    [[Okay.|IntroductionOlivia]]
+<<elseif $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionOlivia
+tags:
+speaker: Coda
+colorID: 0
+position: 1751,2348
+---
+Olivia Simons is standing over there, behind her home trainer. Hi Olivia!
+
+[[IntroductionOlivia2]]
+===
+title: IntroductionOlivia2
+tags:
+speaker: Olivia
+colorID: 0
+position: 2066,2347
+---
+Hi Coda, are we staying in shape?
+
+[[IntroductionOlivia3]]
+===
+title: IntroductionOlivia3
+tags:
+speaker: Coda
+colorID: 0
+position: 2367,2347
+---
+You know robots are always in good shape, Olivia!
+
+[[IntroductionOlivia4]]
+===
+title: IntroductionOlivia4
+tags:
+speaker: Coda
+colorID: 0
+position: 2673,2350
+---
+If you click on Olivia, you can talk to her about all things related to physical activity.
+
+[[IntroductionOlivia5]]
+===
+title: IntroductionOlivia5
+tags:
+speaker: Coda
+colorID: 0
+position: 2985,2348
+---
+<<if $coachRasmusEnabled >>
+    Okay, then it's only Rasmus left... let's say hi to him shall we?
+<<else>>
+    I think we've introduced everyone then.
+<<endif>>
+
+<<if $coachRasmusEnabled >>
+    [[Okay.|IntroductionRasmus]]
+<<else>>
+    [[Okay.|IntroductionEnd]]
+<<endif>>
+[[Can we skip the coaches?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionRasmus
+tags:
+speaker: Coda
+colorID: 0
+position: 1746,2637
+---
+Rasmus Johansen is behind me, casually leaning against the kitchen counter. Hi Rasmus!
+
+[[IntroductionRasmus2]]
+===
+title: IntroductionRasmus2
+tags:
+speaker: Rasmus
+colorID: 0
+position: 2085,2640
+---
+Yeah, I'm a casual kinda guy, haha! How's it hangin' Coda?
+
+[[IntroductionRasmus3]]
+===
+title: IntroductionRasmus3
+tags:
+speaker: Coda
+colorID: 0
+position: 2382,2641
+---
+Such a cool kid that Rasmus. Click on him to talk about chronic pain. He's always happy to help!
+
+[[IntroductionRasmus4]]
+===
+title: IntroductionRasmus4
+tags:
+speaker: Coda
+colorID: 0
+position: 2683,2638
+---
+And that's it for the coaches...
+
+[[Okay, what's next?|IntroductionEnd]]
+[[Goodbye.|End]]
+===
+title: IntroductionEnd
+tags:
+speaker: Coda
+colorID: 0
+position: 1742,2924
+---
+<<set $userCompletedInterfaceExplanation = true>>
+
+Okay, so it should be fairly simple. Click on the coaches to talk to them, and click on me if you need help with anything else.
+
+[[Anything else?|IntroductionRadio]]
+[[Goodbye.|End]]
+===
+title: IntroductionRadio
+tags:
+speaker: Coda
+colorID: 0
+position: 2048,2935
+---
+Oh before I forget, if you think it's getting a little quiet, don't forget you can switch on the radio.
+
+[[IntroductionRadio2]]
+===
+title: IntroductionRadio3
+tags:
+speaker: Coda
+colorID: 0
+position: 2623,2930
+---
+<<if $coachFrancoisEnabled >>
+    François loves that channel with the french songs, haha!
+<<elseif $coachCarlosEnabled >>
+    Carlos loves the rock and roll channel, haha!
+<<else>>
+    I'm a big fan of the classic channel myself.
+<<endif>>
+
+[[ExplanationEnd]]
+===
+title: IntroductionRadio2
+tags:
+speaker: Coda
+colorID: 0
+position: 2331,2934
+---
+It only has four channels, but maybe there is something there you like.
+
+[[IntroductionRadio3]]
+===
+title: ExplanationEnd
+tags:
+speaker: Coda
+colorID: 0
+position: 2962,2931
+---
+That's all there is to say really. Have fun using the Council of Coaches!
+
+[[I want to ask something else, Coda.|coda-menu.Start]]
+[[Goodbye.|End]]
+===
+title: EvaluationStartCheck
+tags:
+speaker: Coda
+colorID: 0
+position: 508,1255
+---
+Before you can start using the Council of Coaches, you have to finish your baseline week.
+
+[[EvaluationStartCheck2]]
+===
+title: EvaluationConfirm
+tags:
+speaker: Coda
+colorID: 0
+position: 797,1559
+---
+During the intake you've indicated that you are participating in the Council of Coaches evaluation in $evaluationUserSite, is that not correct?
+
+[[Yes, it's correct.|EvaluationCorrect]]
+[[No, I am not participating in an evaluation.|EvaluationMistake]]
+===
+title: EvaluationStartCheck2
+tags:
+speaker: Coda
+colorID: 0
+position: 187,1254
+---
+<<if $evaluationUserStartDate == $today >>
+    You started the baseline period today, so you can start exactly one week from now.
+<<else>>
+    You started the evaluation on $evaluationUserStartDate, so you can start one week after that date.
+<<endif>>
+
+[[EvaluationStartCheck3]]
+===
+title: EvaluationStartCheck3
+tags:
+speaker: Coda
+colorID: 0
+position: -117,1251
+---
+Until then, don't forget to wear your Fitbit and synchronise with the Fitbit application.
+
+[[EvaluationStartCheck4]]
+===
+title: EvaluationStartCheck4
+tags:
+speaker: Coda
+colorID: 0
+position: -427,1249
+---
+I will take you back to the main menu now. See you soon, okay!?
+
+[[Goodbye.|End|<<action type="generic" value="LOGOUT">>]]
+===
+title: EvaluationCorrect
+tags:
+speaker: Coda
+colorID: 0
+position: 508,1558
+---
+Ah okay, well in that case...
+
+[[EvaluationStartCheck]]
+===
+title: EvaluationMistake
+tags:
+speaker: Coda
+colorID: 0
+position: 510,1825
+---
+<<set $isEvaluationUser = false >>
+
+Oh, hmmm... must have been a mistake then. Well in that case, welcome to the Council of Coaches livingroom!
+
+[[Introduction2]]
+===

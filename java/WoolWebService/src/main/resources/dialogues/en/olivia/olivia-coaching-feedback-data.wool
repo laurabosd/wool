@@ -1,0 +1,308 @@
+title: Start
+tags: 
+speaker: Olivia
+colorID: 2
+position: 63,-808
+---
+Okay, let's have a look at how you've been doing. I'll just grab your activity book from the bookshelf.
+
+[[GrabBook]]
+===
+title: GrabBook
+tags: 
+speaker: Olivia
+colorID: 0
+position: 361,-809
+---
+<<action type="generic" value="OPEN_ACTIVITY_BOOK">>
+
+Here we are, your personal physical activity diary.
+
+[[BookStart]]
+===
+title: BookStart
+tags: 
+speaker: Olivia
+colorID: 0
+position: 675,-810
+---
+<<if $paUserCompletedActivityBookExplanation == false>>
+    Hmmm, I don't think I've explained to you how this works, right? Should I quickly explain the book?
+
+    [[Yes, please explain the book.|ExplainBook]]
+    [[No, skip the explanation.|SkipExplanation]]
+    [[I want to discuss something else.|olivia-menu.Redirect]]
+    [[Goodbye.|EndCloseBook]]
+<<else>>
+    Have a look at your data, and let me know if you have any questions.
+
+    [[I have a question.|Questions]]
+    [[Goodbye.|EndCloseBook]]
+<<endif>>
+===
+title: EndCloseBook
+tags: 
+speaker: Olivia
+colorID: 5
+position: 363,-493
+---
+<<action type="generic" value="CLOSE_BOOK">>
+
+Bye! Talk to you later!
+===
+title: SkipExplanation
+tags: 
+speaker: Olivia
+colorID: 0
+position: 688,-1116
+---
+Okay, sure! Well, have a look at your data, and let me know if you have any questions.
+
+[[I have a question.|Questions]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|EndCloseBook]]
+===
+title: ExplainBook
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1279,-1121
+---
+Alright, let me explain the activity book for you. Hmmm, I need a nice example...
+
+<<if $coachFrancoisEnabled>>
+    [[ExplainBookFrancois]]
+<<else>>
+    [[ExplainBookOlivia]]
+<<endif>>
+===
+title: End
+tags: 
+speaker: Olivia
+colorID: 5
+position: 361,-243
+---
+
+===
+title: Questions
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1059,-661
+---
+Sure, ask away! What would you like to know?
+
+[[Can you explain the book again?|ExplainBookConfirm]]
+[[Goodbye.|EndCloseBook]]
+===
+title: ExplainBookFrancois
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1592,-1267
+---
+<<action type="generic" value="CLOSE_BOOK">>
+
+Let me put this away... Hey, François, do you mind if I quickly show your book to explain how this works to $userFirstName?
+
+[[ExplainBookFrancois2]]
+===
+title: ExplainBookFrancois2
+tags: 
+speaker: Francois
+colorID: 0
+position: 1887,-1273
+---
+Bien sûr! I mean, of course Olivia. But please don't be too critical, I know I haven't always reached my goals...
+
+[[ExplainBookFrancois3]]
+===
+title: ExplainBookFrancois3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2170,-1267
+---
+<<action type="generic" value="OPEN_EXAMPLE_ACTIVITY_BOOK" character="francois">>
+
+Thank you François. Of course I won't be too critical! Here, let's have a look...
+
+[[ExplainBookFrancois4]]
+===
+title: ExplainBookFrancois5
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2745,-1266
+---
+As you can see, François has been very active on Tuesday. What were you doing François?
+
+[[ExplainBookFrancois6]]
+===
+title: ExplainBookFrancois4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2464,-1265
+---
+So, in this overview you see François' steps for every day of the week.
+
+[[ExplainBookFrancois5]]
+===
+title: ExplainBookFrancois6
+tags: 
+speaker: Francois
+colorID: 0
+position: 3034,-1266
+---
+Ah I went to the market that day, buying fresh fish and vegetables... Well, and maybe just a little bit of cheese as well...
+
+[[ExplainBookFrancois7]]
+===
+title: ExplainBookFrancois7
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3319,-1267
+---
+<<set $paUserCompletedActivityBookExplanation = true>>
+Very nice François! And a good tip as well, walking to the market to buy fresh food is good for your activity and your diet!
+
+[[I think I understand the book now.|ExplainBookEnd]]
+[[What happened on Friday, François?|ExplainBookFrancois8]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: ExplainBookEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3337,-928
+---
+<<action type="generic" value="CLOSE_BOOK">>
+
+Great! If you still have questions later, you can always ask! Now where were we...
+
+[[Start]]
+===
+title: ExplainBookFrancois8
+tags: 
+speaker: Francois
+colorID: 0
+position: 3633,-1273
+---
+Ah, on Friday I wasn't feeling too good. I spent the day here at home, just reading through recipes. Olivia must be disappointed... quelle tristesse...
+
+[[ExplainBookFrancois9]]
+===
+title: ExplainBookFrancois9
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3942,-1275
+---
+Don't be silly François, you are allowed to have a bad day. You're doing very good, and I'm proud of you!
+
+[[ExplainBookFrancois10]]
+===
+title: ExplainBookFrancois10
+tags: 
+speaker: Francois
+colorID: 0
+position: 4244,-1276
+---
+Merci Olivia, that means a lot to me.
+
+[[ExplainBookPreEnd]]
+===
+title: ExplainBookPreEnd
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3793,-828
+---
+So anyway, I hope it's clear how the activity book works. Shall we get back to your data again, $userFirstName?
+
+[[Okay, let's go!|ExplainBookEnd]]
+===
+title: ExplainBookConfirm
+tags: 
+speaker: Olivia
+colorID: 0
+position: 991,-1105
+---
+Sure, sure, I can tell you something about how the book works.
+
+[[Yes, explain the book.|ExplainBook]]
+[[No, never mind.|BookStart]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|EndCloseBook]]
+===
+title: ExplainBookOlivia
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1594,-972
+---
+<<action type="generic" value="CLOSE_BOOK">>
+
+Let me put this away... So, how about I show you some of my own data...
+
+[[ExplainBookOlivia2]]
+===
+title: ExplainBookOlivia2
+tags: 
+speaker: Olivia
+colorID: 0
+position: 1886,-974
+---
+<<action type="generic" value="OPEN_EXAMPLE_ACTIVITY_BOOK" character="olivia">>
+
+Let's have a look at how I am doing this week...
+
+[[ExplainBookOlivia3]]
+===
+title: ExplainBookOlivia3
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2173,-974
+---
+So, in this overview you can see my steps for every day of the week.
+
+[[ExplainBookOlivia4]]
+===
+title: ExplainBookOlivia4
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2458,-969
+---
+<<set $paUserCompletedActivityBookExplanation = true>>
+As you can see, I have been very active on Tuesday. I went for a long walk in the morning, and had a lot of shopping to do later that day.
+
+[[I think I understand the book now.|ExplainBookEnd]]
+[[What happened on Friday, Olivia?|ExplainBookOlivia5]]
+[[I want to discuss something else.|olivia-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: ExplainBookOlivia5
+tags: 
+speaker: Olivia
+colorID: 0
+position: 2728,-681
+---
+Ah on Friday I wasn't feeling very well. I got a bit sad thinking about some of my old friends that I don't see anymore. I stayed the day at home watching television.
+
+[[ExplainBookOlivia6]]
+===
+title: ExplainBookOlivia6
+tags: 
+speaker: Olivia
+colorID: 0
+position: 3015,-682
+---
+Everyone has their bad days, that's no problem at all. As long as you fight your way back the next day!
+
+[[ExplainBookPreEnd]]
+===

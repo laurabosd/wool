@@ -1,0 +1,464 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: -4912,-584
+---
+<<set $paUserCompletedHealthIntake = false >>
+<<set $nutUserCompletedHealthIntake = false >>
+<<set $cogUserCompletedHealthIntake = false >>
+<<set $socUserCompletedHealthIntake = false >>
+<<set $userCompletedHealthIntake = false >>
+
+Alright, to see which coaches are the most relevant for you, I have a few questions on different topics.
+
+<<if $dt2UserCompletedHealthIntake == false >>
+    [[Diagnosis]]
+<<else>>
+    [[DiagnosisSkip]]
+<<endif>>
+===
+title: Topics
+tags: 
+speaker: Coda
+colorID: 0
+position: -2993,-620
+---
+<<if ($paUserCompletedHealthIntake == false) && ($nutUserCompletedHealthIntake == false) && ($cogUserCompletedHealthIntake == false) && ($socUserCompletedHealthIntake == false) >>
+    We will have to go through all of them, but it doesn't matter in which order. On which topic do you want to start?
+<<elseif ($paUserCompletedHealthIntake == true) && ($nutUserCompletedHealthIntake == true) && ($cogUserCompletedHealthIntake == true) && ($socUserCompletedHealthIntake == true) >>
+    Awesome! That's all the topics covered. Let's see the results.
+    <<set $userCompletedHealthIntake = true >>
+<<else>>
+    So, which topic should we discuss next?
+<<endif>>
+
+<<if $paUserCompletedHealthIntake == false >>
+    [[Physical Activity.|PhysicalActivity]]
+<<endif>>
+
+<<if $nutUserCompletedHealthIntake == false >>
+    [[Nutrition.|Nutrition]]
+<<endif>>
+
+<<if $cogUserCompletedHealthIntake == false >>
+    [[Cognition.|Cognition]]
+<<endif>>
+
+<<if $socUserCompletedHealthIntake == false >>
+    [[Social.|Social]]
+<<endif>>
+
+<<if ($paUserCompletedHealthIntake == true) && ($nutUserCompletedHealthIntake == true) && ($cogUserCompletedHealthIntake == true) && ($socUserCompletedHealthIntake == true) >>
+    [[Okay, let's go.|coda-selectcoaches.Start]]
+<<endif>>
+===
+title: PhysicalActivity
+tags: 
+speaker: Coda
+colorID: 0
+position: -2649,-881
+---
+Okay, when we're talking about physical activity, we mean the things you do in your everyday life.
+
+[[PA1]]
+===
+title: Nutrition
+tags: 
+speaker: Coda
+colorID: 0
+position: -2643,-625
+---
+Okay, let's see how healthy your eating habits are. I have a few simple questions for you.
+
+[[N1]]
+===
+title: Cognition
+tags: 
+speaker: Coda
+colorID: 0
+position: -2641,-373
+---
+Okay, let's talk about cognition. Your memory, quickness of mind, those sort of things...
+
+[[C1]]
+===
+title: N4
+tags: 
+speaker: Coda
+colorID: 0
+position: -1592,-621
+---
+Finally, which of the following statements would best describe your view on healthy eating?
+
+[[I already eat healthy.|N5|<<set $nutUserStageOfChange = "maintenance">>]]
+[[I am working on it.|N5|<<set $nutUserStageOfChange = "action">>]]
+[[I'm trying to start.|N5|<<set $nutUserStageOfChange = "preparation">>]]
+[[I probably should.|N5|<<set $nutUserStageOfChange = "contemplation">>]]
+[[I'm not bothered.|N5|<<set $nutUserStageOfChange = "precontemplation">>]]
+===
+title: N5
+tags: 
+speaker: Coda
+colorID: 0
+position: -1322,-619
+---
+<<set $nutUserCompletedHealthIntake = true>>
+
+Great, that's it!
+
+[[Okay, let's continue.|Topics]]
+===
+title: C4
+tags: 
+speaker: Coda
+colorID: 0
+position: -1595,-363
+---
+And, in conclusion, which of the following statements would best describe your view on cognitive training?
+
+[[My cognitive health is fine.|C5|<<set $cogUserStageOfChange = "maintenance">>]]
+[[I am working on it.|C5|<<set $cogUserStageOfChange = "action">>]]
+[[I'm trying to start.|C5|<<set $cogUserStageOfChange = "preparation">>]]
+[[I probably should.|C5|<<set $cogUserStageOfChange = "contemplation">>]]
+[[I'm not bothered.|C5|<<set $cogUserStageOfChange = "precontemplation">>]]
+===
+title: C2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2131,-371
+---
+In order to train your cognitive skills you can play memory games or do different types of puzzles with words or numbers...
+
+[[C3]]
+===
+title: C1
+tags: 
+speaker: Coda
+colorID: 0
+position: -2388,-372
+---
+As you get older, you may get a little more forgetful, or you might be distracted more easily than you're used to.
+
+[[C2]]
+===
+title: C3
+tags: 
+speaker: Coda
+colorID: 0
+position: -1865,-369
+---
+So tell me, how would you rate your own cognition?
+
+[[Nothing wrong with my cognition.|C4|<<set $cogUserSelfAssessed = "good">>]]
+[[I'm doing okay, could be better.|C4|<<set $cogUserSelfAssessed = "neutral">>]]
+[[I really could use some help.|C4|<<set $cogUserSelfAssessed = "bad">>]]
+===
+title: C5
+tags: 
+speaker: Coda
+colorID: 0
+position: -1316,-365
+---
+<<set $cogUserCompletedHealthIntake = true>>
+
+Great! That was the cognition part of the intake.
+
+[[Okay, let's continue.|Topics]]
+===
+title: N1
+tags: 
+speaker: Coda
+colorID: 0
+position: -2387,-628
+---
+When talking about healthy eating, there are various aspects that come into play. Variation, calorie intake, fruit and vegetables...
+
+[[N2]]
+===
+title: N2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2133,-630
+---
+Are you drinking enough water? Not too much alcohol, sugars, fat... These are all things we consider under healthy eating.
+
+[[N3]]
+===
+title: N3
+tags: 
+speaker: Coda
+colorID: 0
+position: -1870,-628
+---
+So, may I ask you... how healthy do you think your eating and drinking habits are?
+
+[[My diet is perfect.|N4|<<set $nutUserSelfAssessed = "good">>]]
+[[My diet is okay, could be better.|N4|<<set $nutUserSelfAssessed = "neutral">>]]
+[[I really could use some help.|N4|<<set $nutUserSelfAssessed = "bad">>]]
+===
+title: PA1
+tags: 
+speaker: Coda
+colorID: 0
+position: -2384,-881
+---
+So, it's not about running a marathon, or spending all day in the gym. Although if you do that, it would also count of course!
+
+[[PA2]]
+===
+title: PA2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2130,-874
+---
+But we are thinking more about everyday physical activity, like doing groceries, gardening, walking the dog or going for a bike ride.
+
+[[PA3]]
+===
+title: PA3
+tags: 
+speaker: Coda
+colorID: 0
+position: -1856,-883
+---
+So, considering this type of everyday physical activity... how active would you say you are?
+
+[[I'm always very active.|PA4|<<set $paUserSelfAssessed = "good">>]]
+[[I'm doing okay, could be better.|PA4|<<set $paUserSelfAssessed = "neutral">>]]
+[[I really could use some help.|PA4|<<set $paUserSelfAssessed = "bad">>]]
+===
+title: PA4
+tags: 
+speaker: Coda
+colorID: 0
+position: -1591,-874
+---
+And finally, which of the following statements would best describe your view on improving your daily physical activity?
+
+[[I'm already very active.|PA5|<<set $paUserStageOfChange = "maintenance">>]]
+[[I am working on it.|PA5|<<set $paUserStageOfChange = "action">>]]
+[[I'm trying to be more active.|PA5|<<set $paUserStageOfChange = "preparation">>]]
+[[I probably should.|PA5|<<set $paUserStageOfChange = "contemplation">>]]
+[[I'm not bothered.|PA5|<<set $paUserStageOfChange = "precontemplation">>]]
+===
+title: PA5
+tags: 
+speaker: Coda
+colorID: 0
+position: -1322,-874
+---
+<<set $paUserCompletedHealthIntake = true>>
+
+Excellent, that's it for the questions regarding physical activity.
+
+[[Okay, let's continue.|Topics]]
+===
+title: Diagnosis
+tags: 
+speaker: Coda
+colorID: 0
+position: -4534,-717
+---
+To start, Council of Coaches offers specific support for Type 2 Diabetes and Chronic Pain. It's important for us to know if you have been diagnosed with either.
+
+[[Okay.|Diabetes]]
+===
+title: Diabetes
+tags: 
+speaker: Coda
+colorID: 0
+position: -4242,-716
+---
+Are you officially diagnosed with Diabetes Type 2?
+
+[[Yes, I have been diagnosed with Diabetes Type 2.|DiabetesYes]]
+[[No, I have not been.|DiabetesNo]]
+===
+title: DiabetesYes
+tags: 
+speaker: Coda
+colorID: 0
+position: -3950,-851
+---
+<<set $dt2UserCompletedHealthIntake = true>>
+<<set $cpUserCompletedHealthIntake = true>>
+<<set $userHasDiabetes = true>>
+
+Okay, so in any case I will recommend that you include Katarzyna, our specialised Diabetes Type 2 Coach in your council.
+
+[[Okay.|FollowUpQuestions]]
+===
+title: DiabetesNo
+tags: 
+speaker: Coda
+colorID: 0
+position: -3955,-522
+---
+<<set $dt2UserCompletedHealthIntake = true>>
+<<set $userHasDiabetes = false>>
+
+And what about Chronic Pain, have you been officially diagnosed with this?
+
+[[Yes, I am diagnosed with Chronic Pain.|ChronicPainYes]]
+[[No, I am not.|ChronicPainNo]]
+===
+title: ChronicPainYes
+tags: 
+speaker: Coda
+colorID: 0
+position: -3641,-634
+---
+<<set $cpUserCompletedHealthIntake = true>>
+<<set $userHasChronicPain = true>>
+
+Okay, so in any case I will recommend that you include Rasmus, our specialised Chronic Pain Coach in your council.
+
+[[Okay.|FollowUpQuestions]]
+===
+title: ChronicPainNo
+tags: 
+speaker: Coda
+colorID: 0
+position: -3642,-352
+---
+<<set $cpUserCompletedHealthIntake = true>>
+<<set $userHasChronicPain = false>>
+
+Okay, that is good to know! Now, there are a few more topics I would like to discuss.
+
+[[Okay, let's go.|Topics]]
+===
+title: FollowUpQuestions
+tags: 
+speaker: Coda
+colorID: 0
+position: -3311,-806
+---
+We also have a short list of other topics I would like to discuss.
+
+[[Okay, let's go.|Topics]]
+===
+title: Social
+tags: 
+speaker: Coda
+colorID: 0
+position: -2640,-113
+---
+Okay, let's discuss some of the social aspects of your life, interactions with friends, family or neighbours.
+
+[[S1]]
+===
+title: S1
+tags: 
+speaker: Coda
+colorID: 0
+position: -2376,-114
+---
+We can all lose touch with other people and even start to feel lonely from time to time.
+
+[[S2]]
+===
+title: S2
+tags: 
+speaker: Coda
+colorID: 0
+position: -2119,-112
+---
+The coaches may be able to help you out with some advice on meeting other people, or doing things together.
+
+[[S3]]
+===
+title: S3
+tags: 
+speaker: Coda
+colorID: 0
+position: -1845,-109
+---
+So if I may ask, how would you rate your current social life?
+
+[[I have an active social life, no problems.|S4|<<set $socUserSelfAssessed = "good">>]]
+[[I'm doing okay, could be better.|S4|<<set $socUserSelfAssessed = "neutral">>]]
+[[I really could use some help.|S4|<<set $socUserSelfAssessed = "bad">>]]
+===
+title: S4
+tags: 
+speaker: Coda
+colorID: 0
+position: -1587,-111
+---
+And, more formally, which of the following statements would best describe your view on your social life?
+
+[[My social life is fine.|S5|<<set $socUserStageOfChange = "maintenance">>]]
+[[I am working on meeting more people.|S5|<<set $socUserStageOfChange = "action">>]]
+[[I'm trying to improve my social life.|S5|<<set $socUserStageOfChange = "preparation">>]]
+[[I probably should do something.|S5|<<set $socUserStageOfChange = "contemplation">>]]
+[[I'm not trying to improve.|S5|<<set $socUserStageOfChange = "precontemplation">>]]
+===
+title: S5
+tags: 
+speaker: Coda
+colorID: 0
+position: -1313,-107
+---
+<<set $socUserCompletedHealthIntake = true>>
+
+That's everything done, we are finished with the social part of this intake!
+
+[[Okay, let's continue.|Topics]]
+===
+title: DiagnosisSkip
+tags: 
+speaker: Coda
+colorID: 0
+position: -4762,-248
+---
+<<if $userHasDiabetes >>
+    You have previously indicated that you are diagnosed with Diabetes Type 2, is that correct?
+<<elseif $userHasChronicPain >>
+    You have previously indicated that you are diagnosed with Chronic Pain, is that correct?
+<<else>>
+    You have previously indicated that you don't suffer from Diabetes Type 2 or Chronic Pain, is that correct?
+<<endif>>
+
+[[Yes, that is correct.|DiagnosisCorrect]]
+[[No, that is not correct.|DiagnosisIncorrect]]
+===
+title: DiagnosisCorrect
+tags: 
+speaker: Coda
+colorID: 0
+position: -4433,-372
+---
+Okay then, in that case, we have short list of other topics I would like to discuss. Shall we get right to it?
+
+[[Okay, let's go.|Topics]]
+===
+title: DiagnosisIncorrect
+tags: 
+speaker: Coda
+colorID: 0
+position: -4438,-115
+---
+<<set $dt2UserCompletedHealthIntake = false>>
+<<set $cpUserCompletedHealthIntake = false>>
+<<set $userHasDiabetes = false>>
+<<set $userHasChronicPain = false>>
+
+Okay, then let's do that part of the intake again shall we?
+
+[[Okay, let's go.|DiagnosisIncorrect2]]
+===
+title: DiagnosisIncorrect2
+tags: 
+speaker: Coda
+colorID: 0
+position: -4162,-116
+---
+So as you may know, Council of Coaches offers specific support for Type 2 Diabetes and Chronic Pain. It's important for us to know if you have been diagnosed with either.
+
+[[Okay.|Diabetes]]
+===

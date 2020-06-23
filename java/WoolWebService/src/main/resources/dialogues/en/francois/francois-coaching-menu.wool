@@ -1,0 +1,22 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 9,-186
+---
+Aaah, food. My favourite thing in the world. What do you need of me specifically?
+
+[[Recipes.|francois-coaching-recipes-menu.Start]]
+[[Tips and info.|francois-coaching-inform-menu.Start]]
+[[My preferences.|francois-coaching-gatherinfo-menu.Start]]
+[[I want to discuss something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Francois
+colorID: 5
+position: 341,-180
+---
+
+===

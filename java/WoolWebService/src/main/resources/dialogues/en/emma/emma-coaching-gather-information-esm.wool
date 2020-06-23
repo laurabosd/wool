@@ -1,0 +1,142 @@
+title: NotToday
+tags: 
+speaker: Emma
+colorID: 0
+position: -228,-176
+---
+<<set $esmEmmaSkipDate = $today >>
+
+Yes of course, let's skip the questions for today. Anything else I can help you with?
+
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: Start
+tags: 
+speaker: Emma
+colorID: 2
+position: -228,138
+---
+<<if $esmEmmaCompletedDate == $today>>
+    Wait a minute... I already asked about your social interactions today, didn't I? I'm very sorry. Can I help with something else?    
+
+    [[I want to discuss something else.|emma-menu.Redirect]]
+    [[Goodbye.|End]]
+<<else>>
+    Great! Just a few short questions about your social interactions, are you ready?
+
+    [[Yes, let's go.|QuestionS1]]
+    [[Can we come back to this later?|OtherTime]]
+    [[I don't want to answer today.|NotToday]]
+    [[Goodbye.|End]]
+<<endif>>
+===
+title: OtherTime
+tags: 
+speaker: Emma
+colorID: 5
+position: -227,448
+---
+<<set $esmEmmaLaterDate = $today >>
+
+Okay, understandable. I will come back to you about it later. Was there something else you wanted to discuss?
+
+[[I want to talk about something else.|emma-menu.Redirect]]
+[[Goodbye.|End]]
+===
+title: QuestionS1
+tags: 
+speaker: Emma
+colorID: 4
+position: 136,139
+---
+So, are you satisfied with your social interactions today?
+
+[[Very dissatisfied.|QuestionS2Neg|<<set $esmSocialSatisfaction = 0>>]]
+[[Dissatisfied.|QuestionS2Neg|<<set $esmSocialSatisfaction = 1>>]]
+[[Satisfied.|QuestionS2Pos|<<set $esmSocialSatisfaction = 2>>]]
+[[Very satisfied.|QuestionS2Pos|<<set $esmSocialSatisfaction = 3>>]]
+===
+title: End
+tags: 
+speaker: Emma
+colorID: 5
+position: 913,570
+---
+
+===
+title: QuestionS2Pos
+tags: 
+speaker: Emma
+colorID: 4
+position: 480,268
+---
+Nice to hear that! So I guess you have interacted with other people today?
+
+[[Yes.|QuestionS3Yes1|<<set $esmSocialInteractedToday = true>>]]
+[[No.|QuestionS3No|<<set $esmSocialInteractedToday = false>>]]
+===
+title: QuestionS2Neg
+tags: 
+speaker: Emma
+colorID: 4
+position: 479,-63
+---
+Ah, hmmm that is a shame... but have you interacted with other people today?
+
+[[Yes.|QuestionS3Yes1|<<set $esmSocialInteractedToday = true>>]]
+[[No.|QuestionS3No|<<set $esmSocialInteractedToday = false>>]]
+===
+title: QuestionS3No
+tags: 
+speaker: Emma
+colorID: 4
+position: 838,272
+---
+Okay, in that case, I have no more questions!
+
+[[ClosingText]]
+===
+title: QuestionS3Yes1
+tags: 
+speaker: Emma
+colorID: 4
+position: 834,-63
+---
+Nice! Could you tell me the total duration (in minutes) of interacting with family members? So, for example write "30" if you spent half an hour with family members, or "0" if you haven't seen them.
+
+[[Time spent with family in minutes: <<input type="numeric" value="$esmSocialTimeSpentFamily" min="0" max="1440">>|QuestionS3Yes2]]
+===
+title: QuestionS3Yes2
+tags: 
+speaker: Emma
+colorID: 4
+position: 1143,-64
+---
+In the same way, could you tell me the total duration (in minutes) of interacting with friends? Again, write "0" if you haven't seen any.
+
+[[Time spent with friends in minutes: <<input type="numeric" value="$esmSocialTimeSpentFriends" min="0" max="1440">>|QuestionS3Yes3]]
+===
+title: QuestionS3Yes3
+tags: 
+speaker: Emma
+colorID: 4
+position: 1448,-66
+---
+Okay, finally, could you tell me the total duration (in minutes) of interacting with other acquaintances (like colleagues)? Again, write "0" if you haven't had any interaction.
+
+[[Time spent with acquaintances in minutes: <<input type="numeric" value="$esmSocialTimeSpentOther" min="0" max="1440">>|ClosingText]]
+===
+title: ClosingText
+tags: 
+speaker: Emma
+colorID: 4
+position: 1772,145
+---
+<<set $esmEmmaCompletedDate = $today >>
+
+Thanks for your time! Was there something else you wanted to discuss?
+
+[[I want to talk about something else.|emma-menu.Start]]
+[[Goodbye.|End]]
+===

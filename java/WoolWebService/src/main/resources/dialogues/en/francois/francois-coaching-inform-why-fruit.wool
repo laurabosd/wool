@@ -1,0 +1,141 @@
+title: Start
+tags: 
+speaker: Francois
+colorID: 2
+position: 53,558
+---
+As you might know, it is important to eat enough fruit!
+
+[[I agree.|node_voeding_tip1_fruit1]]
+[[Can you tell me why? |node_voeding_tip1_fruit5]]
+===
+title: node_voeding_tip1_fruit1
+tags: 
+speaker: Francois
+colorID: 0
+position: 316,254
+---
+Good to hear that you feel the same! The advice is to eat two pieces (or portions) of fruit per day! 
+
+[[node_voeding_tip1_fruit2]]
+===
+title: node_voeding_tip1_fruit2
+tags: 
+speaker: Francois
+colorID: 0
+position: 612,152
+---
+Do you know why you should do this? 
+
+[[Yes. |node_voeding_tip1_fruit4]]
+[[Not really.|node_voeding_tip1_fruit5]]
+[[No.|node_voeding_tip1_fruit5]]
+===
+title: node_voeding_tip1_fruit4
+tags: 
+speaker: Francois
+colorID: 0
+position: 906,81
+---
+Ah, un connaisseur - I mean, an expert! 
+
+[[Thank you!|node_voeding_tip1_fruit5]]
+===
+title: node_voeding_tip1_fruit5
+tags: 
+speaker: Francois
+colorID: 0
+position: 912,559
+---
+Eating enough fruit has many benefits. It reduces the risk of getting a chronic illness, for example.  
+
+[[That's good to know. |node_voeding_tip1_fruit6]]
+[[Can you give an example? | node_voeding_tip1_fruit7]]
+===
+title: node_voeding_tip1_fruit6
+tags: 
+speaker: Francois
+colorID: 0
+position: 1214,412
+---
+<<set $nutUserCompletedInformWhyFruit = true>>
+<<set $nutUserCompletedInformWhyDate = $today>>
+
+This was what I wanted to tell you today. Did you want to talk about something else?
+
+[[Can we go through the previous tips?|francois-coaching-inform-why-archive.Start]]
+[[I want to talk about something else.|francois-menu.Start]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: 
+colorID: 0
+position: 1510,417
+---
+
+===
+title: node_voeding_tip1_fruit7
+tags: 
+speaker: Francois
+colorID: 0
+position: 1206,79
+---
+Well, the risk for some types of cancer is reduced, for example.
+
+[[node_voeding_tip2_fruit1]]
+
+===
+title: node_voeding_tip2_fruit1
+tags: 
+speaker: Francois
+colorID: 0
+position: 1504,73
+---
+Scientific research shows that eating enough fruit can protect against different types of cancer. Mouth and troat cancer, esophagus and stomach cancer, and lungcancer. 
+
+[[Okay, I know enough.|node_voeding_tip1_fruit6]]
+[[And why is that?|node_voeding_tip2_fruit2]]
+===
+title: node_voeding_tip2_fruit2
+tags: 
+speaker: Francois
+colorID: 0
+position: 1783,72
+---
+Well, vegetables and fruit contain vitamins, minerals and other healthy natural elements (fytochemicals), that keep the body healthy and strengthen the immune system. Many of these function as antioxidants. 
+
+[[What do antioxidants do?|node_voeding_tip2_fruit3]]
+[[I have heard enough.|node_voeding_tip1_fruit6]]
+===
+title: node_voeding_tip2_fruit3
+tags: 
+speaker: Francois
+colorID: 0
+position: 2041,76
+---
+Antioxidants can help protect cells in the body against damage that might lead to cancer. 
+
+[[Okay, anything else?|node_voeding_tip2_fruit4]]
+[[I know enough, thank you.|node_voeding_tip1_fruit6]]
+===
+title: node_voeding_tip2_fruit4
+tags: 
+speaker: Francois
+colorID: 0
+position: 2298,77
+---
+Oui! There is convincing scientific evidence that eating food with a lot of fiber - such as whole grain products, vegetables, fruit and legumes - can lower the risk at colon cancer. 
+
+[[Interesting, but why?|node_voeding_tip2_fruit5]]
+===
+title: node_voeding_tip2_fruit5
+tags: 
+speaker: Francois
+colorID: 0
+position: 2572,73
+---
+Well, fibers speed up our digestion, so food spends less time in the intestines. 
+
+[[Thanks for telling me.|node_voeding_tip1_fruit6]]
+===

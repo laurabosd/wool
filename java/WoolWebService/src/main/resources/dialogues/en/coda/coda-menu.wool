@@ -1,0 +1,304 @@
+title: Start
+tags: 
+speaker: Coda
+colorID: 2
+position: 2252,384
+---
+Hi $userFirstName, how can I help you today?
+
+[[Can you explain the interface again?|ExplainInterface]]
+<<if $isEvaluationUser == true>>
+    [[About the evaluation...|EvaluationIntro]]
+<<endif>>
+[[About the Corona Virus.|Corona]]
+[[I want to log out.|LogoutConfirm]]
+[[Goodbye.|End]]
+===
+title: End
+tags: 
+speaker: Coda
+colorID: 5
+position: 2254,107
+---
+
+===
+title: ExplainInterface
+tags: 
+speaker: Coda
+colorID: 0
+position: 2252,666
+---
+Of course I can! Let me load up the interface explanation module...
+
+[[Okay...|coda-explain-interface.Start]]
+===
+title: LogoutConfirm
+tags: 
+speaker: Coda
+colorID: 0
+position: 1656,384
+---
+If you log out, you will be sent back to the login screen. Are you sure?
+
+[[Yes, log me out.|LogoutBye]]
+[[How will I get back?|LogoutExplainReturn]]
+[[Oops, no nevermind.|Start]]
+[[Goodbye.|End]]
+===
+title: LogoutExplainReturn
+tags: 
+speaker: Coda
+colorID: 0
+position: 1657,669
+---
+To come back to the living room, you would have to sign in again using your email address and password.
+
+[[Okay, log me out.|LogoutBye]]
+[[Oops, no nevermind.|Start]]
+[[Goodbye.|End]]
+===
+title: LogoutBye
+tags: 
+speaker: Coda
+colorID: 0
+position: 1377,383
+---
+Okay, see you next time!
+
+[[Goodbye.|End|<<action type="generic" value="LOGOUT">>]]
+===
+title: EvaluationIntro
+tags: 
+speaker: Coda
+colorID: 0
+position: 2579,381
+---
+Of course $userFirstName! First of all, we are very happy that you are participating in the Council of Coaches evaluation.
+
+[[EvaluationMenu]]
+===
+title: EvaluationMenu
+tags: 
+speaker: Coda
+colorID: 1
+position: 2894,379
+---
+Your feedback is very valuable! Or did you have any questions about the evaluation?
+
+[[How can I give feedback?|EvaluationFeedback]]
+[[I have a question.|EvaluationQuestions]]
+[[I want to discuss something else.|Start]]
+[[Goodbye.|End]]
+===
+title: EvaluationFeedback
+tags: 
+speaker: Coda
+colorID: 1
+position: 3198,193
+---
+If you have any suggestion on how we can improve Council of Coaches, we would love to hear from you!
+
+[[EvaluationFeedback2]]
+===
+title: EvaluationQuestions
+tags: 
+speaker: Coda
+colorID: 1
+position: 3201,547
+---
+Sure, what would you like to ask?
+
+[[Why do coaches say their dialogue is being written?|EvalQInProgress]]
+<<if $evaluationUserSite == "Twente" >>
+    [[Why do coaches sometimes talk in English?|EvalQEnglish]]
+<<endif>>
+[[About my Fitbit.|EvalQFitbit]]
+[[Another question.|EvalQOther]]
+[[I want to talk about something else.|Start]]
+[[Goodbye.|End]]
+===
+title: EvalQInProgress
+tags: 
+speaker: Coda
+colorID: 1
+position: 2814,834
+---
+Ah yes, we are aware of the problem. The team behind Council of Coaches is working hard to write new dialogues.
+
+[[EvalQInProgress2]]
+===
+title: EvalQFitbit
+tags: 
+speaker: Coda
+colorID: 1
+position: 3489,843
+---
+<<if $coachOliviaEnabled >>
+    Did you try talking to Olivia? She is the physical activity expert, and knows everything about your Fitbit tracker.
+    
+    [[EvalQFitbitCommentOlivia]]
+<<else>>
+    Well, if you have technical difficulties, you should contact the researcher who helped you set up with Council of Coaches.
+    
+    [[EvalQFitbitContactResearcher]]
+<<endif>>
+
+===
+title: EvalQOther
+tags: 
+speaker: Coda
+colorID: 1
+position: 3877,857
+---
+For all other questions, please send an email to your research contact, or use the Feedback button in the bottom right corner of the screen.
+
+[[I want to ask something else.|EvaluationQuestions]]
+[[Goodbye.|End]]
+===
+title: EvalQInProgress2
+tags: 
+speaker: Coda
+colorID: 1
+position: 2817,1096
+---
+Over time we are adding more and more content, but it is a lot of work.
+
+[[EvalQInProgress3]]
+===
+title: EvalQEnglish
+tags: 
+speaker: Coda
+colorID: 1
+position: 3069,842
+---
+Ai! That must be a mistake! You see, the conversations are being written in English first, and then translated to Dutch.
+
+[[EvalQEnglish2]]
+===
+title: EvalQEnglish2
+tags: 
+speaker: Coda
+colorID: 1
+position: 3072,1095
+---
+It could be that the translation is still being done, it's somehow forgotten, or something else is going wrong.
+
+[[EvalQEnglish3]]
+===
+title: EvalQEnglish3
+tags: 
+speaker: Coda
+colorID: 1
+position: 3068,1331
+---
+When you notice the coaches speaking in English, you can always let us know, and we will do our best to fix it as soon as possible!
+
+[[How can I give feedback?|EvaluationFeedback]]
+[[I had another question.|EvaluationQuestions]]
+[[Goodbye.|End]]
+===
+title: EvalQInProgress3
+tags: 
+speaker: Coda
+colorID: 1
+position: 2816,1339
+---
+When the coaches have nothing new to say, maybe you can try to come back next week, and new dialogue options might be available to you.
+
+[[EvalQInProgress4]]
+===
+title: EvalQInProgress4
+tags: 
+speaker: Coda
+colorID: 1
+position: 2816,1580
+---
+And if you have any suggestions for content you would like to see added, please let us know!
+
+[[How can I give feedback?|EvaluationFeedback]]
+[[I had another question.|EvaluationQuestions]]
+[[Goodbye.|End]]
+===
+title: EvalQFitbitCommentOlivia
+tags: 
+speaker: Olivia
+colorID: 1
+position: 3336,1102
+---
+Of course, just come talk to me and ask about "My activity tracker", and I'll see what I can do.
+
+[[EvalQFitbitEnd]]
+===
+title: EvalQFitbitContactResearcher
+tags: 
+speaker: Coda
+colorID: 1
+position: 3598,1102
+---
+It's probably best to send an email explaining the problem, and I'm sure they will get back to you as quickly as possible.
+
+[[EvalQFitbitEnd]]
+===
+title: EvalQFitbitEnd
+tags: 
+speaker: Coda
+colorID: 1
+position: 3478,1414
+---
+I hope we can quickly resolve your question. Was there anything else?
+
+[[I had another question.|EvaluationQuestions]]
+[[Goodbye.|End]]
+===
+title: EvaluationFeedback2
+tags: 
+speaker: Coda
+colorID: 1
+position: 3501,192
+---
+That is the whole point of this evaluation! You can always send an email to your research contact, or use the feedback button in the bottom right corner of the screen.
+
+[[I have a question.|EvaluationQuestions]]
+[[I want to discuss something else.|Start]]
+[[Goodbye.|End]]
+===
+title: Redirect
+tags: 
+speaker: Coda
+colorID: 2
+position: 2028,389
+---
+So, how can I help you today?
+
+[[Can you explain the interface again?|ExplainInterface]]
+<<if $isEvaluationUser == true>>
+    [[About the evaluation...|EvaluationIntro]]
+<<endif>>
+[[About the Corona Virus.|Corona]]
+[[I want to log out.|LogoutConfirm]]
+[[Goodbye.|End]]
+===
+title: Corona
+tags: 
+speaker: Coda
+colorID: 0
+position: 2002,916
+---
+<<if $userCompletedCoronaMessage1 == true>>
+
+    We have a statement regarding the corona virus outbreak from the developers from March 17, 2020. Do you want me to repeat it for you?
+
+    [[Okay, let's hear it.|coda-explain-corona.Start]]
+    [[I want to ask something else.|Redirect]]
+    [[Goodbye.|End]]
+
+<<else>>
+
+    We have a statement regarding the corona virus outbreak from the developers from March 17, 2020. Do you want to hear it?
+
+    [[Okay, let's hear it.|coda-explain-corona.Start]]
+    [[I want to ask something else.|Redirect]]
+    [[Goodbye.|End]]
+
+<<endif>>
+===
